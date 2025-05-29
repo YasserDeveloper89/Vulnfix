@@ -6,6 +6,16 @@ from streamlit_folium import st_folium
 # ✅ Esta línea debe ir siempre al principio
 st.set_page_config(page_title="LimaProp", layout="wide")
 
+# Reducir espacio extra al final de la página
+st.markdown("""
+    <style>
+        .block-container {
+            padding-bottom: 1rem !important;
+        }
+        footer {visibility: hidden;}
+    </style>
+""", unsafe_allow_html=True)
+
 # Encabezado
 st.title("🏙️ LimaProp - Buscador de Proyectos Inmobiliarios")
 st.markdown("Explora proyectos inmobiliarios por zona, tipo y precio en Lima Metropolitana!")
@@ -73,13 +83,13 @@ if distrito_seleccionado != "Selecciona...":
             ).add_to(mapa)
         st_folium(mapa, use_container_width=True, height=500)
 
-# Footer profesional
+# Footer profesional (ajustado sin margen adicional)
 st.markdown(
     """
-    <hr style="margin-top: 50px;"/>
+    <hr style="margin-top: 20px; margin-bottom: 10px;"/>
     <div style="text-align: center; font-size: 0.9em; color: #888;">
         © 2025 LimaProp. Todos los derechos reservados.
     </div>
     """,
     unsafe_allow_html=True
-            )
+)
