@@ -3,31 +3,14 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
-# ✅ Debe ser el primer comando de Streamlit
+# Debe ir al inicio
 st.set_page_config(page_title="LimaProp", layout="wide")
 
-# 🎨 Estilo personalizado para mejorar estética
-st.markdown("""
-    <style>
-    .block-container {
-        padding-top: 2rem;
-        padding-bottom: 1rem !important;
-    }
-    .project-card {
-        padding: 1rem;
-        margin-bottom: 1rem;
-        border: 1px solid #e6e6e6;
-        border-radius: 12px;
-        background-color: #f9f9f9;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
-# 🏙️ Título principal
+# Título y descripción
 st.title("🏙️ LimaProp - Buscador de Proyectos Inmobiliarios")
 st.markdown("Explora proyectos inmobiliarios por zona, tipo y precio en Lima Metropolitana.")
 
-# 📄 Cargar datos
+# Cargar datos
 try:
     df = pd.read_json("data_urbania.json")
     df["distrito"] = df["distrito"].astype(str).str.strip().str.title()
@@ -36,10 +19,10 @@ except Exception as e:
     st.error(f"Error al cargar el archivo JSON: {e}")
     st.stop()
 
-# 🎛️ Filtros laterales
+# Filtros
 with st.sidebar:
     st.header("🔎 Filtros")
-    
+
     distrito_seleccionado = st.selectbox(
         "Selecciona un distrito:",
         options=sorted(df["distrito"].unique())
@@ -61,7 +44,7 @@ with st.sidebar:
         value=(precio_min, precio_max)
     )
 
-# 📊 Aplicar filtros
+# Filtrar datos
 df_filtrado = df[
     (df["distrito"] == distrito_seleccionado) &
     (df["tipo"].isin(tipo_seleccionado)) &
@@ -69,11 +52,12 @@ df_filtrado = df[
     (df["precio"] <= rango_precios[1])
 ]
 
-# 📍 Mapa y proyectos
+# Layout de columnas: mapa a la izquierda, proyectos a la derecha
 col1, col2 = st.columns([1, 1.5])
 
+# 🗺️ Mapa de proyectos
 with col1:
-    st.subheader(f"📍 Mapa de proyectos en {distrito_seleccionado}")
+    st.subheader(f"📍 Proyectos en {distrito_seleccionado}")
     if not df_filtrado.empty:
         mapa = folium.Map(
             location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()],
@@ -92,19 +76,15 @@ with col1:
     else:
         st.warning("No se encontraron proyectos para los filtros seleccionados.")
 
+# 🧱 Lista de proyectos
 with col2:
     st.subheader("🏗️ Proyectos Disponibles")
     if df_filtrado.empty:
         st.info("No hay proyectos con las características seleccionadas.")
     else:
         for _, row in df_filtrado.iterrows():
-            with st.container():
-                st.markdown(f"""
-                    <div class="project-card">
-                        <h4>{row['nombre']}</h4>
-                        <p><strong>Distrito:</strong> {row['distrito']}<br>
-                        <strong>Tipo:</strong> {row['tipo']}<br>
-                        <strong>Precio:</strong> S/. {int(row['precio']):,}</p>
-                        <a href="{row['link']}" target="_blank">🔗 Ver proyecto en Urbania</a>
-                    </div>
-                """, unsafe_allow_html=True)
+            with st.expander(row["nombre"]):
+                st.write(f"**Distrito:** {row['distrito']}")
+                st.write(f"**Tipo:** {row['tipo']}")
+                st.write(f"**Precio:** S/. {int(row['precio']):,}".replace(",", ".") )
+                st.markdown(f"[🔗 Ver proyecto en Urbania]({row['link']})", unsafe_allow_html=True)
