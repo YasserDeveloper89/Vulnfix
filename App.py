@@ -3,12 +3,12 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
-# Debe ir al inicio
+# Configuración de la página (debe ir primero)
 st.set_page_config(page_title="LimaProp", layout="wide")
 
-# Título y descripción
-st.title("🏙️ LimaProp - Buscador de Proyectos Inmobiliarios")
-st.markdown("Explora proyectos inmobiliarios por zona, tipo y precio en Lima Metropolitana.")
+# Título principal
+st.title("🏙️ LimaProp - Buscador de Proyectos inmobiliarios")
+st.markdown("Explora proyectos inmobiliarios por zona, tipo y precio en Lima Metropolitana!")
 
 # Cargar datos
 try:
@@ -19,7 +19,7 @@ except Exception as e:
     st.error(f"Error al cargar el archivo JSON: {e}")
     st.stop()
 
-# Filtros
+# Filtros en sidebar
 with st.sidebar:
     st.header("🔎 Filtros")
 
@@ -52,12 +52,25 @@ df_filtrado = df[
     (df["precio"] <= rango_precios[1])
 ]
 
-# Layout de columnas: mapa a la izquierda, proyectos a la derecha
-col1, col2 = st.columns([1, 1.5])
+# Cambiar el orden: proyectos primero, luego el mapa
+col1, col2 = st.columns([1.5, 1])  # Ahora la columna 1 es más ancha para proyectos
 
-# 🗺️ Mapa de proyectos
+# 🧱 Lista de proyectos (arriba / izquierda visualmente)
 with col1:
-    st.subheader(f"📍 Proyectos en {distrito_seleccionado}")
+    st.subheader("🏗️ Proyectos Disponibles")
+    if df_filtrado.empty:
+        st.info("No hay proyectos con las características seleccionadas.")
+    else:
+        for _, row in df_filtrado.iterrows():
+            with st.expander(row["nombre"]):
+                st.write(f"**Distrito:** {row['distrito']}")
+                st.write(f"**Tipo:** {row['tipo']}")
+                st.write(f"**Precio:** S/. {int(row['precio']):,}".replace(",", ".") )
+                st.markdown(f"[🔗 Ver proyecto en Urbania]({row['link']})", unsafe_allow_html=True)
+
+# 🗺️ Mapa interactivo (debajo / derecha visualmente)
+with col2:
+    st.subheader(f"📍 Mapa de proyectos en {distrito_seleccionado}")
     if not df_filtrado.empty:
         mapa = folium.Map(
             location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()],
@@ -74,17 +87,4 @@ with col1:
 
         st_folium(mapa, use_container_width=True, height=500)
     else:
-        st.warning("No se encontraron proyectos para los filtros seleccionados.")
-
-# 🧱 Lista de proyectos
-with col2:
-    st.subheader("🏗️ Proyectos Disponibles")
-    if df_filtrado.empty:
-        st.info("No hay proyectos con las características seleccionadas.")
-    else:
-        for _, row in df_filtrado.iterrows():
-            with st.expander(row["nombre"]):
-                st.write(f"**Distrito:** {row['distrito']}")
-                st.write(f"**Tipo:** {row['tipo']}")
-                st.write(f"**Precio:** S/. {int(row['precio']):,}".replace(",", ".") )
-                st.markdown(f"[🔗 Ver proyecto en Urbania]({row['link']})", unsafe_allow_html=True)
+        st.warning("No hay ubicaciones para mostrar en el mapa.")
