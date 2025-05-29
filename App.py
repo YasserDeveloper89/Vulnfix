@@ -3,33 +3,49 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
-# Título
-st.set_page_config(page_title="Proyectos Inmobiliarios Premium", layout="wide")
-st.title("🏠 Proyectos Inmobiliarios Premium en Lima")
-st.markdown("Consulta proyectos inmobiliarios **actualizados y reales** desde el mapa y tabla interactiva.")
-
-# Cargar datos
+# Cargar los datos
 try:
     df = pd.read_json("data_urbania.json")
 except Exception as e:
     st.error(f"Error al cargar los datos: {e}")
     st.stop()
 
-# Filtro por distrito
-distritos = df["distrito"].unique()
-distrito_sel = st.selectbox("Selecciona un distrito:", sorted(distritos))
+# Verificación de columnas
+required_columns = {'nombre', 'distrito', 'lat', 'lon', 'link'}
+if not required_columns.issubset(df.columns):
+    st.error(f"El archivo de datos no contiene todas las columnas necesarias.\nSe requieren: {required_columns}\nColumnas actuales: {set(df.columns)}")
+    st.stop()
 
-df_filtrado = df[df["distrito"] == distrito_sel]
+# Interfaz
+st.set_page_config(page_title="Proyectos Inmobiliarios Premium", layout="wide")
+st.title("🏠 Proyectos Inmobiliarios Premium en Lima")
+st.markdown("Consulta propiedades actualizadas en tiempo real. Selecciona un distrito para ver los proyectos disponibles.")
+
+# Filtros
+distritos = sorted(df["distrito"].unique())
+distrito_seleccionado = st.selectbox("📍 Selecciona un distrito", distritos)
+
+# Filtrar por distrito
+df_filtrado = df[df["distrito"] == distrito_seleccionado]
 
 # Mostrar mapa
-m = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=15)
-for _, row in df_filtrado.iterrows():
-    popup = folium.Popup(f"<b>{row['nombre']}</b><br>Precio: {row['precio']}<br><a href='{row['enlace']}' target='_blank'>Ver propiedad</a>", max_width=300)
-    folium.Marker(location=[row["lat"], row["lon"]], popup=popup, icon=folium.Icon(color="blue")).add_to(m)
+if not df_filtrado.empty:
+    m = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=14)
 
-st.subheader("📍 Mapa Interactivo")
-st_folium(m, width=900, height=500)
+    for _, row in df_filtrado.iterrows():
+        folium.Marker(
+            location=[row["lat"], row["lon"]],
+            tooltip=row["nombre"],
+            popup=f"<b>{row['nombre']}</b><br><a href='{row['link']}' target='_blank'>Ver en Urbania</a>",
+            icon=folium.Icon(color="blue", icon="home"),
+        ).add_to(m)
 
-# Mostrar tabla
-st.subheader("📋 Detalles de propiedades")
-st.dataframe(df_filtrado[["nombre", "precio", "habitaciones", "área_m2", "tipo", "enlace"]], use_container_width=True)
+    st_data = st_folium(m, width=900, height=500)
+
+    st.markdown("### 📋 Detalles del distrito seleccionado")
+    st.dataframe(df_filtrado[["nombre", "link"]].rename(columns={
+        "nombre": "Nombre del Proyecto",
+        "link": "Enlace"
+    }), use_container_width=True)
+else:
+    st.warning("No se encontraron proyectos para este distrito.")
