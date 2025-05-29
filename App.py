@@ -3,48 +3,47 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
-# --- Configuración de la página ---
+# Configuración de la página
 st.set_page_config(page_title="LimaProp", layout="wide")
-
 st.title("🧭 LimaProp - Buscador de Proyectos Inmobiliarios")
 st.markdown("Explora proyectos inmobiliarios en Lima de forma interactiva.")
 
-# --- Cargar datos ---
+# Cargar datos
 try:
     df = pd.read_json("data_urbania.json")
-
-    # Verificar columnas necesarias
     required_columns = {"nombre", "distrito", "lat", "lon", "link", "precio", "tipo"}
-    if not required_columns.issubset(set(df.columns)):
+    if not required_columns.issubset(df.columns):
         st.error(f"El archivo de datos no contiene todas las columnas necesarias.\nSe requieren: {required_columns}\nColumnas actuales: {set(df.columns)}")
         st.stop()
 except Exception as e:
     st.error(f"Error al cargar los datos: {e}")
     st.stop()
 
-# --- Filtros ---
+# Filtros
 st.sidebar.header("🔎 Filtros")
 
-distritos = df["distrito"].unique()
-distrito_seleccionado = st.sidebar.selectbox("Selecciona un distrito", options=sorted(distritos))
+# Filtro de distrito (multi selección)
+distritos = sorted(df["distrito"].unique())
+distritos_seleccionados = st.sidebar.multiselect("Selecciona distritos", distritos, default=distritos)
 
-tipos_disponibles = df["tipo"].unique()
-tipo_seleccionado = st.sidebar.multiselect("Tipo de propiedad", options=sorted(tipos_disponibles), default=list(tipos_disponibles))
+# Filtro por tipo de propiedad
+tipos = sorted(df["tipo"].unique())
+tipos_seleccionados = st.sidebar.multiselect("Tipo de propiedad", tipos, default=tipos)
 
+# Filtro por rango de precios
 precio_min, precio_max = int(df["precio"].min()), int(df["precio"].max())
-rango_precios = st.sidebar.slider("Rango de precio (S/.)", min_value=precio_min, max_value=precio_max, value=(precio_min, precio_max))
+rango_precio = st.sidebar.slider("Rango de precio (S/.)", min_value=precio_min, max_value=precio_max, value=(precio_min, precio_max))
 
-# --- Aplicar filtros ---
+# Aplicar filtros
 df_filtrado = df[
-    (df["distrito"] == distrito_seleccionado) &
-    (df["tipo"].isin(tipo_seleccionado)) &
-    (df["precio"] >= rango_precios[0]) &
-    (df["precio"] <= rango_precios[1])
+    df["distrito"].isin(distritos_seleccionados) &
+    df["tipo"].isin(tipos_seleccionados) &
+    df["precio"].between(rango_precio[0], rango_precio[1])
 ]
 
-# --- Mapa interactivo ---
-st.subheader(f"📍 Proyectos en {distrito_seleccionado}")
-mapa = folium.Map(location=[-12.1, -77.03], zoom_start=13)
+# Mostrar mapa
+st.subheader("📍 Ubicación de proyectos")
+mapa = folium.Map(location=[-12.08, -77.03], zoom_start=12)
 
 for _, row in df_filtrado.iterrows():
     folium.Marker(
@@ -56,7 +55,7 @@ for _, row in df_filtrado.iterrows():
 
 st_data = st_folium(mapa, width=900, height=500)
 
-# --- Lista de resultados ---
+# Mostrar lista de proyectos
 st.subheader("📄 Lista de proyectos")
 
 if df_filtrado.empty:
@@ -64,7 +63,7 @@ if df_filtrado.empty:
 else:
     for _, row in df_filtrado.iterrows():
         with st.expander(row["nombre"]):
-            st.write(f"**Distrito:** {row['distrito']}")
-            st.write(f"**Tipo:** {row['tipo']}")
-            st.write(f"**Precio:** S/. {int(row['precio']):,}".replace(",", "."))
+            st.markdown(f"**Distrito:** {row['distrito']}")
+            st.markdown(f"**Tipo:** {row['tipo']}")
+            st.markdown(f"**Precio:** S/. {int(row['precio']):,}".replace(",", "."))
             st.markdown(f"[🔗 Ver proyecto]({row['link']})", unsafe_allow_html=True)
