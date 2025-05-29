@@ -1,0 +1,47 @@
+[
+  {
+    "nombre": "Residencial San Felipe",
+    "distrito": "San Isidro",
+    "lat": -12.1025,
+    "lon": -77.0365,
+    "direccion": "Av. Felipe 123",
+    "precio": "$250,000",
+    "link": "https://urbania.pe/inmueble/1"
+  },
+  {
+    "nombre": "Miraflores Park",
+    "distrito": "Miraflores",
+    "lat": -12.1212,
+    "lon": -77.0301,
+    "direccion": "Calle Lima 456",
+    "precio": "$180,000",
+    "link": "https://urbania.pe/inmueble/2"
+  },
+  {
+    "nombre": "Barranco View",
+    "distrito": "Barranco",
+    "lat": -12.1432,
+    "lon": -77.0202,
+    "direccion": "Malecón 789",
+    "precio": "$300,000",
+    "link": "https://urbania.pe/inmueble/3"
+  },
+  {
+    "nombre": "Surco Suites",
+    "distrito": "Santiago de Surco",
+    "lat": -12.15,
+    "lon": -76.99,
+    "direccion": "Av. Surco 1000",
+    "precio": "$220,000",
+    "link": "https://urbania.pe/inmueble/4"
+  },
+  {
+    "nombre": "Magdalena Life",
+    "distrito": "Magdalena",
+    "lat": -12.0933,
+    "lon": -77.065,
+    "direccion": "Calle Comercio 77",
+    "precio": "$210,000",
+    "link": "https://urbania.pe/inmueble/5"
+  }
+]
