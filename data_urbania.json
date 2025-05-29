@@ -1,27 +1,92 @@
 [
-  {"nombre": "Ocean View", "distrito": "Miraflores", "tipo": "Departamento", "precio": 650000, "lat": -12.121, "lon": -77.03, "link": "https://urbania.pe/ocean-view"},
-  {"nombre": "Skyline Tower", "distrito": "Miraflores", "tipo": "Proyecto", "precio": 720000, "lat": -12.118, "lon": -77.032, "link": "https://urbania.pe/skyline"},
-  {"nombre": "Miraflores Garden", "distrito": "Miraflores", "tipo": "Departamento", "precio": 550000, "lat": -12.123, "lon": -77.029, "link": "https://urbania.pe/miraflores-garden"},
-  {"nombre": "Residencial del Sol", "distrito": "Miraflores", "tipo": "Proyecto", "precio": 480000, "lat": -12.12, "lon": -77.035, "link": "https://urbania.pe/sol"},
-  {"nombre": "Lima Loft", "distrito": "Miraflores", "tipo": "Departamento", "precio": 590000, "lat": -12.125, "lon": -77.028, "link": "https://urbania.pe/loft"},
-  {"nombre": "San Isidro Central", "distrito": "San Isidro", "tipo": "Departamento", "precio": 750000, "lat": -12.098, "lon": -77.035, "link": "https://urbania.pe/sicentral"},
-  {"nombre": "Isidro Tower", "distrito": "San Isidro", "tipo": "Proyecto", "precio": 820000, "lat": -12.1, "lon": -77.036, "link": "https://urbania.pe/isidrotower"},
-  {"nombre": "Parque Business", "distrito": "San Isidro", "tipo": "Departamento", "precio": 699000, "lat": -12.099, "lon": -77.032, "link": "https://urbania.pe/parque"},
-  {"nombre": "Vista Club", "distrito": "San Isidro", "tipo": "Proyecto", "precio": 720000, "lat": -12.097, "lon": -77.03, "link": "https://urbania.pe/vistaclub"},
-  {"nombre": "Aurora Prime", "distrito": "San Isidro", "tipo": "Departamento", "precio": 690000, "lat": -12.095, "lon": -77.031, "link": "https://urbania.pe/aurora"},
-  {"nombre": "Surco Family", "distrito": "Santiago de Surco", "tipo": "Departamento", "precio": 450000, "lat": -12.142, "lon": -76.98, "link": "https://urbania.pe/surco-family"},
-  {"nombre": "Altos de Surco", "distrito": "Santiago de Surco", "tipo": "Proyecto", "precio": 470000, "lat": -12.145, "lon": -76.985, "link": "https://urbania.pe/altos-surco"},
-  {"nombre": "Surco Green", "distrito": "Santiago de Surco", "tipo": "Departamento", "precio": 500000, "lat": -12.14, "lon": -76.982, "link": "https://urbania.pe/green"},
-  {"nombre": "San Roque Life", "distrito": "Santiago de Surco", "tipo": "Proyecto", "precio": 490000, "lat": -12.143, "lon": -76.981, "link": "https://urbania.pe/san-roque"},
-  {"nombre": "Residencial Loma", "distrito": "Santiago de Surco", "tipo": "Departamento", "precio": 510000, "lat": -12.141, "lon": -76.983, "link": "https://urbania.pe/loma"},
-  {"nombre": "Malecón Barranco", "distrito": "Barranco", "tipo": "Departamento", "precio": 700000, "lat": -12.15, "lon": -77.021, "link": "https://urbania.pe/malecon"},
-  {"nombre": "Arte Barranco", "distrito": "Barranco", "tipo": "Proyecto", "precio": 740000, "lat": -12.153, "lon": -77.024, "link": "https://urbania.pe/arte"},
-  {"nombre": "Barranco Loft", "distrito": "Barranco", "tipo": "Departamento", "precio": 680000, "lat": -12.152, "lon": -77.022, "link": "https://urbania.pe/loftb"},
-  {"nombre": "Residencial Puente", "distrito": "Barranco", "tipo": "Proyecto", "precio": 660000, "lat": -12.154, "lon": -77.025, "link": "https://urbania.pe/puente"},
-  {"nombre": "Barranco View", "distrito": "Barranco", "tipo": "Departamento", "precio": 705000, "lat": -12.151, "lon": -77.02, "link": "https://urbania.pe/view"},
-  {"nombre": "Magdalena Residencial", "distrito": "Magdalena", "tipo": "Departamento", "precio": 560000, "lat": -12.089, "lon": -77.075, "link": "https://urbania.pe/mag-res"},
-  {"nombre": "Costanera One", "distrito": "Magdalena", "tipo": "Proyecto", "precio": 600000, "lat": -12.088, "lon": -77.073, "link": "https://urbania.pe/costanera"},
-  {"nombre": "Magdalena Life", "distrito": "Magdalena", "tipo": "Departamento", "precio": 540000, "lat": -12.09, "lon": -77.07, "link": "https://urbania.pe/life"},
-  {"nombre": "Riviera Magdalena", "distrito": "Magdalena", "tipo": "Proyecto", "precio": 580000, "lat": -12.087, "lon": -77.072, "link": "https://urbania.pe/riviera"},
-  {"nombre": "Magdalena Park", "distrito": "Magdalena", "tipo": "Departamento", "precio": 610000, "lat": -12.091, "lon": -77.074, "link": "https://urbania.pe/park"}
+  {
+    "nombre": "Residencial El Parque",
+    "distrito": "Miraflores",
+    "lat": -12.1215,
+    "lon": -77.0301,
+    "link": "https://ejemplo.com/miraflores1",
+    "precio": 460000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Torre Pacific",
+    "distrito": "Miraflores",
+    "lat": -12.1255,
+    "lon": -77.0281,
+    "link": "https://ejemplo.com/miraflores2",
+    "precio": 520000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Vista Verde",
+    "distrito": "San Isidro",
+    "lat": -12.0995,
+    "lon": -77.0362,
+    "link": "https://ejemplo.com/sanisidro1",
+    "precio": 680000,
+    "tipo": "Penthouse"
+  },
+  {
+    "nombre": "Edificio Aurora",
+    "distrito": "San Isidro",
+    "lat": -12.0980,
+    "lon": -77.0379,
+    "link": "https://ejemplo.com/sanisidro2",
+    "precio": 740000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Ocean Bay",
+    "distrito": "Barranco",
+    "lat": -12.1456,
+    "lon": -77.0212,
+    "link": "https://ejemplo.com/barranco1",
+    "precio": 510000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Terrazas del Mar",
+    "distrito": "Barranco",
+    "lat": -12.1431,
+    "lon": -77.0223,
+    "link": "https://ejemplo.com/barranco2",
+    "precio": 495000,
+    "tipo": "Loft"
+  },
+  {
+    "nombre": "Central Living",
+    "distrito": "Lince",
+    "lat": -12.0821,
+    "lon": -77.0422,
+    "link": "https://ejemplo.com/lince1",
+    "precio": 395000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Parque Norte",
+    "distrito": "Lince",
+    "lat": -12.0842,
+    "lon": -77.0440,
+    "link": "https://ejemplo.com/lince2",
+    "precio": 415000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Altos de Surco",
+    "distrito": "Santiago de Surco",
+    "lat": -12.1354,
+    "lon": -76.9900,
+    "link": "https://ejemplo.com/surco1",
+    "precio": 480000,
+    "tipo": "Dúplex"
+  },
+  {
+    "nombre": "Surco Gardens",
+    "distrito": "Santiago de Surco",
+    "lat": -12.1370,
+    "lon": -76.9923,
+    "link": "https://ejemplo.com/surco2",
+    "precio": 500000,
+    "tipo": "Departamento"
+  }
 ]
