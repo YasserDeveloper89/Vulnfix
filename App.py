@@ -2,10 +2,8 @@ import streamlit as st
 import pandas as pd
 import folium
 from streamlit_folium import st_folium
-from bs4 import BeautifulSoup
-import requests
 
-# Configuración de la página
+# Configuración inicial de la página
 st.set_page_config(page_title="LimaProp - Proyectos Inmobiliarios", layout="wide")
 
 # Título principal
@@ -27,16 +25,17 @@ st.sidebar.header("📍 Filtrar proyectos")
 zonas = sorted(df["distrito"].dropna().unique())
 zona_seleccionada = st.sidebar.selectbox("Selecciona una zona:", ["Seleccionar"] + zonas)
 
-# Mostrar resultados si se elige una zona
+# Mostrar resultados si se ha seleccionado una zona
 if zona_seleccionada != "Seleccionar":
     proyectos_filtrados = df[df["distrito"] == zona_seleccionada]
 
     st.subheader(f"🏘️ Proyectos disponibles en {zona_seleccionada}")
-    for _, row in proyectos_filtrados.iterrows():
-        with st.container():
+    cols = st.columns(2)
+    for i, (_, row) in enumerate(proyectos_filtrados.iterrows()):
+        with cols[i % 2]:
             st.markdown(f"### {row['titulo']}")
             st.markdown(f"- **Tipo:** {row['tipo']}")
-            st.markdown(f"- **Precio:** {row['precio']}")  
+            st.markdown(f"- **Precio:** {row['precio']}")
             st.markdown(f"- **Ubicación:** {row['distrito']}")
             st.markdown("---")
 
@@ -53,29 +52,15 @@ if zona_seleccionada != "Seleccionar":
 
     st_folium(mapa, width=700, height=500)
 
-# Noticias para llenar espacio vacío
-st.markdown("---")
-st.subheader("📰 Noticias recientes sobre el mercado inmobiliario en Perú")
-
-def obtener_noticias():
-    url = "https://gestion.pe/economia/inmobiliaria/"
-    try:
-        page = requests.get(url, timeout=10)
-        soup = BeautifulSoup(page.content, "html.parser")
-        noticias = soup.find_all("div", class_="story-item__content")
-        noticias_data = []
-        for noticia in noticias[:5]:
-            titulo = noticia.find("a").get_text(strip=True)
-            link = noticia.find("a")["href"]
-            noticias_data.append((titulo, "https://gestion.pe" + link))
-        return noticias_data
-    except Exception as e:
-        return [("No se pudieron cargar noticias en este momento.", "#")]
-
-noticias = obtener_noticias()
-for titulo, enlace in noticias:
-    st.markdown(f"- [{titulo}]({enlace})")
-
-# Espacio final ajustado para evitar espacios vacíos excesivos
-st.markdown("<style>footer {visibility: hidden;}</style>", unsafe_allow_html=True)
-st.markdown("<br><br>", unsafe_allow_html=True)
+# Eliminar espacio vacío extra
+st.markdown(
+    """
+    <style>
+    .block-container {
+        padding-bottom: 0rem !important;
+    }
+    footer {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
