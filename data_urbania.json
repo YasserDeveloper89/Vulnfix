@@ -1,143 +1,145 @@
 [
+  // ... [Aquí van los proyectos de Miraflores y San Isidro que ya tienes]
+
   {
-    "nombre": "Residencial El Sol de Miraflores",
-    "distrito": "Miraflores",
-    "lat": -12.1214,
-    "lon": -77.0305,
-    "link": "https://urbania.pe/proyecto/miraflores-1"
+    "nombre": "Residencial Surco Verde",
+    "distrito": "Surco",
+    "lat": -12.1490,
+    "lon": -76.9812,
+    "link": "https://urbania.pe/proyecto/surco-1"
   },
   {
-    "nombre": "Ocean View Miraflores",
-    "distrito": "Miraflores",
-    "lat": -12.1223,
-    "lon": -77.0312,
-    "link": "https://urbania.pe/proyecto/miraflores-2"
+    "nombre": "Altos del Higuereta",
+    "distrito": "Surco",
+    "lat": -12.1532,
+    "lon": -76.9804,
+    "link": "https://urbania.pe/proyecto/surco-2"
   },
   {
-    "nombre": "Torre Pacífico",
-    "distrito": "Miraflores",
-    "lat": -12.1198,
-    "lon": -77.0287,
-    "link": "https://urbania.pe/proyecto/miraflores-3"
+    "nombre": "Condominio La Encalada",
+    "distrito": "Surco",
+    "lat": -12.1515,
+    "lon": -76.9788,
+    "link": "https://urbania.pe/proyecto/surco-3"
   },
   {
-    "nombre": "Parque Kennedy Flats",
-    "distrito": "Miraflores",
-    "lat": -12.1220,
-    "lon": -77.0290,
-    "link": "https://urbania.pe/proyecto/miraflores-4"
+    "nombre": "Jardines del Sur",
+    "distrito": "Surco",
+    "lat": -12.1472,
+    "lon": -76.9755,
+    "link": "https://urbania.pe/proyecto/surco-4"
   },
   {
-    "nombre": "Vista Mar Residencial",
-    "distrito": "Miraflores",
-    "lat": -12.1189,
-    "lon": -77.0275,
-    "link": "https://urbania.pe/proyecto/miraflores-5"
+    "nombre": "Surco Garden Towers",
+    "distrito": "Surco",
+    "lat": -12.1504,
+    "lon": -76.9820,
+    "link": "https://urbania.pe/proyecto/surco-5"
   },
   {
-    "nombre": "Luxury Flats",
-    "distrito": "Miraflores",
-    "lat": -12.1175,
-    "lon": -77.0298,
-    "link": "https://urbania.pe/proyecto/miraflores-6"
+    "nombre": "Vive Surco Condominio",
+    "distrito": "Surco",
+    "lat": -12.1529,
+    "lon": -76.9844,
+    "link": "https://urbania.pe/proyecto/surco-6"
   },
   {
-    "nombre": "Condominio Pacífico Azul",
-    "distrito": "Miraflores",
-    "lat": -12.1203,
-    "lon": -77.0320,
-    "link": "https://urbania.pe/proyecto/miraflores-7"
+    "nombre": "Condominio El Trigal",
+    "distrito": "Surco",
+    "lat": -12.1498,
+    "lon": -76.9809,
+    "link": "https://urbania.pe/proyecto/surco-7"
   },
   {
-    "nombre": "Altos de Larcomar",
-    "distrito": "Miraflores",
-    "lat": -12.1244,
-    "lon": -77.0340,
-    "link": "https://urbania.pe/proyecto/miraflores-8"
+    "nombre": "Parque Surco Urbano",
+    "distrito": "Surco",
+    "lat": -12.1461,
+    "lon": -76.9777,
+    "link": "https://urbania.pe/proyecto/surco-8"
   },
   {
-    "nombre": "Veranda Park",
-    "distrito": "Miraflores",
-    "lat": -12.1229,
-    "lon": -77.0268,
-    "link": "https://urbania.pe/proyecto/miraflores-9"
+    "nombre": "Vista Sur Loft",
+    "distrito": "Surco",
+    "lat": -12.1487,
+    "lon": -76.9762,
+    "link": "https://urbania.pe/proyecto/surco-9"
   },
   {
-    "nombre": "EcoVista Residencias",
-    "distrito": "Miraflores",
-    "lat": -12.1210,
-    "lon": -77.0255,
-    "link": "https://urbania.pe/proyecto/miraflores-10"
+    "nombre": "Lofts de Primavera",
+    "distrito": "Surco",
+    "lat": -12.1500,
+    "lon": -76.9799,
+    "link": "https://urbania.pe/proyecto/surco-10"
   },
 
   {
-    "nombre": "Residencial Golf View",
-    "distrito": "San Isidro",
-    "lat": -12.0972,
-    "lon": -77.0370,
-    "link": "https://urbania.pe/proyecto/sanisidro-1"
+    "nombre": "Residencial San Borja Norte",
+    "distrito": "San Borja",
+    "lat": -12.1020,
+    "lon": -76.9965,
+    "link": "https://urbania.pe/proyecto/sanborja-1"
   },
   {
-    "nombre": "Business Park Lofts",
-    "distrito": "San Isidro",
-    "lat": -12.0965,
-    "lon": -77.0391,
-    "link": "https://urbania.pe/proyecto/sanisidro-2"
+    "nombre": "Torres del Pentagonito",
+    "distrito": "San Borja",
+    "lat": -12.1002,
+    "lon": -76.9941,
+    "link": "https://urbania.pe/proyecto/sanborja-2"
   },
   {
-    "nombre": "Edificio Los Álamos",
-    "distrito": "San Isidro",
-    "lat": -12.0981,
-    "lon": -77.0355,
-    "link": "https://urbania.pe/proyecto/sanisidro-3"
+    "nombre": "San Borja Life",
+    "distrito": "San Borja",
+    "lat": -12.1045,
+    "lon": -76.9950,
+    "link": "https://urbania.pe/proyecto/sanborja-3"
   },
   {
-    "nombre": "Torre Ejecutiva Plus",
-    "distrito": "San Isidro",
+    "nombre": "Eco San Borja",
+    "distrito": "San Borja",
+    "lat": -12.1011,
+    "lon": -76.9934,
+    "link": "https://urbania.pe/proyecto/sanborja-4"
+  },
+  {
+    "nombre": "Condominio Primavera Borja",
+    "distrito": "San Borja",
     "lat": -12.0990,
-    "lon": -77.0364,
-    "link": "https://urbania.pe/proyecto/sanisidro-4"
+    "lon": -76.9920,
+    "link": "https://urbania.pe/proyecto/sanborja-5"
   },
   {
-    "nombre": "Sky High San Isidro",
-    "distrito": "San Isidro",
-    "lat": -12.0978,
-    "lon": -77.0342,
-    "link": "https://urbania.pe/proyecto/sanisidro-5"
+    "nombre": "Altos del Pentagonito",
+    "distrito": "San Borja",
+    "lat": -12.0988,
+    "lon": -76.9904,
+    "link": "https://urbania.pe/proyecto/sanborja-6"
   },
   {
-    "nombre": "Paseo de la República Flats",
-    "distrito": "San Isidro",
-    "lat": -12.0950,
-    "lon": -77.0331,
-    "link": "https://urbania.pe/proyecto/sanisidro-6"
+    "nombre": "Vista Pentagonito",
+    "distrito": "San Borja",
+    "lat": -12.1023,
+    "lon": -76.9897,
+    "link": "https://urbania.pe/proyecto/sanborja-7"
   },
   {
-    "nombre": "Central Park Residences",
-    "distrito": "San Isidro",
-    "lat": -12.0944,
-    "lon": -77.0320,
-    "link": "https://urbania.pe/proyecto/sanisidro-7"
+    "nombre": "Veranda San Borja",
+    "distrito": "San Borja",
+    "lat": -12.1007,
+    "lon": -76.9915,
+    "link": "https://urbania.pe/proyecto/sanborja-8"
   },
   {
-    "nombre": "Horizonte Urbano",
-    "distrito": "San Isidro",
-    "lat": -12.0935,
-    "lon": -77.0310,
-    "link": "https://urbania.pe/proyecto/sanisidro-8"
+    "nombre": "Park View Borja",
+    "distrito": "San Borja",
+    "lat": -12.1036,
+    "lon": -76.9883,
+    "link": "https://urbania.pe/proyecto/sanborja-9"
   },
   {
-    "nombre": "Capital Towers",
-    "distrito": "San Isidro",
-    "lat": -12.0920,
-    "lon": -77.0305,
-    "link": "https://urbania.pe/proyecto/sanisidro-9"
-  },
-  {
-    "nombre": "Green Loft San Isidro",
-    "distrito": "San Isidro",
-    "lat": -12.0901,
-    "lon": -77.0300,
-    "link": "https://urbania.pe/proyecto/sanisidro-10"
+    "nombre": "Condominio Sur Este",
+    "distrito": "San Borja",
+    "lat": -12.1050,
+    "lon": -76.9901,
+    "link": "https://urbania.pe/proyecto/sanborja-10"
   }
 ]
