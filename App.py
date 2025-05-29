@@ -3,7 +3,7 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
-Configuración de la página
+# Configuración de la página
 
 st.set_page_config(page_title="LimaProp - Buscador de Proyectos Inmobiliarios", layout="wide")
 
