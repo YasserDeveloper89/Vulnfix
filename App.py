@@ -25,7 +25,7 @@ except Exception as e:
 # Sidebar con filtros
 with st.sidebar:
     st.header("🔎 Filtros")
-    
+
     distritos_disponibles = sorted(df["distrito"].unique())
     distrito_seleccionado = st.selectbox("Selecciona un distrito", options=distritos_disponibles)
 
@@ -44,10 +44,9 @@ df_filtrado = df[
     (df["precio"] <= rango_precios[1])
 ]
 
-# Layout en columnas
-col1, col2 = st.columns([1, 1.5])
+# Layout: mapa y lista al mismo nivel
+col1, col2 = st.columns([1, 1.5], gap="large")
 
-# Mapa de proyectos
 with col1:
     st.subheader(f"📍 Mapa de proyectos en {distrito_seleccionado}")
     if not df_filtrado.empty:
@@ -63,15 +62,14 @@ with col1:
     else:
         st.info("No hay proyectos para mostrar en el mapa.")
 
-# Lista de proyectos
 with col2:
-    st.subheader("📄 Lista de Proyectos")
+    st.subheader("🏗️ Proyectos Disponibles")
     if df_filtrado.empty:
         st.warning("No se encontraron proyectos para los filtros seleccionados.")
     else:
         for _, row in df_filtrado.iterrows():
             with st.expander(row["nombre"]):
-                st.write(f"**Distrito:** {row['distrito']}")
-                st.write(f"**Tipo:** {row['tipo']}")
-                st.write(f"**Precio:** S/. {int(row['precio']):,}".replace(",", "."))
+                st.markdown(f"**Distrito:** {row['distrito']}")
+                st.markdown(f"**Tipo:** {row['tipo']}")
+                st.markdown(f"**Precio:** S/. {int(row['precio']):,}".replace(",", "."))
                 st.markdown(f"[🔗 Ver proyecto en Urbania]({row['link']})", unsafe_allow_html=True)
