@@ -3,21 +3,16 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
-# Configuración de página (¡SIEMPRE lo primero!)
 st.set_page_config(page_title="LimaProp", layout="wide")
 
-# Estilos para eliminar espacio inferior
+# Estilos para quitar espacio final
 st.markdown("""
     <style>
-    .block-container {
-        padding-bottom: 0rem !important;
-    }
-    .main > div:has(.stButton) {
-        margin-bottom: 0rem !important;
-    }
-    footer, .st-emotion-cache-z5fcl4 {
-        display: none;
-    }
+        .block-container {
+            padding-bottom: 0rem !important;
+        }
+        footer, .st-emotion-cache-z5fcl4 { display: none; }
+        iframe { margin-bottom: -30px !important; }
     </style>
 """, unsafe_allow_html=True)
 
@@ -37,64 +32,56 @@ except Exception as e:
 # Sidebar
 with st.sidebar:
     st.header("🔎 Filtros")
+    distrito = st.selectbox("Selecciona un distrito:", options=[""] + sorted(df["distrito"].unique()))
+    tipos = st.multiselect("Tipo de propiedad:", options=sorted(df["tipo"].unique()), default=sorted(df["tipo"].unique()))
+    precio_min, precio_max = st.slider("Rango de precios (S/.)",
+                                       int(df["precio"].min()), int(df["precio"].max()),
+                                       (int(df["precio"].min()), int(df["precio"].max())))
 
-    distrito_seleccionado = st.selectbox("Selecciona un distrito:",
-                                         options=[""] + sorted(df["distrito"].unique()))
-
-    tipo_seleccionado = st.multiselect(
-        "Tipo de propiedad:",
-        options=sorted(df["tipo"].unique()),
-        default=sorted(df["tipo"].unique())
-    )
-
-    rango_precios = st.slider(
-        "Rango de precios (S/.)",
-        min_value=int(df["precio"].min()),
-        max_value=int(df["precio"].max()),
-        value=(int(df["precio"].min()), int(df["precio"].max()))
-    )
-
-# Mostrar resultados sólo si se selecciona distrito
-if distrito_seleccionado:
-    df_filtrado = df[
-        (df["distrito"] == distrito_seleccionado) &
-        (df["tipo"].isin(tipo_seleccionado)) &
-        (df["precio"] >= rango_precios[0]) &
-        (df["precio"] <= rango_precios[1])
+# Mostrar resultados solo si se ha seleccionado un distrito
+if distrito:
+    resultados = df[
+        (df["distrito"] == distrito) &
+        (df["tipo"].isin(tipos)) &
+        (df["precio"] >= precio_min) &
+        (df["precio"] <= precio_max)
     ]
 
     st.subheader("🏘️ Proyectos disponibles")
-    if df_filtrado.empty:
+    if resultados.empty:
         st.warning("No se encontraron proyectos con los filtros seleccionados.")
     else:
         cols = st.columns(2)
-        for i, (_, row) in enumerate(df_filtrado.iterrows()):
+        for i, (_, row) in enumerate(resultados.iterrows()):
             with cols[i % 2]:
                 st.markdown(f"""
                     <div style="background: white; padding: 20px; border-radius: 12px;
                                 box-shadow: 0 4px 8px rgba(0,0,0,0.05); margin-bottom: 20px;
                                 border: 1px solid #eee;">
                         <h4 style="margin: 0 0 8px 0;">{row['nombre']}</h4>
-                        <p style="margin: 4px 0;"><strong>Distrito:</strong> {row['distrito']}</p>
-                        <p style="margin: 4px 0;"><strong>Tipo:</strong> {row['tipo']}</p>
-                        <p style="margin: 4px 0;"><strong>Precio:</strong> S/. {int(row['precio']):,}".replace(",", ".")</p>
-                        <a href="{row['link']}" target="_blank" style="color: white; background: #0066cc;
-                           padding: 6px 12px; border-radius: 6px; text-decoration: none;">🔗 Ver proyecto</a>
+                        <p><strong>Distrito:</strong> {row['distrito']}</p>
+                        <p><strong>Tipo:</strong> {row['tipo']}</p>
+                        <p><strong>Precio:</strong> S/. {int(row['precio']):,}".replace(",", ".")</p>
+                        <a href="{row['link']}" target="_blank"
+                           style="color: white; background: #0066cc;
+                           padding: 6px 12px; border-radius: 6px;
+                           text-decoration: none;">🔗 Ver proyecto</a>
                     </div>
                 """, unsafe_allow_html=True)
 
+        # Mapa solo si hay proyectos
         st.subheader("🗺️ Mapa de proyectos")
-        mapa = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=14)
+        map_container = st.container()
+        with map_container:
+            m = folium.Map(location=[resultados["lat"].mean(), resultados["lon"].mean()], zoom_start=14)
+            for _, row in resultados.iterrows():
+                folium.Marker(
+                    location=[row["lat"], row["lon"]],
+                    popup=f"<b>{row['nombre']}</b><br><a href='{row['link']}' target='_blank'>Ver más</a>",
+                    tooltip=row["nombre"],
+                    icon=folium.Icon(color="blue", icon="home")
+                ).add_to(m)
+            st_folium(m, height=400, use_container_width=True)
 
-        for _, row in df_filtrado.iterrows():
-            folium.Marker(
-                location=[row["lat"], row["lon"]],
-                popup=f"<b>{row['nombre']}</b><br><a href='{row['link']}' target='_blank'>Ver más</a>",
-                tooltip=row["nombre"],
-                icon=folium.Icon(color="blue", icon="home")
-            ).add_to(mapa)
-
-        st_folium(mapa, use_container_width=True, height=500)
-
-# Div para terminar sin espacio sobrante
-st.markdown("<div style='height: 1px;'></div>", unsafe_allow_html=True)
+# Cierre para evitar espacio vacío
+st.markdown("<style>body::after {content:'';display:block;height:1px;}</style>", unsafe_allow_html=True)
