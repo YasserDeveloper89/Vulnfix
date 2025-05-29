@@ -1,50 +1,110 @@
-import streamlit as st import pandas as pd import folium from streamlit_folium import st_folium
+import streamlit as st
+import pandas as pd
+import folium
+from streamlit_folium import st_folium
+import requests
+from bs4 import BeautifulSoup
 
-Configuración de la página
-
+# 🔧 Configuración inicial de la página
 st.set_page_config(page_title="LimaProp", layout="wide")
 
-Título de la aplicación
+# 🏙️ Título
+st.title("🏙️ LimaProp - Buscador de Proyectos Inmobiliarios")
+st.markdown("Explora proyectos inmobiliarios por zona, tipo y precio en Lima Metropolitana.")
 
-st.title("LimaProp - Buscador de Proyectos Inmobiliarios") st.markdown("Explora proyectos inmobiliarios en Lima de forma interactiva.")
+# 📁 Cargar datos
+try:
+    df = pd.read_json("data_urbania.json")
+    df["distrito"] = df["distrito"].astype(str).str.strip().str.title()
+    df["tipo"] = df["tipo"].astype(str).str.strip().str.title()
+except Exception as e:
+    st.error(f"Error al cargar el archivo JSON: {e}")
+    st.stop()
 
-Cargar datos
+# 🎛️ Sidebar: filtros
+with st.sidebar:
+    st.header("🔎 Filtros")
 
-try: df = pd.read_json("data_urbania.json") df["distrito"] = df["distrito"].astype(str).str.strip().str.title() df["tipo"] = df["tipo"].astype(str).str.strip().str.title() except Exception as e: st.error(f"Error al cargar el archivo JSON: {e}") st.stop()
+    distrito_seleccionado = st.selectbox(
+        "Selecciona un distrito:",
+        options=sorted(df["distrito"].unique())
+    )
 
-Menú de selección de distrito
+    tipos_disponibles = sorted(df["tipo"].unique())
+    tipo_seleccionado = st.multiselect(
+        "Tipo de propiedad:",
+        options=tipos_disponibles,
+        default=tipos_disponibles
+    )
 
-distritos = ["Seleccione un distrito"] + sorted(df["distrito"].unique()) distrito_seleccionado = st.selectbox("Selecciona un distrito", distritos)
+    precio_min = int(df["precio"].min())
+    precio_max = int(df["precio"].max())
+    rango_precios = st.slider(
+        "Rango de precios (S/.)",
+        min_value=precio_min,
+        max_value=precio_max,
+        value=(precio_min, precio_max)
+    )
 
-if distrito_seleccionado != "Seleccione un distrito": proyectos_filtrados = df[df["distrito"] == distrito_seleccionado]
+# 📊 Aplicar filtros
+df_filtrado = df[
+    (df["distrito"] == distrito_seleccionado) &
+    (df["tipo"].isin(tipo_seleccionado)) &
+    (df["precio"] >= rango_precios[0]) &
+    (df["precio"] <= rango_precios[1])
+]
 
-st.subheader("🏢 Proyectos Disponibles")
-for _, row in proyectos_filtrados.iterrows():
-    with st.container():
-        st.markdown(f"### [{row['nombre']}]({row['link']})")
-        st.markdown(f"**Distrito:** {row['distrito']}  |  **Precio:** ${row['precio']:,.0f}  |  **Tipo:** {row['tipo']}")
-        st.markdown("---")
+# 🧱 Distribución en columnas
+col1, col2 = st.columns([1.2, 1])
 
-# Crear el mapa
-mapa = folium.Map(location=[proyectos_filtrados["lat"].mean(), proyectos_filtrados["lon"].mean()], zoom_start=14)
+with col1:
+    st.subheader("📄 Proyectos disponibles")
+    if df_filtrado.empty:
+        st.warning("No se encontraron proyectos para los filtros seleccionados.")
+    else:
+        for _, row in df_filtrado.iterrows():
+            with st.container():
+                st.markdown(f"### {row['nombre']}")
+                st.markdown(f"- **Distrito:** {row['distrito']}")
+                st.markdown(f"- **Tipo:** {row['tipo']}")
+                st.markdown(f"- **Precio:** S/. {int(row['precio']):,}".replace(",", "."))
+                st.markdown(f"[🔗 Ver proyecto en Urbania]({row['link']})", unsafe_allow_html=True)
+                st.markdown("---")
 
-for _, row in proyectos_filtrados.iterrows():
-    folium.Marker(
-        location=[row["lat"], row["lon"]],
-        popup=f"<b>{row['nombre']}</b><br>{row['distrito']}<br>${row['precio']:,.0f}",
-        tooltip=row["nombre"]
-    ).add_to(mapa)
+with col2:
+    st.subheader("🗺️ Mapa de proyectos")
+    if not df_filtrado.empty:
+        mapa = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=14)
+        for _, row in df_filtrado.iterrows():
+            folium.Marker(
+                location=[row["lat"], row["lon"]],
+                popup=f"<strong>{row['nombre']}</strong><br><a href='{row['link']}' target='_blank'>Ver proyecto</a>",
+                tooltip=row["nombre"],
+                icon=folium.Icon(color="blue", icon="home")
+            ).add_to(mapa)
+        st_folium(mapa, use_container_width=True, height=500)
 
-st.subheader("🗺️ Mapa de Proyectos")
-st_data = st_folium(mapa, width=1000, height=500)
+# 📰 Noticias inmobiliarias (relleno del espacio)
+st.markdown("## 📰 Noticias del sector inmobiliario en Lima")
+try:
+    noticias = []
+    url = "https://gestion.pe/economia/inmobiliaria/"
+    response = requests.get(url, timeout=10)
+    soup = BeautifulSoup(response.content, "html.parser")
+    titulares = soup.select("h2 a")[:3]  # Primeros 3 titulares
 
-Noticias Inmobiliarias para rellenar espacio vacío
+    for link in titulares:
+        titulo = link.get_text(strip=True)
+        href = link["href"]
+        noticias.append((titulo, href))
 
-st.subheader("📰 Noticias Inmobiliarias Recientes") noticias = [ { "titulo": "Ventas de viviendas en Lima crecieron 30% en el primer trimestre de 2025", "resumen": "El mercado inmobiliario de Lima Metropolitana experimentó un crecimiento notable durante 2024, con un aumento del 30% en las ventas de unidades habitacionales en comparación con el año anterior.", "enlace": "https://gestion.pe/tu-dinero/inmobiliarias/ventas-de-viviendas-en-lima-crecieron-30-en-primer-trimestre-del-2025-noticia/" }, { "titulo": "Perú en la mira de inmobiliarias chilenas con inversiones por US$ 200 millones en 2025", "resumen": "Con el mercado inmobiliario de Chile en desaceleración, varias empresas de ese país están profundizando su expansión hacia Perú.", "enlace": "https://gestion.pe/economia/empresas/peru-es-ahora-destino-de-inmobiliarias-chilenas-con-inversiones-por-us-200-millones-noticia/" }, { "titulo": "Estos son los distritos de Lima que concentran la mayor demanda inmobiliaria", "resumen": "El precio más buscado por los compradores en ferias fluctúa entre S/300.000 y S/400.000, mientras que los departamentos de tres habitaciones lideran las preferencias.", "enlace": "https://larepublica.pe/economia/2025/05/17/estos-son-los-distritos-de-lima-que-concentran-la-mayor-demanda-inmobiliaria-segun-urbania-hnews-915518" } ]
+    for titulo, enlace in noticias:
+        st.markdown(f"🔗 [{titulo}]({enlace})")
+except Exception as e:
+    st.info("No se pudieron cargar las noticias en este momento.")
 
-for noticia in noticias: st.markdown(f"{noticia['titulo']}") st.write(noticia['resumen']) st.markdown(f"Leer más") st.markdown("---")
-
-Footer personalizado
-
-st.markdown(""" <style> footer { visibility: hidden; } .footer-container { font-size: 0.9rem; text-align: center; color: #999; padding: 20px 0; } </style> <div class="footer-container"> © 2025 LimaProp - Todos los derechos reservados </div> """, unsafe_allow_html=True)
-
+# 🦶 Footer profesional
+st.markdown("""<hr style="margin-top:50px;">
+<div style='text-align: center; color: gray; font-size: 0.9em;'>
+    LimaProp © 2025 - Todos los derechos reservados. | Diseñado para explorar proyectos en Lima.
+</div>""", unsafe_allow_html=True)
