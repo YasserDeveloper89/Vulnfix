@@ -1,285 +1,107 @@
 [
   {
-    "nombre": "Residencial Pardo 700",
-    "distrito": "Miraflores",
-    "lat": -12.1215,
-    "lon": -77.0301,
-    "link": "https://urbania.pe/proyecto-residencial-pardo-700"
-  },
-  {
-    "nombre": "Edificio Ocean View",
-    "distrito": "Miraflores",
-    "lat": -12.1201,
-    "lon": -77.0332,
-    "link": "https://urbania.pe/proyecto-edificio-ocean-view"
-  },
-  {
-    "nombre": "Condominio Del Mar",
-    "distrito": "Miraflores",
-    "lat": -12.1189,
-    "lon": -77.0289,
-    "link": "https://urbania.pe/proyecto-condominio-del-mar"
-  },
-  {
-    "nombre": "Parque Kennedy Towers",
-    "distrito": "Miraflores",
-    "lat": -12.1208,
-    "lon": -77.0293,
-    "link": "https://urbania.pe/proyecto-parque-kennedy-towers"
-  },
-  {
-    "nombre": "San Fernando 120",
-    "distrito": "Miraflores",
-    "lat": -12.1212,
-    "lon": -77.0275,
-    "link": "https://urbania.pe/proyecto-san-fernando-120"
-  },
-  {
-    "nombre": "Residencial Pacific",
-    "distrito": "Miraflores",
-    "lat": -12.1230,
-    "lon": -77.0321,
-    "link": "https://urbania.pe/proyecto-residencial-pacific"
-  },
-  {
-    "nombre": "Green Park",
-    "distrito": "Miraflores",
-    "lat": -12.1224,
-    "lon": -77.0342,
-    "link": "https://urbania.pe/proyecto-green-park"
-  },
-  {
-    "nombre": "Vía Parque",
-    "distrito": "Miraflores",
-    "lat": -12.1198,
-    "lon": -77.0314,
-    "link": "https://urbania.pe/proyecto-via-parque"
-  },
-  {
-    "nombre": "Miraflores Central",
-    "distrito": "Miraflores",
-    "lat": -12.1221,
-    "lon": -77.0308,
-    "link": "https://urbania.pe/proyecto-miraflores-central"
-  },
-  {
-    "nombre": "Condominio Larcomar",
-    "distrito": "Miraflores",
-    "lat": -12.1265,
-    "lon": -77.0309,
-    "link": "https://urbania.pe/proyecto-condominio-larcomar"
-  },
-
-  {
-    "nombre": "Residencial Golf",
+    "nombre": "Torre San Isidro Plaza",
     "distrito": "San Isidro",
-    "lat": -12.0950,
-    "lon": -77.0368,
-    "link": "https://urbania.pe/proyecto-residencial-golf"
+    "lat": -12.0975,
+    "lon": -77.0365,
+    "link": "https://urbania.pe/proyecto/torre-san-isidro-plaza"
   },
   {
-    "nombre": "Edificio Pezet",
+    "nombre": "Residencial El Bosque",
     "distrito": "San Isidro",
-    "lat": -12.0956,
-    "lon": -77.0385,
-    "link": "https://urbania.pe/proyecto-edificio-pezet"
-  },
-  {
-    "nombre": "Condominio El Bosque",
-    "distrito": "San Isidro",
-    "lat": -12.0964,
-    "lon": -77.0332,
-    "link": "https://urbania.pe/proyecto-el-bosque"
-  },
-  {
-    "nombre": "Vista Golf",
-    "distrito": "San Isidro",
-    "lat": -12.0942,
-    "lon": -77.0370,
-    "link": "https://urbania.pe/proyecto-vista-golf"
-  },
-  {
-    "nombre": "Lux Garden",
-    "distrito": "San Isidro",
-    "lat": -12.0931,
-    "lon": -77.0360,
-    "link": "https://urbania.pe/proyecto-lux-garden"
-  },
-  {
-    "nombre": "Residencial Asturias",
-    "distrito": "San Isidro",
-    "lat": -12.0945,
+    "lat": -12.0982,
     "lon": -77.0352,
-    "link": "https://urbania.pe/proyecto-asturias"
+    "link": "https://urbania.pe/proyecto/residencial-el-bosque"
   },
   {
-    "nombre": "San Isidro Elite",
+    "nombre": "Condominio Golf Park",
     "distrito": "San Isidro",
     "lat": -12.0968,
-    "lon": -77.0327,
-    "link": "https://urbania.pe/proyecto-san-isidro-elite"
+    "lon": -77.0339,
+    "link": "https://urbania.pe/proyecto/condominio-golf-park"
   },
   {
-    "nombre": "Altos de Pezet",
+    "nombre": "Edificio Lima View",
     "distrito": "San Isidro",
-    "lat": -12.0957,
-    "lon": -77.0341,
-    "link": "https://urbania.pe/proyecto-altos-pezet"
+    "lat": -12.0993,
+    "lon": -77.0381,
+    "link": "https://urbania.pe/proyecto/edificio-lima-view"
   },
   {
-    "nombre": "Golf Premier",
+    "nombre": "Vivienda Los Robles",
     "distrito": "San Isidro",
-    "lat": -12.0972,
-    "lon": -77.0375,
-    "link": "https://urbania.pe/proyecto-golf-premier"
+    "lat": -12.1001,
+    "lon": -77.0377,
+    "link": "https://urbania.pe/proyecto/vivienda-los-robles"
   },
   {
-    "nombre": "Residencial Belgrado",
-    "distrito": "San Isidro",
-    "lat": -12.0937,
-    "lon": -77.0335,
-    "link": "https://urbania.pe/proyecto-belgrado"
+    "nombre": "Edificio Ocean Miraflores",
+    "distrito": "Miraflores",
+    "lat": -12.1201,
+    "lon": -77.0302,
+    "link": "https://urbania.pe/proyecto/edificio-ocean-miraflores"
   },
-
   {
-    "nombre": "Malecón 28 de Julio",
+    "nombre": "Torre Mar Azul",
+    "distrito": "Miraflores",
+    "lat": -12.1192,
+    "lon": -77.0328,
+    "link": "https://urbania.pe/proyecto/torre-mar-azul"
+  },
+  {
+    "nombre": "Condominio Pacifico Sur",
+    "distrito": "Miraflores",
+    "lat": -12.1214,
+    "lon": -77.0299,
+    "link": "https://urbania.pe/proyecto/condominio-pacifico-sur"
+  },
+  {
+    "nombre": "Vivienda Miramar",
+    "distrito": "Miraflores",
+    "lat": -12.1231,
+    "lon": -77.0285,
+    "link": "https://urbania.pe/proyecto/vivienda-miramar"
+  },
+  {
+    "nombre": "Residencial Las Palmas",
+    "distrito": "Miraflores",
+    "lat": -12.1223,
+    "lon": -77.0310,
+    "link": "https://urbania.pe/proyecto/residencial-las-palmas"
+  },
+  {
+    "nombre": "Edificio Vista Sur",
     "distrito": "Barranco",
-    "lat": -12.1451,
-    "lon": -77.0212,
-    "link": "https://urbania.pe/proyecto-malecón-28"
-  },
-  {
-    "nombre": "Residencial Pedro de Osma",
-    "distrito": "Barranco",
-    "lat": -12.1438,
-    "lon": -77.0198,
-    "link": "https://urbania.pe/proyecto-pedro-de-osma"
-  },
-  {
-    "nombre": "Edificio Arte",
-    "distrito": "Barranco",
-    "lat": -12.1449,
+    "lat": -12.1402,
     "lon": -77.0204,
-    "link": "https://urbania.pe/proyecto-edificio-arte"
+    "link": "https://urbania.pe/proyecto/edificio-vista-sur"
   },
   {
-    "nombre": "Parque Central",
+    "nombre": "Torre Barranco Bay",
     "distrito": "Barranco",
-    "lat": -12.1445,
-    "lon": -77.0221,
-    "link": "https://urbania.pe/proyecto-parque-central"
+    "lat": -12.1415,
+    "lon": -77.0217,
+    "link": "https://urbania.pe/proyecto/torre-barranco-bay"
   },
   {
-    "nombre": "Ocean Barranco",
+    "nombre": "Residencial El Faro",
     "distrito": "Barranco",
-    "lat": -12.1463,
-    "lon": -77.0232,
-    "link": "https://urbania.pe/proyecto-ocean-barranco"
+    "lat": -12.1399,
+    "lon": -77.0195,
+    "link": "https://urbania.pe/proyecto/residencial-el-faro"
   },
   {
-    "nombre": "Residencial Sucre",
+    "nombre": "Condominio Loma Verde",
+    "distrito": "Barranco",
+    "lat": -12.1428,
+    "lon": -77.0231,
+    "link": "https://urbania.pe/proyecto/condominio-loma-verde"
+  },
+  {
+    "nombre": "Edificio Costa Viva",
     "distrito": "Barranco",
     "lat": -12.1433,
-    "lon": -77.0217,
-    "link": "https://urbania.pe/proyecto-sucre"
-  },
-  {
-    "nombre": "Edificio Plaza",
-    "distrito": "Barranco",
-    "lat": -12.1460,
-    "lon": -77.0192,
-    "link": "https://urbania.pe/proyecto-plaza"
-  },
-  {
-    "nombre": "Concepto Barranco",
-    "distrito": "Barranco",
-    "lat": -12.1458,
-    "lon": -77.0200,
-    "link": "https://urbania.pe/proyecto-concepto"
-  },
-  {
-    "nombre": "Residencial Litoral",
-    "distrito": "Barranco",
-    "lat": -12.1465,
-    "lon": -77.0225,
-    "link": "https://urbania.pe/proyecto-litoral"
-  },
-  {
-    "nombre": "Barranco Green",
-    "distrito": "Barranco",
-    "lat": -12.1441,
-    "lon": -77.0207,
-    "link": "https://urbania.pe/proyecto-barranco-green"
-  },
-
-  {
-    "nombre": "Residencial Fresno",
-    "distrito": "La Molina",
-    "lat": -12.0874,
-    "lon": -76.9351,
-    "link": "https://urbania.pe/proyecto-fresno"
-  },
-  {
-    "nombre": "Residencial Rinconada",
-    "distrito": "La Molina",
-    "lat": -12.0865,
-    "lon": -76.9318,
-    "link": "https://urbania.pe/proyecto-rinconada"
-  },
-  {
-    "nombre": "La Molina Park",
-    "distrito": "La Molina",
-    "lat": -12.0881,
-    "lon": -76.9323,
-    "link": "https://urbania.pe/proyecto-molina-park"
-  },
-  {
-    "nombre": "Molivento",
-    "distrito": "La Molina",
-    "lat": -12.0895,
-    "lon": -76.9362,
-    "link": "https://urbania.pe/proyecto-molivento"
-  },
-  {
-    "nombre": "Vista del Valle",
-    "distrito": "La Molina",
-    "lat": -12.0850,
-    "lon": -76.9340,
-    "link": "https://urbania.pe/proyecto-vista-valle"
-  },
-  {
-    "nombre": "El Mirador",
-    "distrito": "La Molina",
-    "lat": -12.0870,
-    "lon": -76.9335,
-    "link": "https://urbania.pe/proyecto-mirador"
-  },
-  {
-    "nombre": "Altos de La Molina",
-    "distrito": "La Molina",
-    "lat": -12.0867,
-    "lon": -76.9359,
-    "link": "https://urbania.pe/proyecto-altos-molina"
-  },
-  {
-    "nombre": "Residencial Viña",
-    "distrito": "La Molina",
-    "lat": -12.0889,
-    "lon": -76.9321,
-    "link": "https://urbania.pe/proyecto-viña"
-  },
-  {
-    "nombre": "La Molina Real",
-    "distrito": "La Molina",
-    "lat": -12.0893,
-    "lon": -76.9330,
-    "link": "https://urbania.pe/proyecto-molina-real"
-  },
-  {
-    "nombre": "Residencial Sauce",
-    "distrito": "La Molina",
-    "lat": -12.0860,
-    "lon": -76.9345,
-    "link": "https://urbania.pe/proyecto-sauce"
+    "lon": -77.0224,
+    "link": "https://urbania.pe/proyecto/edificio-costa-viva"
   }
 ]
