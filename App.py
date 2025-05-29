@@ -11,7 +11,7 @@ st.markdown("Explora proyectos inmobiliarios en Lima de forma interactiva.")
 
 # --- Cargar datos ---
 try:
-    df = pd.read_json("data_limaprop.json")
+    df = pd.read_json("data_urbania.json")
 
     # Verificar columnas necesarias
     required_columns = {"nombre", "distrito", "lat", "lon", "link", "precio", "tipo"}
