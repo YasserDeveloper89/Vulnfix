@@ -3,10 +3,24 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
-# Esta línea debe ir antes de cualquier otra cosa
+# Configuración de página (¡debe ir primero!)
 st.set_page_config(page_title="LimaProp", layout="wide")
 
-# Título principal
+# Inyectar CSS personalizado para eliminar espacio final
+st.markdown("""
+    <style>
+        /* Quitar espacio extra inferior */
+        .block-container {
+            padding-bottom: 0rem;
+        }
+        /* Ajustar espacio de los componentes */
+        .stVerticalBlock {
+            margin-bottom: 0 !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Título
 st.title("🏙️ LimaProp - Buscador de Proyectos Inmobiliarios")
 st.markdown("Explora proyectos inmobiliarios por zona, tipo y precio en Lima Metropolitana.")
 
@@ -19,7 +33,7 @@ except Exception as e:
     st.error(f"Error al cargar el archivo JSON: {e}")
     st.stop()
 
-# Sidebar con filtros
+# Sidebar - filtros
 with st.sidebar:
     st.header("🔎 Filtros")
 
@@ -45,7 +59,7 @@ with st.sidebar:
         value=(precio_min, precio_max)
     )
 
-# Solo mostrar si hay un distrito elegido
+# Si el usuario seleccionó un distrito
 if distrito_seleccionado:
     df_filtrado = df[
         (df["distrito"] == distrito_seleccionado) &
@@ -54,7 +68,7 @@ if distrito_seleccionado:
         (df["precio"] <= rango_precios[1])
     ]
 
-    # Proyectos arriba
+    # Mostrar proyectos disponibles
     st.subheader("🏘️ Proyectos disponibles")
     if df_filtrado.empty:
         st.warning("No se encontraron proyectos para los filtros seleccionados.")
@@ -77,7 +91,7 @@ if distrito_seleccionado:
                     </div>
                 """, unsafe_allow_html=True)
 
-        # Mapa debajo
+        # Mostrar mapa
         st.subheader(f"🗺️ Mapa de proyectos en {distrito_seleccionado}")
         mapa = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=14)
 
@@ -89,4 +103,5 @@ if distrito_seleccionado:
                 icon=folium.Icon(color="blue", icon="home")
             ).add_to(mapa)
 
+        # Mostrar el mapa con altura fija
         st_folium(mapa, use_container_width=True, height=500)
