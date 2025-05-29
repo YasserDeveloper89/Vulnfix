@@ -3,7 +3,6 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
-# Configuración de la página
 st.set_page_config(page_title="LimaProp", layout="wide")
 
 st.title("🏙️ LimaProp - Buscador de Proyectos Inmobiliarios")
@@ -26,12 +25,8 @@ except Exception as e:
 with st.sidebar:
     st.header("🔎 Filtros")
 
-    distritos_disponibles = sorted(df["distrito"].unique())
-    distrito_seleccionado = st.selectbox("Selecciona un distrito", options=distritos_disponibles)
-
-    tipos_disponibles = sorted(df["tipo"].unique())
-    tipo_seleccionado = st.multiselect("Tipo de propiedad", options=tipos_disponibles, default=tipos_disponibles)
-
+    distrito_seleccionado = st.selectbox("Selecciona un distrito", options=sorted(df["distrito"].unique()))
+    tipo_seleccionado = st.multiselect("Tipo de propiedad", options=sorted(df["tipo"].unique()), default=sorted(df["tipo"].unique()))
     precio_min = int(df["precio"].min())
     precio_max = int(df["precio"].max())
     rango_precios = st.slider("Rango de precios (S/.)", min_value=precio_min, max_value=precio_max, value=(precio_min, precio_max))
@@ -44,11 +39,11 @@ df_filtrado = df[
     (df["precio"] <= rango_precios[1])
 ]
 
-# Layout: mapa y lista al mismo nivel
+# Mostrar columnas SIEMPRE — contenido condicional adentro
 col1, col2 = st.columns([1, 1.5], gap="large")
 
 with col1:
-    st.subheader(f"📍 Mapa de proyectos en {distrito_seleccionado}")
+    st.subheader(f"📍 Mapa en {distrito_seleccionado}")
     if not df_filtrado.empty:
         mapa = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=14)
         for _, row in df_filtrado.iterrows():
@@ -60,7 +55,7 @@ with col1:
             ).add_to(mapa)
         st_folium(mapa, use_container_width=True, height=500)
     else:
-        st.info("No hay proyectos para mostrar en el mapa.")
+        st.info("No hay proyectos para este filtro.")
 
 with col2:
     st.subheader("🏗️ Proyectos Disponibles")
