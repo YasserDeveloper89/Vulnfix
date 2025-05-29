@@ -1,6 +1,0 @@
-
-streamlit
-pandas
-pydeck
-geopy
-playwright
