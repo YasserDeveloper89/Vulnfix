@@ -1,0 +1,142 @@
+[
+    {
+        "nombre": "Residencial Miraflores Norte",
+        "distrito": "Miraflores",
+        "lat": -12.1205,
+        "lon": -77.0301,
+        "link": "https://urbania.pe/inmueble/1"
+    },
+    {
+        "nombre": "Condominio Vista Mar",
+        "distrito": "Miraflores",
+        "lat": -12.1212,
+        "lon": -77.0288,
+        "link": "https://urbania.pe/inmueble/2"
+    },
+    {
+        "nombre": "Edificio Pacifico",
+        "distrito": "Miraflores",
+        "lat": -12.1197,
+        "lon": -77.031,
+        "link": "https://urbania.pe/inmueble/3"
+    },
+    {
+        "nombre": "Proyecto Aurora Park",
+        "distrito": "Miraflores",
+        "lat": -12.1225,
+        "lon": -77.0322,
+        "link": "https://urbania.pe/inmueble/4"
+    },
+    {
+        "nombre": "Torre del Sur",
+        "distrito": "Miraflores",
+        "lat": -12.1185,
+        "lon": -77.0308,
+        "link": "https://urbania.pe/inmueble/5"
+    },
+    {
+        "nombre": "Residencias Malecon",
+        "distrito": "Miraflores",
+        "lat": -12.1179,
+        "lon": -77.0295,
+        "link": "https://urbania.pe/inmueble/6"
+    },
+    {
+        "nombre": "Miraflores Green",
+        "distrito": "Miraflores",
+        "lat": -12.1167,
+        "lon": -77.0315,
+        "link": "https://urbania.pe/inmueble/7"
+    },
+    {
+        "nombre": "Luz del Pacifico",
+        "distrito": "Miraflores",
+        "lat": -12.1201,
+        "lon": -77.0333,
+        "link": "https://urbania.pe/inmueble/8"
+    },
+    {
+        "nombre": "Avenida Central",
+        "distrito": "Miraflores",
+        "lat": -12.1219,
+        "lon": -77.03,
+        "link": "https://urbania.pe/inmueble/9"
+    },
+    {
+        "nombre": "Parque Sur",
+        "distrito": "Miraflores",
+        "lat": -12.122,
+        "lon": -77.0291,
+        "link": "https://urbania.pe/inmueble/10"
+    },
+    {
+        "nombre": "Residencial El Bosque",
+        "distrito": "San Isidro",
+        "lat": -12.101,
+        "lon": -77.0362,
+        "link": "https://urbania.pe/inmueble/11"
+    },
+    {
+        "nombre": "Condominio Golf View",
+        "distrito": "San Isidro",
+        "lat": -12.1025,
+        "lon": -77.038,
+        "link": "https://urbania.pe/inmueble/12"
+    },
+    {
+        "nombre": "Torre Libertad",
+        "distrito": "San Isidro",
+        "lat": -12.1002,
+        "lon": -77.0371,
+        "link": "https://urbania.pe/inmueble/13"
+    },
+    {
+        "nombre": "Proyecto Central 27",
+        "distrito": "San Isidro",
+        "lat": -12.104,
+        "lon": -77.0365,
+        "link": "https://urbania.pe/inmueble/14"
+    },
+    {
+        "nombre": "San Isidro Garden",
+        "distrito": "San Isidro",
+        "lat": -12.103,
+        "lon": -77.0359,
+        "link": "https://urbania.pe/inmueble/15"
+    },
+    {
+        "nombre": "Panorama Plaza",
+        "distrito": "San Isidro",
+        "lat": -12.102,
+        "lon": -77.0348,
+        "link": "https://urbania.pe/inmueble/16"
+    },
+    {
+        "nombre": "El Roble",
+        "distrito": "San Isidro",
+        "lat": -12.1007,
+        "lon": -77.0335,
+        "link": "https://urbania.pe/inmueble/17"
+    },
+    {
+        "nombre": "Residencias Lima Norte",
+        "distrito": "San Isidro",
+        "lat": -12.1015,
+        "lon": -77.0322,
+        "link": "https://urbania.pe/inmueble/18"
+    },
+    {
+        "nombre": "Edificio Premier",
+        "distrito": "San Isidro",
+        "lat": -12.1035,
+        "lon": -77.031,
+        "link": "https://urbania.pe/inmueble/19"
+    },
+    {
+        "nombre": "Condominio El Sol",
+        "distrito": "San Isidro",
+        "lat": -12.1041,
+        "lon": -77.0301,
+        "link": "https://urbania.pe/inmueble/20"
+    }
+]
