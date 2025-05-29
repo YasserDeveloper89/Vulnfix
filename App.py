@@ -28,7 +28,7 @@ with st.sidebar:
         "Selecciona un distrito:",
         options=sorted(df["distrito"].unique())
     )
-
+    
     tipos_disponibles = sorted(df["tipo"].unique())
     tipo_seleccionado = st.multiselect(
         "Tipo de propiedad:",
