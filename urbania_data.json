@@ -1,0 +1,20 @@
+[
+    {
+        "nombre": "Residencial San Isidro",
+        "distrito": "San Isidro",
+        "lat": -12.097,
+        "lon": -77.036
+    },
+    {
+        "nombre": "Miraflores One",
+        "distrito": "Miraflores",
+        "lat": -12.122,
+        "lon": -77.03
+    },
+    {
+        "nombre": "Barranco Tower",
+        "distrito": "Barranco",
+        "lat": -12.148,
+        "lon": -77.021
+    }
+]
