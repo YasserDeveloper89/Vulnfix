@@ -3,8 +3,24 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
-# ✅ Esta línea debe ir siempre al principio
 st.set_page_config(page_title="LimaProp", layout="wide")
+
+# Reducir márgenes globales y espacio final
+st.markdown("""
+    <style>
+        .block-container {
+            padding-bottom: 0rem !important;
+        }
+        iframe {
+            height: 350px !important;
+        }
+        footer {visibility: hidden;}
+        section.main > div:has(.folium-map) {
+            padding-bottom: 0px !important;
+            margin-bottom: 0px !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 # Encabezado
 st.title("🏙️ LimaProp - Buscador de Proyectos Inmobiliarios")
@@ -34,7 +50,7 @@ with st.sidebar:
     rango_precios = st.slider("Rango de precios (S/.)", min_value=precio_min, max_value=precio_max,
                               value=(precio_min, precio_max))
 
-# Mostrar contenido solo si se selecciona un distrito
+# Filtrar datos
 if distrito_seleccionado != "Selecciona...":
     df_filtrado = df[
         (df["distrito"] == distrito_seleccionado) &
@@ -43,7 +59,6 @@ if distrito_seleccionado != "Selecciona...":
         (df["precio"] <= rango_precios[1])
     ]
 
-    # Mostrar lista de proyectos
     st.subheader(f"🏢 Proyectos disponibles en {distrito_seleccionado}")
     if df_filtrado.empty:
         st.warning("No se encontraron proyectos con los filtros seleccionados.")
@@ -60,25 +75,19 @@ if distrito_seleccionado != "Selecciona...":
                 """, unsafe_allow_html=True
             )
 
-    # Mapa de proyectos
+    # Mapa de proyectos con control de layout
     if not df_filtrado.empty:
         st.subheader("🗺️ Mapa de proyectos")
-        mapa = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=14)
-        for _, row in df_filtrado.iterrows():
-            folium.Marker(
-                location=[row["lat"], row["lon"]],
-                popup=f"<strong>{row['nombre']}</strong><br><a href='{row['link']}' target='_blank'>Ver proyecto</a>",
-                tooltip=row["nombre"],
-                icon=folium.Icon(color="blue", icon="home")
-            ).add_to(mapa)
-        st_folium(mapa, use_container_width=True, height=500)
+        with st.container():
+            mapa = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=14)
+            for _, row in df_filtrado.iterrows():
+                folium.Marker(
+                    location=[row["lat"], row["lon"]],
+                    popup=f"<strong>{row['nombre']}</strong><br><a href='{row['link']}' target='_blank'>Ver proyecto</a>",
+                    tooltip=row["nombre"],
+                    icon=folium.Icon(color="blue", icon="home")
+                ).add_to(mapa)
+            st_folium(mapa, use_container_width=True, height=350)
 
-# Footer sin generar espacio excesivo
-st.markdown(
-    """
-    <div style="margin-top: 30px; padding-top: 10px; border-top: 1px solid #eaeaea; text-align: center; font-size: 0.9em; color: #888;">
-        © 2025 LimaProp. Todos los derechos reservados.
-    </div>
-    """,
-    unsafe_allow_html=True
-    )
+# Eliminar footer visual (si es necesario, lo puedes volver a poner luego)
+# st.markdown(...footer...)
