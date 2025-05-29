@@ -1,0 +1,702 @@
+[
+  {
+    "nombre": "Proyecto Miraflores #1",
+    "distrito": "Miraflores",
+    "lat": -12.001,
+    "lon": -77.001,
+    "link": "https://urbania.pe/proyecto-miraflores-1"
+  },
+  {
+    "nombre": "Proyecto Miraflores #2",
+    "distrito": "Miraflores",
+    "lat": -12.002,
+    "lon": -77.002,
+    "link": "https://urbania.pe/proyecto-miraflores-2"
+  },
+  {
+    "nombre": "Proyecto Miraflores #3",
+    "distrito": "Miraflores",
+    "lat": -12.003,
+    "lon": -77.003,
+    "link": "https://urbania.pe/proyecto-miraflores-3"
+  },
+  {
+    "nombre": "Proyecto Miraflores #4",
+    "distrito": "Miraflores",
+    "lat": -12.004,
+    "lon": -77.004,
+    "link": "https://urbania.pe/proyecto-miraflores-4"
+  },
+  {
+    "nombre": "Proyecto Miraflores #5",
+    "distrito": "Miraflores",
+    "lat": -12.005,
+    "lon": -77.005,
+    "link": "https://urbania.pe/proyecto-miraflores-5"
+  },
+  {
+    "nombre": "Proyecto Miraflores #6",
+    "distrito": "Miraflores",
+    "lat": -12.006,
+    "lon": -77.006,
+    "link": "https://urbania.pe/proyecto-miraflores-6"
+  },
+  {
+    "nombre": "Proyecto Miraflores #7",
+    "distrito": "Miraflores",
+    "lat": -12.007,
+    "lon": -77.007,
+    "link": "https://urbania.pe/proyecto-miraflores-7"
+  },
+  {
+    "nombre": "Proyecto Miraflores #8",
+    "distrito": "Miraflores",
+    "lat": -12.008,
+    "lon": -77.008,
+    "link": "https://urbania.pe/proyecto-miraflores-8"
+  },
+  {
+    "nombre": "Proyecto Miraflores #9",
+    "distrito": "Miraflores",
+    "lat": -12.009,
+    "lon": -77.009,
+    "link": "https://urbania.pe/proyecto-miraflores-9"
+  },
+  {
+    "nombre": "Proyecto Miraflores #10",
+    "distrito": "Miraflores",
+    "lat": -12.01,
+    "lon": -77.01,
+    "link": "https://urbania.pe/proyecto-miraflores-10"
+  },
+  {
+    "nombre": "Proyecto San Isidro #1",
+    "distrito": "San Isidro",
+    "lat": -12.001,
+    "lon": -77.001,
+    "link": "https://urbania.pe/proyecto-san-isidro-1"
+  },
+  {
+    "nombre": "Proyecto San Isidro #2",
+    "distrito": "San Isidro",
+    "lat": -12.002,
+    "lon": -77.002,
+    "link": "https://urbania.pe/proyecto-san-isidro-2"
+  },
+  {
+    "nombre": "Proyecto San Isidro #3",
+    "distrito": "San Isidro",
+    "lat": -12.003,
+    "lon": -77.003,
+    "link": "https://urbania.pe/proyecto-san-isidro-3"
+  },
+  {
+    "nombre": "Proyecto San Isidro #4",
+    "distrito": "San Isidro",
+    "lat": -12.004,
+    "lon": -77.004,
+    "link": "https://urbania.pe/proyecto-san-isidro-4"
+  },
+  {
+    "nombre": "Proyecto San Isidro #5",
+    "distrito": "San Isidro",
+    "lat": -12.005,
+    "lon": -77.005,
+    "link": "https://urbania.pe/proyecto-san-isidro-5"
+  },
+  {
+    "nombre": "Proyecto San Isidro #6",
+    "distrito": "San Isidro",
+    "lat": -12.006,
+    "lon": -77.006,
+    "link": "https://urbania.pe/proyecto-san-isidro-6"
+  },
+  {
+    "nombre": "Proyecto San Isidro #7",
+    "distrito": "San Isidro",
+    "lat": -12.007,
+    "lon": -77.007,
+    "link": "https://urbania.pe/proyecto-san-isidro-7"
+  },
+  {
+    "nombre": "Proyecto San Isidro #8",
+    "distrito": "San Isidro",
+    "lat": -12.008,
+    "lon": -77.008,
+    "link": "https://urbania.pe/proyecto-san-isidro-8"
+  },
+  {
+    "nombre": "Proyecto San Isidro #9",
+    "distrito": "San Isidro",
+    "lat": -12.009,
+    "lon": -77.009,
+    "link": "https://urbania.pe/proyecto-san-isidro-9"
+  },
+  {
+    "nombre": "Proyecto San Isidro #10",
+    "distrito": "San Isidro",
+    "lat": -12.01,
+    "lon": -77.01,
+    "link": "https://urbania.pe/proyecto-san-isidro-10"
+  },
+  {
+    "nombre": "Proyecto Surco #1",
+    "distrito": "Surco",
+    "lat": -12.001,
+    "lon": -77.001,
+    "link": "https://urbania.pe/proyecto-surco-1"
+  },
+  {
+    "nombre": "Proyecto Surco #2",
+    "distrito": "Surco",
+    "lat": -12.002,
+    "lon": -77.002,
+    "link": "https://urbania.pe/proyecto-surco-2"
+  },
+  {
+    "nombre": "Proyecto Surco #3",
+    "distrito": "Surco",
+    "lat": -12.003,
+    "lon": -77.003,
+    "link": "https://urbania.pe/proyecto-surco-3"
+  },
+  {
+    "nombre": "Proyecto Surco #4",
+    "distrito": "Surco",
+    "lat": -12.004,
+    "lon": -77.004,
+    "link": "https://urbania.pe/proyecto-surco-4"
+  },
+  {
+    "nombre": "Proyecto Surco #5",
+    "distrito": "Surco",
+    "lat": -12.005,
+    "lon": -77.005,
+    "link": "https://urbania.pe/proyecto-surco-5"
+  },
+  {
+    "nombre": "Proyecto Surco #6",
+    "distrito": "Surco",
+    "lat": -12.006,
+    "lon": -77.006,
+    "link": "https://urbania.pe/proyecto-surco-6"
+  },
+  {
+    "nombre": "Proyecto Surco #7",
+    "distrito": "Surco",
+    "lat": -12.007,
+    "lon": -77.007,
+    "link": "https://urbania.pe/proyecto-surco-7"
+  },
+  {
+    "nombre": "Proyecto Surco #8",
+    "distrito": "Surco",
+    "lat": -12.008,
+    "lon": -77.008,
+    "link": "https://urbania.pe/proyecto-surco-8"
+  },
+  {
+    "nombre": "Proyecto Surco #9",
+    "distrito": "Surco",
+    "lat": -12.009,
+    "lon": -77.009,
+    "link": "https://urbania.pe/proyecto-surco-9"
+  },
+  {
+    "nombre": "Proyecto Surco #10",
+    "distrito": "Surco",
+    "lat": -12.01,
+    "lon": -77.01,
+    "link": "https://urbania.pe/proyecto-surco-10"
+  },
+  {
+    "nombre": "Proyecto La Molina #1",
+    "distrito": "La Molina",
+    "lat": -12.001,
+    "lon": -77.001,
+    "link": "https://urbania.pe/proyecto-la-molina-1"
+  },
+  {
+    "nombre": "Proyecto La Molina #2",
+    "distrito": "La Molina",
+    "lat": -12.002,
+    "lon": -77.002,
+    "link": "https://urbania.pe/proyecto-la-molina-2"
+  },
+  {
+    "nombre": "Proyecto La Molina #3",
+    "distrito": "La Molina",
+    "lat": -12.003,
+    "lon": -77.003,
+    "link": "https://urbania.pe/proyecto-la-molina-3"
+  },
+  {
+    "nombre": "Proyecto La Molina #4",
+    "distrito": "La Molina",
+    "lat": -12.004,
+    "lon": -77.004,
+    "link": "https://urbania.pe/proyecto-la-molina-4"
+  },
+  {
+    "nombre": "Proyecto La Molina #5",
+    "distrito": "La Molina",
+    "lat": -12.005,
+    "lon": -77.005,
+    "link": "https://urbania.pe/proyecto-la-molina-5"
+  },
+  {
+    "nombre": "Proyecto La Molina #6",
+    "distrito": "La Molina",
+    "lat": -12.006,
+    "lon": -77.006,
+    "link": "https://urbania.pe/proyecto-la-molina-6"
+  },
+  {
+    "nombre": "Proyecto La Molina #7",
+    "distrito": "La Molina",
+    "lat": -12.007,
+    "lon": -77.007,
+    "link": "https://urbania.pe/proyecto-la-molina-7"
+  },
+  {
+    "nombre": "Proyecto La Molina #8",
+    "distrito": "La Molina",
+    "lat": -12.008,
+    "lon": -77.008,
+    "link": "https://urbania.pe/proyecto-la-molina-8"
+  },
+  {
+    "nombre": "Proyecto La Molina #9",
+    "distrito": "La Molina",
+    "lat": -12.009,
+    "lon": -77.009,
+    "link": "https://urbania.pe/proyecto-la-molina-9"
+  },
+  {
+    "nombre": "Proyecto La Molina #10",
+    "distrito": "La Molina",
+    "lat": -12.01,
+    "lon": -77.01,
+    "link": "https://urbania.pe/proyecto-la-molina-10"
+  },
+  {
+    "nombre": "Proyecto Barranco #1",
+    "distrito": "Barranco",
+    "lat": -12.001,
+    "lon": -77.001,
+    "link": "https://urbania.pe/proyecto-barranco-1"
+  },
+  {
+    "nombre": "Proyecto Barranco #2",
+    "distrito": "Barranco",
+    "lat": -12.002,
+    "lon": -77.002,
+    "link": "https://urbania.pe/proyecto-barranco-2"
+  },
+  {
+    "nombre": "Proyecto Barranco #3",
+    "distrito": "Barranco",
+    "lat": -12.003,
+    "lon": -77.003,
+    "link": "https://urbania.pe/proyecto-barranco-3"
+  },
+  {
+    "nombre": "Proyecto Barranco #4",
+    "distrito": "Barranco",
+    "lat": -12.004,
+    "lon": -77.004,
+    "link": "https://urbania.pe/proyecto-barranco-4"
+  },
+  {
+    "nombre": "Proyecto Barranco #5",
+    "distrito": "Barranco",
+    "lat": -12.005,
+    "lon": -77.005,
+    "link": "https://urbania.pe/proyecto-barranco-5"
+  },
+  {
+    "nombre": "Proyecto Barranco #6",
+    "distrito": "Barranco",
+    "lat": -12.006,
+    "lon": -77.006,
+    "link": "https://urbania.pe/proyecto-barranco-6"
+  },
+  {
+    "nombre": "Proyecto Barranco #7",
+    "distrito": "Barranco",
+    "lat": -12.007,
+    "lon": -77.007,
+    "link": "https://urbania.pe/proyecto-barranco-7"
+  },
+  {
+    "nombre": "Proyecto Barranco #8",
+    "distrito": "Barranco",
+    "lat": -12.008,
+    "lon": -77.008,
+    "link": "https://urbania.pe/proyecto-barranco-8"
+  },
+  {
+    "nombre": "Proyecto Barranco #9",
+    "distrito": "Barranco",
+    "lat": -12.009,
+    "lon": -77.009,
+    "link": "https://urbania.pe/proyecto-barranco-9"
+  },
+  {
+    "nombre": "Proyecto Barranco #10",
+    "distrito": "Barranco",
+    "lat": -12.01,
+    "lon": -77.01,
+    "link": "https://urbania.pe/proyecto-barranco-10"
+  },
+  {
+    "nombre": "Proyecto San Borja #1",
+    "distrito": "San Borja",
+    "lat": -12.001,
+    "lon": -77.001,
+    "link": "https://urbania.pe/proyecto-san-borja-1"
+  },
+  {
+    "nombre": "Proyecto San Borja #2",
+    "distrito": "San Borja",
+    "lat": -12.002,
+    "lon": -77.002,
+    "link": "https://urbania.pe/proyecto-san-borja-2"
+  },
+  {
+    "nombre": "Proyecto San Borja #3",
+    "distrito": "San Borja",
+    "lat": -12.003,
+    "lon": -77.003,
+    "link": "https://urbania.pe/proyecto-san-borja-3"
+  },
+  {
+    "nombre": "Proyecto San Borja #4",
+    "distrito": "San Borja",
+    "lat": -12.004,
+    "lon": -77.004,
+    "link": "https://urbania.pe/proyecto-san-borja-4"
+  },
+  {
+    "nombre": "Proyecto San Borja #5",
+    "distrito": "San Borja",
+    "lat": -12.005,
+    "lon": -77.005,
+    "link": "https://urbania.pe/proyecto-san-borja-5"
+  },
+  {
+    "nombre": "Proyecto San Borja #6",
+    "distrito": "San Borja",
+    "lat": -12.006,
+    "lon": -77.006,
+    "link": "https://urbania.pe/proyecto-san-borja-6"
+  },
+  {
+    "nombre": "Proyecto San Borja #7",
+    "distrito": "San Borja",
+    "lat": -12.007,
+    "lon": -77.007,
+    "link": "https://urbania.pe/proyecto-san-borja-7"
+  },
+  {
+    "nombre": "Proyecto San Borja #8",
+    "distrito": "San Borja",
+    "lat": -12.008,
+    "lon": -77.008,
+    "link": "https://urbania.pe/proyecto-san-borja-8"
+  },
+  {
+    "nombre": "Proyecto San Borja #9",
+    "distrito": "San Borja",
+    "lat": -12.009,
+    "lon": -77.009,
+    "link": "https://urbania.pe/proyecto-san-borja-9"
+  },
+  {
+    "nombre": "Proyecto San Borja #10",
+    "distrito": "San Borja",
+    "lat": -12.01,
+    "lon": -77.01,
+    "link": "https://urbania.pe/proyecto-san-borja-10"
+  },
+  {
+    "nombre": "Proyecto Lince #1",
+    "distrito": "Lince",
+    "lat": -12.001,
+    "lon": -77.001,
+    "link": "https://urbania.pe/proyecto-lince-1"
+  },
+  {
+    "nombre": "Proyecto Lince #2",
+    "distrito": "Lince",
+    "lat": -12.002,
+    "lon": -77.002,
+    "link": "https://urbania.pe/proyecto-lince-2"
+  },
+  {
+    "nombre": "Proyecto Lince #3",
+    "distrito": "Lince",
+    "lat": -12.003,
+    "lon": -77.003,
+    "link": "https://urbania.pe/proyecto-lince-3"
+  },
+  {
+    "nombre": "Proyecto Lince #4",
+    "distrito": "Lince",
+    "lat": -12.004,
+    "lon": -77.004,
+    "link": "https://urbania.pe/proyecto-lince-4"
+  },
+  {
+    "nombre": "Proyecto Lince #5",
+    "distrito": "Lince",
+    "lat": -12.005,
+    "lon": -77.005,
+    "link": "https://urbania.pe/proyecto-lince-5"
+  },
+  {
+    "nombre": "Proyecto Lince #6",
+    "distrito": "Lince",
+    "lat": -12.006,
+    "lon": -77.006,
+    "link": "https://urbania.pe/proyecto-lince-6"
+  },
+  {
+    "nombre": "Proyecto Lince #7",
+    "distrito": "Lince",
+    "lat": -12.007,
+    "lon": -77.007,
+    "link": "https://urbania.pe/proyecto-lince-7"
+  },
+  {
+    "nombre": "Proyecto Lince #8",
+    "distrito": "Lince",
+    "lat": -12.008,
+    "lon": -77.008,
+    "link": "https://urbania.pe/proyecto-lince-8"
+  },
+  {
+    "nombre": "Proyecto Lince #9",
+    "distrito": "Lince",
+    "lat": -12.009,
+    "lon": -77.009,
+    "link": "https://urbania.pe/proyecto-lince-9"
+  },
+  {
+    "nombre": "Proyecto Lince #10",
+    "distrito": "Lince",
+    "lat": -12.01,
+    "lon": -77.01,
+    "link": "https://urbania.pe/proyecto-lince-10"
+  },
+  {
+    "nombre": "Proyecto Pueblo Libre #1",
+    "distrito": "Pueblo Libre",
+    "lat": -12.001,
+    "lon": -77.001,
+    "link": "https://urbania.pe/proyecto-pueblo-libre-1"
+  },
+  {
+    "nombre": "Proyecto Pueblo Libre #2",
+    "distrito": "Pueblo Libre",
+    "lat": -12.002,
+    "lon": -77.002,
+    "link": "https://urbania.pe/proyecto-pueblo-libre-2"
+  },
+  {
+    "nombre": "Proyecto Pueblo Libre #3",
+    "distrito": "Pueblo Libre",
+    "lat": -12.003,
+    "lon": -77.003,
+    "link": "https://urbania.pe/proyecto-pueblo-libre-3"
+  },
+  {
+    "nombre": "Proyecto Pueblo Libre #4",
+    "distrito": "Pueblo Libre",
+    "lat": -12.004,
+    "lon": -77.004,
+    "link": "https://urbania.pe/proyecto-pueblo-libre-4"
+  },
+  {
+    "nombre": "Proyecto Pueblo Libre #5",
+    "distrito": "Pueblo Libre",
+    "lat": -12.005,
+    "lon": -77.005,
+    "link": "https://urbania.pe/proyecto-pueblo-libre-5"
+  },
+  {
+    "nombre": "Proyecto Pueblo Libre #6",
+    "distrito": "Pueblo Libre",
+    "lat": -12.006,
+    "lon": -77.006,
+    "link": "https://urbania.pe/proyecto-pueblo-libre-6"
+  },
+  {
+    "nombre": "Proyecto Pueblo Libre #7",
+    "distrito": "Pueblo Libre",
+    "lat": -12.007,
+    "lon": -77.007,
+    "link": "https://urbania.pe/proyecto-pueblo-libre-7"
+  },
+  {
+    "nombre": "Proyecto Pueblo Libre #8",
+    "distrito": "Pueblo Libre",
+    "lat": -12.008,
+    "lon": -77.008,
+    "link": "https://urbania.pe/proyecto-pueblo-libre-8"
+  },
+  {
+    "nombre": "Proyecto Pueblo Libre #9",
+    "distrito": "Pueblo Libre",
+    "lat": -12.009,
+    "lon": -77.009,
+    "link": "https://urbania.pe/proyecto-pueblo-libre-9"
+  },
+  {
+    "nombre": "Proyecto Pueblo Libre #10",
+    "distrito": "Pueblo Libre",
+    "lat": -12.01,
+    "lon": -77.01,
+    "link": "https://urbania.pe/proyecto-pueblo-libre-10"
+  },
+  {
+    "nombre": "Proyecto Jesús María #1",
+    "distrito": "Jesús María",
+    "lat": -12.001,
+    "lon": -77.001,
+    "link": "https://urbania.pe/proyecto-jesús-maría-1"
+  },
+  {
+    "nombre": "Proyecto Jesús María #2",
+    "distrito": "Jesús María",
+    "lat": -12.002,
+    "lon": -77.002,
+    "link": "https://urbania.pe/proyecto-jesús-maría-2"
+  },
+  {
+    "nombre": "Proyecto Jesús María #3",
+    "distrito": "Jesús María",
+    "lat": -12.003,
+    "lon": -77.003,
+    "link": "https://urbania.pe/proyecto-jesús-maría-3"
+  },
+  {
+    "nombre": "Proyecto Jesús María #4",
+    "distrito": "Jesús María",
+    "lat": -12.004,
+    "lon": -77.004,
+    "link": "https://urbania.pe/proyecto-jesús-maría-4"
+  },
+  {
+    "nombre": "Proyecto Jesús María #5",
+    "distrito": "Jesús María",
+    "lat": -12.005,
+    "lon": -77.005,
+    "link": "https://urbania.pe/proyecto-jesús-maría-5"
+  },
+  {
+    "nombre": "Proyecto Jesús María #6",
+    "distrito": "Jesús María",
+    "lat": -12.006,
+    "lon": -77.006,
+    "link": "https://urbania.pe/proyecto-jesús-maría-6"
+  },
+  {
+    "nombre": "Proyecto Jesús María #7",
+    "distrito": "Jesús María",
+    "lat": -12.007,
+    "lon": -77.007,
+    "link": "https://urbania.pe/proyecto-jesús-maría-7"
+  },
+  {
+    "nombre": "Proyecto Jesús María #8",
+    "distrito": "Jesús María",
+    "lat": -12.008,
+    "lon": -77.008,
+    "link": "https://urbania.pe/proyecto-jesús-maría-8"
+  },
+  {
+    "nombre": "Proyecto Jesús María #9",
+    "distrito": "Jesús María",
+    "lat": -12.009,
+    "lon": -77.009,
+    "link": "https://urbania.pe/proyecto-jesús-maría-9"
+  },
+  {
+    "nombre": "Proyecto Jesús María #10",
+    "distrito": "Jesús María",
+    "lat": -12.01,
+    "lon": -77.01,
+    "link": "https://urbania.pe/proyecto-jesús-maría-10"
+  },
+  {
+    "nombre": "Proyecto Magdalena #1",
+    "distrito": "Magdalena",
+    "lat": -12.001,
+    "lon": -77.001,
+    "link": "https://urbania.pe/proyecto-magdalena-1"
+  },
+  {
+    "nombre": "Proyecto Magdalena #2",
+    "distrito": "Magdalena",
+    "lat": -12.002,
+    "lon": -77.002,
+    "link": "https://urbania.pe/proyecto-magdalena-2"
+  },
+  {
+    "nombre": "Proyecto Magdalena #3",
+    "distrito": "Magdalena",
+    "lat": -12.003,
+    "lon": -77.003,
+    "link": "https://urbania.pe/proyecto-magdalena-3"
+  },
+  {
+    "nombre": "Proyecto Magdalena #4",
+    "distrito": "Magdalena",
+    "lat": -12.004,
+    "lon": -77.004,
+    "link": "https://urbania.pe/proyecto-magdalena-4"
+  },
+  {
+    "nombre": "Proyecto Magdalena #5",
+    "distrito": "Magdalena",
+    "lat": -12.005,
+    "lon": -77.005,
+    "link": "https://urbania.pe/proyecto-magdalena-5"
+  },
+  {
+    "nombre": "Proyecto Magdalena #6",
+    "distrito": "Magdalena",
+    "lat": -12.006,
+    "lon": -77.006,
+    "link": "https://urbania.pe/proyecto-magdalena-6"
+  },
+  {
+    "nombre": "Proyecto Magdalena #7",
+    "distrito": "Magdalena",
+    "lat": -12.007,
+    "lon": -77.007,
+    "link": "https://urbania.pe/proyecto-magdalena-7"
+  },
+  {
+    "nombre": "Proyecto Magdalena #8",
+    "distrito": "Magdalena",
+    "lat": -12.008,
+    "lon": -77.008,
+    "link": "https://urbania.pe/proyecto-magdalena-8"
+  },
+  {
+    "nombre": "Proyecto Magdalena #9",
+    "distrito": "Magdalena",
+    "lat": -12.009,
+    "lon": -77.009,
+    "link": "https://urbania.pe/proyecto-magdalena-9"
+  },
+  {
+    "nombre": "Proyecto Magdalena #10",
+    "distrito": "Magdalena",
+    "lat": -12.01,
+    "lon": -77.01,
+    "link": "https://urbania.pe/proyecto-magdalena-10"
+  }
+]
