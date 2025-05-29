@@ -1,0 +1,362 @@
+[
+  {
+    "nombre": "Proyecto Miraflores #1",
+    "distrito": "Miraflores",
+    "lat": -12.123,
+    "lon": -77.03,
+    "link": "https://urbania.pe/proyecto/miraflores-1",
+    "tipo": "Departamento",
+    "precio": 150000
+  },
+  {
+    "nombre": "Proyecto Miraflores #2",
+    "distrito": "Miraflores",
+    "lat": -12.122,
+    "lon": -77.029,
+    "link": "https://urbania.pe/proyecto/miraflores-2",
+    "tipo": "Departamento",
+    "precio": 155000
+  },
+  {
+    "nombre": "Proyecto Miraflores #3",
+    "distrito": "Miraflores",
+    "lat": -12.120999999999999,
+    "lon": -77.028,
+    "link": "https://urbania.pe/proyecto/miraflores-3",
+    "tipo": "Departamento",
+    "precio": 160000
+  },
+  {
+    "nombre": "Proyecto Miraflores #4",
+    "distrito": "Miraflores",
+    "lat": -12.12,
+    "lon": -77.027,
+    "link": "https://urbania.pe/proyecto/miraflores-4",
+    "tipo": "Departamento",
+    "precio": 165000
+  },
+  {
+    "nombre": "Proyecto Miraflores #5",
+    "distrito": "Miraflores",
+    "lat": -12.119,
+    "lon": -77.026,
+    "link": "https://urbania.pe/proyecto/miraflores-5",
+    "tipo": "Departamento",
+    "precio": 170000
+  },
+  {
+    "nombre": "Proyecto Miraflores #6",
+    "distrito": "Miraflores",
+    "lat": -12.117999999999999,
+    "lon": -77.025,
+    "link": "https://urbania.pe/proyecto/miraflores-6",
+    "tipo": "Departamento",
+    "precio": 175000
+  },
+  {
+    "nombre": "Proyecto Miraflores #7",
+    "distrito": "Miraflores",
+    "lat": -12.116999999999999,
+    "lon": -77.024,
+    "link": "https://urbania.pe/proyecto/miraflores-7",
+    "tipo": "Departamento",
+    "precio": 180000
+  },
+  {
+    "nombre": "Proyecto Miraflores #8",
+    "distrito": "Miraflores",
+    "lat": -12.116,
+    "lon": -77.023,
+    "link": "https://urbania.pe/proyecto/miraflores-8",
+    "tipo": "Departamento",
+    "precio": 185000
+  },
+  {
+    "nombre": "Proyecto Miraflores #9",
+    "distrito": "Miraflores",
+    "lat": -12.115,
+    "lon": -77.022,
+    "link": "https://urbania.pe/proyecto/miraflores-9",
+    "tipo": "Departamento",
+    "precio": 190000
+  },
+  {
+    "nombre": "Proyecto Miraflores #10",
+    "distrito": "Miraflores",
+    "lat": -12.113999999999999,
+    "lon": -77.021,
+    "link": "https://urbania.pe/proyecto/miraflores-10",
+    "tipo": "Departamento",
+    "precio": 195000
+  },
+  {
+    "nombre": "Proyecto San Isidro #1",
+    "distrito": "San Isidro",
+    "lat": -12.101,
+    "lon": -77.03,
+    "link": "https://urbania.pe/proyecto/san-isidro-1",
+    "tipo": "Departamento",
+    "precio": 150000
+  },
+  {
+    "nombre": "Proyecto San Isidro #2",
+    "distrito": "San Isidro",
+    "lat": -12.100000000000001,
+    "lon": -77.029,
+    "link": "https://urbania.pe/proyecto/san-isidro-2",
+    "tipo": "Departamento",
+    "precio": 155000
+  },
+  {
+    "nombre": "Proyecto San Isidro #3",
+    "distrito": "San Isidro",
+    "lat": -12.099,
+    "lon": -77.028,
+    "link": "https://urbania.pe/proyecto/san-isidro-3",
+    "tipo": "Departamento",
+    "precio": 160000
+  },
+  {
+    "nombre": "Proyecto San Isidro #4",
+    "distrito": "San Isidro",
+    "lat": -12.098,
+    "lon": -77.027,
+    "link": "https://urbania.pe/proyecto/san-isidro-4",
+    "tipo": "Departamento",
+    "precio": 165000
+  },
+  {
+    "nombre": "Proyecto San Isidro #5",
+    "distrito": "San Isidro",
+    "lat": -12.097000000000001,
+    "lon": -77.026,
+    "link": "https://urbania.pe/proyecto/san-isidro-5",
+    "tipo": "Departamento",
+    "precio": 170000
+  },
+  {
+    "nombre": "Proyecto San Isidro #6",
+    "distrito": "San Isidro",
+    "lat": -12.096,
+    "lon": -77.025,
+    "link": "https://urbania.pe/proyecto/san-isidro-6",
+    "tipo": "Departamento",
+    "precio": 175000
+  },
+  {
+    "nombre": "Proyecto San Isidro #7",
+    "distrito": "San Isidro",
+    "lat": -12.095,
+    "lon": -77.024,
+    "link": "https://urbania.pe/proyecto/san-isidro-7",
+    "tipo": "Departamento",
+    "precio": 180000
+  },
+  {
+    "nombre": "Proyecto San Isidro #8",
+    "distrito": "San Isidro",
+    "lat": -12.094000000000001,
+    "lon": -77.023,
+    "link": "https://urbania.pe/proyecto/san-isidro-8",
+    "tipo": "Departamento",
+    "precio": 185000
+  },
+  {
+    "nombre": "Proyecto San Isidro #9",
+    "distrito": "San Isidro",
+    "lat": -12.093000000000002,
+    "lon": -77.022,
+    "link": "https://urbania.pe/proyecto/san-isidro-9",
+    "tipo": "Departamento",
+    "precio": 190000
+  },
+  {
+    "nombre": "Proyecto San Isidro #10",
+    "distrito": "San Isidro",
+    "lat": -12.092,
+    "lon": -77.021,
+    "link": "https://urbania.pe/proyecto/san-isidro-10",
+    "tipo": "Departamento",
+    "precio": 195000
+  },
+  {
+    "nombre": "Proyecto San Borja #1",
+    "distrito": "San Borja",
+    "lat": -12.105,
+    "lon": -77.03,
+    "link": "https://urbania.pe/proyecto/san-borja-1",
+    "tipo": "Departamento",
+    "precio": 150000
+  },
+  {
+    "nombre": "Proyecto San Borja #2",
+    "distrito": "San Borja",
+    "lat": -12.104000000000001,
+    "lon": -77.029,
+    "link": "https://urbania.pe/proyecto/san-borja-2",
+    "tipo": "Departamento",
+    "precio": 155000
+  },
+  {
+    "nombre": "Proyecto San Borja #3",
+    "distrito": "San Borja",
+    "lat": -12.103,
+    "lon": -77.028,
+    "link": "https://urbania.pe/proyecto/san-borja-3",
+    "tipo": "Departamento",
+    "precio": 160000
+  },
+  {
+    "nombre": "Proyecto San Borja #4",
+    "distrito": "San Borja",
+    "lat": -12.102,
+    "lon": -77.027,
+    "link": "https://urbania.pe/proyecto/san-borja-4",
+    "tipo": "Departamento",
+    "precio": 165000
+  },
+  {
+    "nombre": "Proyecto San Borja #5",
+    "distrito": "San Borja",
+    "lat": -12.101,
+    "lon": -77.026,
+    "link": "https://urbania.pe/proyecto/san-borja-5",
+    "tipo": "Departamento",
+    "precio": 170000
+  },
+  {
+    "nombre": "Proyecto San Borja #6",
+    "distrito": "San Borja",
+    "lat": -12.1,
+    "lon": -77.025,
+    "link": "https://urbania.pe/proyecto/san-borja-6",
+    "tipo": "Departamento",
+    "precio": 175000
+  },
+  {
+    "nombre": "Proyecto San Borja #7",
+    "distrito": "San Borja",
+    "lat": -12.099,
+    "lon": -77.024,
+    "link": "https://urbania.pe/proyecto/san-borja-7",
+    "tipo": "Departamento",
+    "precio": 180000
+  },
+  {
+    "nombre": "Proyecto San Borja #8",
+    "distrito": "San Borja",
+    "lat": -12.098,
+    "lon": -77.023,
+    "link": "https://urbania.pe/proyecto/san-borja-8",
+    "tipo": "Departamento",
+    "precio": 185000
+  },
+  {
+    "nombre": "Proyecto San Borja #9",
+    "distrito": "San Borja",
+    "lat": -12.097000000000001,
+    "lon": -77.022,
+    "link": "https://urbania.pe/proyecto/san-borja-9",
+    "tipo": "Departamento",
+    "precio": 190000
+  },
+  {
+    "nombre": "Proyecto San Borja #10",
+    "distrito": "San Borja",
+    "lat": -12.096,
+    "lon": -77.021,
+    "link": "https://urbania.pe/proyecto/san-borja-10",
+    "tipo": "Departamento",
+    "precio": 195000
+  },
+  {
+    "nombre": "Proyecto Santiago de Surco #1",
+    "distrito": "Santiago de Surco",
+    "lat": -12.139,
+    "lon": -77.03,
+    "link": "https://urbania.pe/proyecto/santiago-de-surco-1",
+    "tipo": "Departamento",
+    "precio": 150000
+  },
+  {
+    "nombre": "Proyecto Santiago de Surco #2",
+    "distrito": "Santiago de Surco",
+    "lat": -12.138,
+    "lon": -77.029,
+    "link": "https://urbania.pe/proyecto/santiago-de-surco-2",
+    "tipo": "Departamento",
+    "precio": 155000
+  },
+  {
+    "nombre": "Proyecto Santiago de Surco #3",
+    "distrito": "Santiago de Surco",
+    "lat": -12.136999999999999,
+    "lon": -77.028,
+    "link": "https://urbania.pe/proyecto/santiago-de-surco-3",
+    "tipo": "Departamento",
+    "precio": 160000
+  },
+  {
+    "nombre": "Proyecto Santiago de Surco #4",
+    "distrito": "Santiago de Surco",
+    "lat": -12.136,
+    "lon": -77.027,
+    "link": "https://urbania.pe/proyecto/santiago-de-surco-4",
+    "tipo": "Departamento",
+    "precio": 165000
+  },
+  {
+    "nombre": "Proyecto Santiago de Surco #5",
+    "distrito": "Santiago de Surco",
+    "lat": -12.135,
+    "lon": -77.026,
+    "link": "https://urbania.pe/proyecto/santiago-de-surco-5",
+    "tipo": "Departamento",
+    "precio": 170000
+  },
+  {
+    "nombre": "Proyecto Santiago de Surco #6",
+    "distrito": "Santiago de Surco",
+    "lat": -12.133999999999999,
+    "lon": -77.025,
+    "link": "https://urbania.pe/proyecto/santiago-de-surco-6",
+    "tipo": "Departamento",
+    "precio": 175000
+  },
+  {
+    "nombre": "Proyecto Santiago de Surco #7",
+    "distrito": "Santiago de Surco",
+    "lat": -12.133,
+    "lon": -77.024,
+    "link": "https://urbania.pe/proyecto/santiago-de-surco-7",
+    "tipo": "Departamento",
+    "precio": 180000
+  },
+  {
+    "nombre": "Proyecto Santiago de Surco #8",
+    "distrito": "Santiago de Surco",
+    "lat": -12.132,
+    "lon": -77.023,
+    "link": "https://urbania.pe/proyecto/santiago-de-surco-8",
+    "tipo": "Departamento",
+    "precio": 185000
+  },
+  {
+    "nombre": "Proyecto Santiago de Surco #9",
+    "distrito": "Santiago de Surco",
+    "lat": -12.131,
+    "lon": -77.022,
+    "link": "https://urbania.pe/proyecto/santiago-de-surco-9",
+    "tipo": "Departamento",
+    "precio": 190000
+  },
+  {
+    "nombre": "Proyecto Santiago de Surco #10",
+    "distrito": "Santiago de Surco",
+    "lat": -12.129999999999999,
+    "lon": -77.021,
+    "link": "https://urbania.pe/proyecto/santiago-de-surco-10",
+    "tipo": "Departamento",
+    "precio": 195000
+  }
+]
