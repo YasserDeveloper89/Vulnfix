@@ -1,60 +1,50 @@
-import streamlit as st
+import requests
+from bs4 import BeautifulSoup
 import pandas as pd
-import pydeck as pdk
-from urbania import get_urbania_data
-from adondevivir import get_adondevivir_data
-from properati import get_properati_data
+from geopy.geocoders import Nominatim
+import time
 
-st.set_page_config(page_title="Proyectos Inmobiliarios en Lima", layout="wide")
-st.title("🏗️ Mapa de Proyectos Inmobiliarios Reales en Lima (2025)")
+def get_urbania_data():
+    url = 'https://urbania.pe/buscar/proyectos-propiedades'
+    headers = {
+        'User-Agent': 'Mozilla/5.0'
+    }
+    response = requests.get(url, headers=headers)
+    soup = BeautifulSoup(response.content, 'html.parser')
 
-st.markdown("""
-Esta herramienta visualiza proyectos inmobiliarios reales en distritos de alto nivel adquisitivo en Lima. 
-Los datos son obtenidos automáticamente desde Urbania, Adondevivir y Properati.
-""")
+    projects = []
+    geolocator = Nominatim(user_agent="urbania_scraper")
 
-with st.spinner("📡 Obteniendo datos reales..."):
-    urbania_df = get_urbania_data()
-    adondevivir_df = get_adondevivir_data()
-    properati_df = get_properati_data()
+    # Este es un ejemplo; la estructura real del sitio puede variar
+    listings = soup.find_all('div', class_='project-card')
+    for listing in listings:
+        name = listing.find('h2').get_text(strip=True)
+        address = listing.find('p', class_='address').get_text(strip=True)
+        price = listing.find('span', class_='price').get_text(strip=True)
+        bedrooms = listing.find('span', class_='bedrooms').get_text(strip=True)
+        area = listing.find('span', class_='area').get_text(strip=True)
+        link = listing.find('a', href=True)['href']
 
-# Unir datos y limpiar
-all_data = pd.concat([urbania_df, adondevivir_df, properati_df], ignore_index=True)
-all_data.drop_duplicates(subset=["nombre", "distrito", "lat", "lon"], inplace=True)
+        # Geocoding
+        location = geolocator.geocode(address)
+        if location:
+            lat = location.latitude
+            lon = location.longitude
+        else:
+            lat = None
+            lon = None
 
-# Filtro por distritos premium
-distritos_permitidos = ["San Isidro", "Miraflores", "Barranco", "La Molina", "San Borja", "Santiago de Surco"]
-all_data = all_data[all_data["distrito"].isin(distritos_permitidos)]
+        projects.append({
+            'nombre': name,
+            'direccion': address,
+            'precio': price,
+            'dormitorios': bedrooms,
+            'area_m2': area,
+            'url': link,
+            'lat': lat,
+            'lon': lon
+        })
 
-# Sidebar de filtros
-with st.sidebar:
-    st.header("Filtros")
-    tipo_filtro = st.multiselect("Tipo de propiedad", options=sorted(all_data["tipo"].unique()), default=list(all_data["tipo"].unique()))
-    distrito_filtro = st.multiselect("Distrito", options=distritos_permitidos, default=distritos_permitidos)
+        time.sleep(1)  # Para respetar las políticas del servicio de geocodificación
 
-filtro_data = all_data[(all_data["tipo"].isin(tipo_filtro)) & (all_data["distrito"].isin(distrito_filtro))]
-
-# Mapa interactivo
-st.subheader("📍 Proyectos Inmobiliarios en Mapa")
-st.pydeck_chart(pdk.Deck(
-    map_style='mapbox://styles/mapbox/light-v9',
-    initial_view_state=pdk.ViewState(
-        latitude=-12.1,
-        longitude=-77.03,
-        zoom=11,
-        pitch=40,
-    ),
-    layers=[
-        pdk.Layer(
-            'ScatterplotLayer',
-            data=filtro_data,
-            get_position='[lon, lat]',
-            get_color='[0, 100, 250, 160]',
-            get_radius=80,
-        )
-    ]
-))
-
-# Tabla
-st.subheader("📄 Lista de Proyectos Inmobiliarios")
-st.dataframe(filtro_data[["nombre", "empresa", "tipo", "distrito", "avance", "precio"]].reset_index(drop=True))
+    return pd.DataFrame(projects)
