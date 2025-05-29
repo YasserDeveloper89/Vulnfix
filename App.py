@@ -73,19 +73,19 @@ st.markdown("## 📰 Noticias del sector inmobiliario en Perú")
 
 noticias = [
     {
-        "titulo": "Ventas de viviendas nuevas en Lima crecieron 30% en el primer trimestre de 2025",
-        "resumen": "El mercado inmobiliario de Lima registró un incremento significativo en ventas en el primer trimestre del 2025, según ASEI.",
-        "enlace": "https://gestion.pe/tu-dinero/inmobiliarias/ventas-de-viviendas-nuevas-en-lima-crecieron-30-en-primer-trimestre-del-2025-noticia/"
+        "titulo": "Ventas de viviendas en Lima crecieron 30% en el primer trimestre de 2025",
+        "resumen": "Según ASEI, se vendieron 6.237 unidades habitacionales en Lima durante el primer trimestre de 2025, lo que representa un aumento del 30% respecto al mismo periodo del año anterior.",
+        "enlace": "https://www.infobae.com/peru/2025/05/07/mercado-inmobiliario-de-lima-crece-30-en-el-primer-trimestre-de-2025-cual-es-el-precio-promedio-hoy-de-un-departamento/"
     },
     {
-        "titulo": "Creciente demanda de espacios compartidos está transformando el mercado inmobiliario en Lima",
-        "resumen": "La mayor demanda se concentra en distritos como Barranco, Surco, Magdalena, La Victoria y San Miguel.",
-        "enlace": "https://elcomercio.pe/noticias/sector-inmobiliario/"
+        "titulo": "Demanda de micro departamentos en Lima impulsa el mercado inmobiliario",
+        "resumen": "La creciente demanda por micro departamentos y viviendas compactas, impulsada por jóvenes profesionales, está transformando el mercado inmobiliario en Lima.",
+        "enlace": "https://www.infobae.com/peru/2025/05/29/invertir-en-inmuebles-en-peru-en-2025-una-oportunidad-real-y-rentable/"
     },
     {
-        "titulo": "El mercado inmobiliario en Lima creció 30% en el 2024, superando expectativas del sector",
-        "resumen": "El mercado inmobiliario en Lima Metropolitana cerró el 2024 con un crecimiento anual de 30 %, al incorporar más de 4,900 viviendas nuevas respecto al periodo anterior.",
-        "enlace": "https://elperuano.pe/noticia/263472-mercado-inmobiliario-en-lima-crecio-30-en-el-2024-superando-expectativas-del-sector"
+        "titulo": "Inmobiliarias chilenas invierten US$ 200 millones en Perú en 2025",
+        "resumen": "Con el mercado inmobiliario de Chile en desaceleración, varias empresas de ese país están profundizando su expansión hacia Perú.",
+        "enlace": "https://gestion.pe/economia/empresas/peru-es-ahora-destino-de-inmobiliarias-chilenas-con-inversiones-por-us-200-millones-noticia/"
     }
 ]
 
