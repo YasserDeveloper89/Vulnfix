@@ -1,107 +1,143 @@
 [
   {
-    "nombre": "Torre San Isidro Plaza",
-    "distrito": "San Isidro",
-    "lat": -12.0975,
-    "lon": -77.0365,
-    "link": "https://urbania.pe/proyecto/torre-san-isidro-plaza"
-  },
-  {
-    "nombre": "Residencial El Bosque",
-    "distrito": "San Isidro",
-    "lat": -12.0982,
-    "lon": -77.0352,
-    "link": "https://urbania.pe/proyecto/residencial-el-bosque"
-  },
-  {
-    "nombre": "Condominio Golf Park",
-    "distrito": "San Isidro",
-    "lat": -12.0968,
-    "lon": -77.0339,
-    "link": "https://urbania.pe/proyecto/condominio-golf-park"
-  },
-  {
-    "nombre": "Edificio Lima View",
-    "distrito": "San Isidro",
-    "lat": -12.0993,
-    "lon": -77.0381,
-    "link": "https://urbania.pe/proyecto/edificio-lima-view"
-  },
-  {
-    "nombre": "Vivienda Los Robles",
-    "distrito": "San Isidro",
-    "lat": -12.1001,
-    "lon": -77.0377,
-    "link": "https://urbania.pe/proyecto/vivienda-los-robles"
-  },
-  {
-    "nombre": "Edificio Ocean Miraflores",
-    "distrito": "Miraflores",
-    "lat": -12.1201,
-    "lon": -77.0302,
-    "link": "https://urbania.pe/proyecto/edificio-ocean-miraflores"
-  },
-  {
-    "nombre": "Torre Mar Azul",
-    "distrito": "Miraflores",
-    "lat": -12.1192,
-    "lon": -77.0328,
-    "link": "https://urbania.pe/proyecto/torre-mar-azul"
-  },
-  {
-    "nombre": "Condominio Pacifico Sur",
+    "nombre": "Residencial El Sol de Miraflores",
     "distrito": "Miraflores",
     "lat": -12.1214,
-    "lon": -77.0299,
-    "link": "https://urbania.pe/proyecto/condominio-pacifico-sur"
+    "lon": -77.0305,
+    "link": "https://urbania.pe/proyecto/miraflores-1"
   },
   {
-    "nombre": "Vivienda Miramar",
-    "distrito": "Miraflores",
-    "lat": -12.1231,
-    "lon": -77.0285,
-    "link": "https://urbania.pe/proyecto/vivienda-miramar"
-  },
-  {
-    "nombre": "Residencial Las Palmas",
+    "nombre": "Ocean View Miraflores",
     "distrito": "Miraflores",
     "lat": -12.1223,
+    "lon": -77.0312,
+    "link": "https://urbania.pe/proyecto/miraflores-2"
+  },
+  {
+    "nombre": "Torre Pacífico",
+    "distrito": "Miraflores",
+    "lat": -12.1198,
+    "lon": -77.0287,
+    "link": "https://urbania.pe/proyecto/miraflores-3"
+  },
+  {
+    "nombre": "Parque Kennedy Flats",
+    "distrito": "Miraflores",
+    "lat": -12.1220,
+    "lon": -77.0290,
+    "link": "https://urbania.pe/proyecto/miraflores-4"
+  },
+  {
+    "nombre": "Vista Mar Residencial",
+    "distrito": "Miraflores",
+    "lat": -12.1189,
+    "lon": -77.0275,
+    "link": "https://urbania.pe/proyecto/miraflores-5"
+  },
+  {
+    "nombre": "Luxury Flats",
+    "distrito": "Miraflores",
+    "lat": -12.1175,
+    "lon": -77.0298,
+    "link": "https://urbania.pe/proyecto/miraflores-6"
+  },
+  {
+    "nombre": "Condominio Pacífico Azul",
+    "distrito": "Miraflores",
+    "lat": -12.1203,
+    "lon": -77.0320,
+    "link": "https://urbania.pe/proyecto/miraflores-7"
+  },
+  {
+    "nombre": "Altos de Larcomar",
+    "distrito": "Miraflores",
+    "lat": -12.1244,
+    "lon": -77.0340,
+    "link": "https://urbania.pe/proyecto/miraflores-8"
+  },
+  {
+    "nombre": "Veranda Park",
+    "distrito": "Miraflores",
+    "lat": -12.1229,
+    "lon": -77.0268,
+    "link": "https://urbania.pe/proyecto/miraflores-9"
+  },
+  {
+    "nombre": "EcoVista Residencias",
+    "distrito": "Miraflores",
+    "lat": -12.1210,
+    "lon": -77.0255,
+    "link": "https://urbania.pe/proyecto/miraflores-10"
+  },
+
+  {
+    "nombre": "Residencial Golf View",
+    "distrito": "San Isidro",
+    "lat": -12.0972,
+    "lon": -77.0370,
+    "link": "https://urbania.pe/proyecto/sanisidro-1"
+  },
+  {
+    "nombre": "Business Park Lofts",
+    "distrito": "San Isidro",
+    "lat": -12.0965,
+    "lon": -77.0391,
+    "link": "https://urbania.pe/proyecto/sanisidro-2"
+  },
+  {
+    "nombre": "Edificio Los Álamos",
+    "distrito": "San Isidro",
+    "lat": -12.0981,
+    "lon": -77.0355,
+    "link": "https://urbania.pe/proyecto/sanisidro-3"
+  },
+  {
+    "nombre": "Torre Ejecutiva Plus",
+    "distrito": "San Isidro",
+    "lat": -12.0990,
+    "lon": -77.0364,
+    "link": "https://urbania.pe/proyecto/sanisidro-4"
+  },
+  {
+    "nombre": "Sky High San Isidro",
+    "distrito": "San Isidro",
+    "lat": -12.0978,
+    "lon": -77.0342,
+    "link": "https://urbania.pe/proyecto/sanisidro-5"
+  },
+  {
+    "nombre": "Paseo de la República Flats",
+    "distrito": "San Isidro",
+    "lat": -12.0950,
+    "lon": -77.0331,
+    "link": "https://urbania.pe/proyecto/sanisidro-6"
+  },
+  {
+    "nombre": "Central Park Residences",
+    "distrito": "San Isidro",
+    "lat": -12.0944,
+    "lon": -77.0320,
+    "link": "https://urbania.pe/proyecto/sanisidro-7"
+  },
+  {
+    "nombre": "Horizonte Urbano",
+    "distrito": "San Isidro",
+    "lat": -12.0935,
     "lon": -77.0310,
-    "link": "https://urbania.pe/proyecto/residencial-las-palmas"
+    "link": "https://urbania.pe/proyecto/sanisidro-8"
   },
   {
-    "nombre": "Edificio Vista Sur",
-    "distrito": "Barranco",
-    "lat": -12.1402,
-    "lon": -77.0204,
-    "link": "https://urbania.pe/proyecto/edificio-vista-sur"
+    "nombre": "Capital Towers",
+    "distrito": "San Isidro",
+    "lat": -12.0920,
+    "lon": -77.0305,
+    "link": "https://urbania.pe/proyecto/sanisidro-9"
   },
   {
-    "nombre": "Torre Barranco Bay",
-    "distrito": "Barranco",
-    "lat": -12.1415,
-    "lon": -77.0217,
-    "link": "https://urbania.pe/proyecto/torre-barranco-bay"
-  },
-  {
-    "nombre": "Residencial El Faro",
-    "distrito": "Barranco",
-    "lat": -12.1399,
-    "lon": -77.0195,
-    "link": "https://urbania.pe/proyecto/residencial-el-faro"
-  },
-  {
-    "nombre": "Condominio Loma Verde",
-    "distrito": "Barranco",
-    "lat": -12.1428,
-    "lon": -77.0231,
-    "link": "https://urbania.pe/proyecto/condominio-loma-verde"
-  },
-  {
-    "nombre": "Edificio Costa Viva",
-    "distrito": "Barranco",
-    "lat": -12.1433,
-    "lon": -77.0224,
-    "link": "https://urbania.pe/proyecto/edificio-costa-viva"
+    "nombre": "Green Loft San Isidro",
+    "distrito": "San Isidro",
+    "lat": -12.0901,
+    "lon": -77.0300,
+    "link": "https://urbania.pe/proyecto/sanisidro-10"
   }
 ]
