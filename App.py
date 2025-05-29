@@ -1,54 +1,62 @@
-import streamlit as st import pandas as pd import folium from streamlit_folium import st_folium from PIL import Image
+import streamlit as st
+import pandas as pd
+import folium
+from streamlit_folium import st_folium
+from PIL import Image
 
-st.set_page_config(page_title="LimaProp - Proyectos Inmobiliarios", layout="wide")
+# Cargar imágenes
+logo = Image.open("logo_limaprop.png")
+portada = Image.open("portada_limaprop.png")
 
-Mostrar el logo
+# Configuración de la página
+st.set_page_config(page_title="LimaProp", layout="wide")
 
-try: logo = Image.open("logo_limaprop.png") st.image(logo, width=150) except FileNotFoundError: st.warning("Logo no encontrado. Asegúrate de tener 'logo_limaprop.png' en la misma carpeta.")
+# Mostrar portada y logo
+col1, col2 = st.columns([1, 6])
+with col1:
+    st.image(logo, width=100)
+with col2:
+    st.title("LimaProp - Proyectos Inmobiliarios 2025")
+st.image(portada, use_column_width=True)
 
-Mostrar la portada
+# Cargar datos
+try:
+    df = pd.read_json("data_urbania.json")
 
-try: portada = Image.open("portada_limaprop.png") st.image(portada, use_column_width=True) except FileNotFoundError: st.warning("Portada no encontrada. Asegúrate de tener 'portada_limaprop.png' en la misma carpeta.")
+    # Validar columnas
+    required_columns = {'nombre', 'distrito', 'lat', 'lon', 'link'}
+    if not required_columns.issubset(df.columns):
+        st.error("El archivo de datos no contiene todas las columnas necesarias.")
+    else:
+        # Filtros
+        st.sidebar.header("🔍 Filtros")
+        distritos = sorted(df["distrito"].unique())
+        distrito_seleccionado = st.sidebar.selectbox("Selecciona un distrito", ["Todos"] + distritos)
 
-st.title("\U0001F3E0 LimaProp - Proyectos Inmobiliarios en Lima (Versión Premium)")
+        if distrito_seleccionado != "Todos":
+            df_filtrado = df[df["distrito"] == distrito_seleccionado]
+        else:
+            df_filtrado = df
 
-Cargar datos
+        # Mostrar resultados
+        st.markdown(f"### 🏘️ Resultados ({len(df_filtrado)} proyectos)")
+        for index, row in df_filtrado.iterrows():
+            with st.expander(f"{row['nombre']} - {row['distrito']}"):
+                st.write(f"📍 Ubicación: {row['lat']}, {row['lon']}")
+                st.write(f"🔗 [Ver propiedad en Urbania]({row['link']})")
 
-try: df = pd.read_json("data_urbania.json") except Exception as e: st.error("Error al cargar los datos: " + str(e)) st.stop()
-
-Verificar columnas necesarias
-
-columnas_necesarias = {'nombre', 'distrito', 'lat', 'lon', 'link'} if not columnas_necesarias.issubset(df.columns): st.error(f"El archivo de datos no contiene todas las columnas necesarias.\nSe requieren: {columnas_necesarias}\nColumnas actuales: {df.columns.tolist()}") st.stop()
-
-Filtro por distrito
-
-zonas = sorted(df['distrito'].unique()) distrito = st.selectbox("Selecciona un distrito:", ['Todos'] + zonas)
-
-Filtro por nombre de proyecto
-
-nombre_busqueda = st.text_input("Buscar por nombre del proyecto:")
-
-Filtrar datos
-
-if distrito != 'Todos': df = df[df['distrito'] == distrito]
-
-if nombre_busqueda: df = df[df['nombre'].str.contains(nombre_busqueda, case=False)]
-
-Mapa interactivo
-
-if not df.empty: mapa = folium.Map(location=[-12.0464, -77.0428], zoom_start=12) for _, row in df.iterrows(): folium.Marker( location=[row['lat'], row['lon']], popup=f"<a href='{row['link']}' target='_blank'>{row['nombre']}</a>", tooltip=row['nombre'], icon=folium.Icon(color='blue', icon='home') ).add_to(mapa)
-
-st.markdown("## Mapa de Proyectos")
-st_data = st_folium(mapa, width=1000, height=500)
-
-st.markdown("## Lista de Proyectos")
-df_display = df[['nombre', 'distrito', 'link']].rename(columns={
-    'nombre': 'Nombre del Proyecto',
-    'distrito': 'Distrito',
-    'link': 'Enlace'
-})
-df_display['Enlace'] = df_display['Enlace'].apply(lambda url: f"[Ver proyecto]({url})")
-st.write(df_display.to_markdown(index=False), unsafe_allow_html=True)
-
-else: st.warning("No hay proyectos para mostrar con los filtros seleccionados.")
-
+        # Mapa
+        st.markdown("### 🌍 Mapa Interactivo de Proyectos")
+        if not df_filtrado.empty:
+            m = folium.Map(location=[-12.1, -77.03], zoom_start=12)
+            for index, row in df_filtrado.iterrows():
+                folium.Marker(
+                    location=[row["lat"], row["lon"]],
+                    popup=f"{row['nombre']} ({row['distrito']})",
+                    tooltip=row['nombre']
+                ).add_to(m)
+            st_folium(m, width=700, height=500)
+        else:
+            st.info("No hay proyectos disponibles para mostrar en el mapa.")
+except Exception as e:
+    st.error(f"Error al cargar los datos: {e}")
