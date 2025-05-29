@@ -1,92 +1,200 @@
 [
   {
-    "nombre": "Edificio Ocean View",
+    "nombre": "Residencial Costamar",
     "distrito": "Miraflores",
-    "lat": -12.1205,
-    "lon": -77.0302,
-    "link": "https://ejemplo.com/ocean-view",
-    "precio": 580000,
+    "lat": -12.1211,
+    "lon": -77.0305,
+    "link": "https://ejemplo.com/costamar",
+    "precio": 450000,
     "tipo": "Departamento"
   },
   {
-    "nombre": "Residencial Aurora",
+    "nombre": "Torre Pacífico",
     "distrito": "Miraflores",
-    "lat": -12.1230,
-    "lon": -77.0275,
-    "link": "https://ejemplo.com/aurora",
-    "precio": 420000,
+    "lat": -12.1185,
+    "lon": -77.0273,
+    "link": "https://ejemplo.com/torrepacifico",
+    "precio": 520000,
     "tipo": "Departamento"
   },
   {
-    "nombre": "Torre Elite",
-    "distrito": "San Isidro",
-    "lat": -12.0982,
-    "lon": -77.0365,
-    "link": "https://ejemplo.com/elite",
-    "precio": 620000,
+    "nombre": "Edificio Mar Azul",
+    "distrito": "Miraflores",
+    "lat": -12.1244,
+    "lon": -77.0322,
+    "link": "https://ejemplo.com/marazul",
+    "precio": 610000,
     "tipo": "Departamento"
+  },
+  {
+    "nombre": "Sky View Miraflores",
+    "distrito": "Miraflores",
+    "lat": -12.1209,
+    "lon": -77.0291,
+    "link": "https://ejemplo.com/skyview",
+    "precio": 480000,
+    "tipo": "Penthouse"
   },
   {
     "nombre": "Green Park",
-    "distrito": "San Isidro",
-    "lat": -12.0950,
-    "lon": -77.0333,
+    "distrito": "Miraflores",
+    "lat": -12.1222,
+    "lon": -77.0301,
     "link": "https://ejemplo.com/greenpark",
-    "precio": 750000,
-    "tipo": "Departamento"
-  },
-  {
-    "nombre": "Eco Lofts",
-    "distrito": "Barranco",
-    "lat": -12.1456,
-    "lon": -77.0203,
-    "link": "https://ejemplo.com/ecolofts",
-    "precio": 350000,
-    "tipo": "Loft"
-  },
-  {
-    "nombre": "Costa Azul",
-    "distrito": "Barranco",
-    "lat": -12.1409,
-    "lon": -77.0198,
-    "link": "https://ejemplo.com/costaazul",
     "precio": 470000,
     "tipo": "Departamento"
   },
   {
-    "nombre": "Altos de Surco",
-    "distrito": "Santiago de Surco",
-    "lat": -12.1554,
-    "lon": -76.9793,
-    "link": "https://ejemplo.com/altossurco",
+    "nombre": "Residencial Barranco 360",
+    "distrito": "Barranco",
+    "lat": -12.1394,
+    "lon": -77.0215,
+    "link": "https://ejemplo.com/barranco360",
+    "precio": 350000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Ocean View Barranco",
+    "distrito": "Barranco",
+    "lat": -12.1401,
+    "lon": -77.0222,
+    "link": "https://ejemplo.com/oceanview",
+    "precio": 380000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Arte Urbano Flats",
+    "distrito": "Barranco",
+    "lat": -12.1387,
+    "lon": -77.0208,
+    "link": "https://ejemplo.com/arteurbano",
+    "precio": 310000,
+    "tipo": "Loft"
+  },
+  {
+    "nombre": "Luz de Barranco",
+    "distrito": "Barranco",
+    "lat": -12.1391,
+    "lon": -77.0231,
+    "link": "https://ejemplo.com/luzdebarranco",
     "precio": 390000,
     "tipo": "Departamento"
   },
   {
-    "nombre": "Residencial Monterrico",
-    "distrito": "Santiago de Surco",
-    "lat": -12.1522,
-    "lon": -76.9780,
-    "link": "https://ejemplo.com/monterrico",
-    "precio": 560000,
-    "tipo": "Casa"
-  },
-  {
-    "nombre": "Villas del Sol",
-    "distrito": "La Molina",
-    "lat": -12.0883,
-    "lon": -76.9512,
-    "link": "https://ejemplo.com/villasol",
-    "precio": 690000,
-    "tipo": "Casa"
-  },
-  {
-    "nombre": "Condominio Los Fresnos",
-    "distrito": "La Molina",
-    "lat": -12.0907,
-    "lon": -76.9543,
-    "link": "https://ejemplo.com/losfresnos",
-    "precio": 510000,
+    "nombre": "Urban Life Barranco",
+    "distrito": "Barranco",
+    "lat": -12.1379,
+    "lon": -77.0195,
+    "link": "https://ejemplo.com/urbanlife",
+    "precio": 365000,
     "tipo": "Departamento"
+  },
+  {
+    "nombre": "Altamira San Isidro",
+    "distrito": "San Isidro",
+    "lat": -12.0954,
+    "lon": -77.0361,
+    "link": "https://ejemplo.com/altamira",
+    "precio": 620000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Vista Verde",
+    "distrito": "San Isidro",
+    "lat": -12.0961,
+    "lon": -77.0358,
+    "link": "https://ejemplo.com/vistaverde",
+    "precio": 670000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Skyline Towers",
+    "distrito": "San Isidro",
+    "lat": -12.0974,
+    "lon": -77.0342,
+    "link": "https://ejemplo.com/skyline",
+    "precio": 700000,
+    "tipo": "Penthouse"
+  },
+  {
+    "nombre": "Edificio Solaris",
+    "distrito": "San Isidro",
+    "lat": -12.0959,
+    "lon": -77.0331,
+    "link": "https://ejemplo.com/solaris",
+    "precio": 645000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "San Felipe 88",
+    "distrito": "Jesús María",
+    "lat": -12.0723,
+    "lon": -77.0499,
+    "link": "https://ejemplo.com/sanfelipe88",
+    "precio": 380000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Jardines del Prado",
+    "distrito": "Jesús María",
+    "lat": -12.0704,
+    "lon": -77.0503,
+    "link": "https://ejemplo.com/jardines",
+    "precio": 420000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Parque Real",
+    "distrito": "Jesús María",
+    "lat": -12.0732,
+    "lon": -77.0512,
+    "link": "https://ejemplo.com/parquereal",
+    "precio": 390000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Central Park Flats",
+    "distrito": "Jesús María",
+    "lat": -12.0719,
+    "lon": -77.0521,
+    "link": "https://ejemplo.com/centralpark",
+    "precio": 410000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "EcoVivienda La Molina",
+    "distrito": "La Molina",
+    "lat": -12.0901,
+    "lon": -76.9452,
+    "link": "https://ejemplo.com/ecovivienda",
+    "precio": 360000,
+    "tipo": "Casa"
+  },
+  {
+    "nombre": "Residencial Las Lomas",
+    "distrito": "La Molina",
+    "lat": -12.0915,
+    "lon": -76.9463,
+    "link": "https://ejemplo.com/laslomas",
+    "precio": 375000,
+    "tipo": "Casa"
+  },
+  {
+    "nombre": "Colinas del Sol",
+    "distrito": "La Molina",
+    "lat": -12.0894,
+    "lon": -76.9448,
+    "link": "https://ejemplo.com/colinas",
+    "precio": 385000,
+    "tipo": "Casa"
+  },
+  {
+    "nombre": "Sunset Hills",
+    "distrito": "La Molina",
+    "lat": -12.0922,
+    "lon": -76.9439,
+    "link": "https://ejemplo.com/sunsethills",
+    "precio": 400000,
+    "tipo": "Casa"
   }
 ]
