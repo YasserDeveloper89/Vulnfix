@@ -12,6 +12,11 @@ st.markdown("Explora proyectos inmobiliarios por zona, tipo y precio en Lima Met
 # Cargar datos
 try:
     df = pd.read_json("data_urbania.json")
+
+    # Normalizar columnas categóricas para evitar errores por espacios o capitalización
+    df["distrito"] = df["distrito"].astype(str).str.strip().str.title()
+    df["tipo"] = df["tipo"].astype(str).str.strip().str.title()
+
     required_columns = {"nombre", "distrito", "lat", "lon", "link", "precio", "tipo"}
     if not required_columns.issubset(df.columns):
         st.error(f"El archivo de datos no contiene todas las columnas necesarias. Se requieren: {required_columns}")
@@ -28,7 +33,7 @@ with st.sidebar:
         "Selecciona un distrito:",
         options=sorted(df["distrito"].unique())
     )
-    
+
     tipos_disponibles = sorted(df["tipo"].unique())
     tipo_seleccionado = st.multiselect(
         "Tipo de propiedad:",
@@ -58,17 +63,20 @@ col1, col2 = st.columns([1, 1.5])
 
 with col1:
     st.subheader(f"📍 Mapa de proyectos en {distrito_seleccionado}")
-    mapa = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=14)
+    if not df_filtrado.empty:
+        mapa = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=14)
 
-    for _, row in df_filtrado.iterrows():
-        folium.Marker(
-            location=[row["lat"], row["lon"]],
-            popup=f"<strong>{row['nombre']}</strong><br><a href='{row['link']}' target='_blank'>Ver proyecto</a>",
-            tooltip=row["nombre"],
-            icon=folium.Icon(color="blue", icon="home")
-        ).add_to(mapa)
+        for _, row in df_filtrado.iterrows():
+            folium.Marker(
+                location=[row["lat"], row["lon"]],
+                popup=f"<strong>{row['nombre']}</strong><br><a href='{row['link']}' target='_blank'>Ver proyecto</a>",
+                tooltip=row["nombre"],
+                icon=folium.Icon(color="blue", icon="home")
+            ).add_to(mapa)
 
-    st_data = st_folium(mapa, use_container_width=True, height=500)
+        st_data = st_folium(mapa, use_container_width=True, height=500)
+    else:
+        st.write("No hay proyectos para mostrar en el mapa.")
 
 with col2:
     st.subheader("📄 Lista de Proyectos")
