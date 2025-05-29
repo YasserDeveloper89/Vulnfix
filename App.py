@@ -1,68 +1,110 @@
-import streamlit as st import pandas as pd import folium from streamlit_folium import st_folium from PIL import Image
+import streamlit as st
+import pandas as pd
+import folium
+from streamlit_folium import st_folium
+from PIL import Image
+import requests
+from bs4 import BeautifulSoup
 
-Configuración de la página
-
+# Configuración de la página
 st.set_page_config(page_title="LimaProp", layout="wide")
 
-Encabezado
+# Logo (opcional)
+st.sidebar.image("logo.png", width=180)
 
-st.title("LimaProp - Buscador de Proyectos Inmobiliarios") st.markdown("Explora proyectos inmobiliarios en Lima de forma interactiva y actualizada.")
+# Menú lateral
+seccion = st.sidebar.radio("Explorar", ["Inicio", "Buscar por distrito", "Noticias del sector"])
 
-Sidebar para selección de zona
+st.title("🏙️ LimaProp - Buscador de Proyectos Inmobiliarios")
 
-st.sidebar.header("Filtrar por zona")
+# Cargar datos
+try:
+    df = pd.read_json("data_urbania.json")
+    df["distrito"] = df["distrito"].astype(str).str.strip().str.title()
+    df["tipo"] = df["tipo"].astype(str).str.strip().str.title()
+except Exception as e:
+    st.error(f"Error al cargar el archivo JSON: {e}")
+    st.stop()
 
-Cargar datos
+# Función para mostrar tarjetas de proyectos
+def mostrar_proyectos(data):
+    for _, row in data.iterrows():
+        with st.container():
+            st.markdown(f"### [{row['nombre']}]({row['link']})")
+            col1, col2, col3 = st.columns([2, 1, 1])
+            with col1:
+                st.write(f"**Distrito:** {row['distrito']}")
+                st.write(f"**Tipo:** {row['tipo']}")
+                st.write(f"**Precio:** ${row['precio']:,}")
+            with col2:
+                st.write(" ")
+            with col3:
+                st.button("Ver Proyecto", key=row['nombre'], on_click=lambda: st.markdown(f"[Ir al proyecto]({row['link']})"))
 
-try: df = pd.read_json("data_urbania.json") df["distrito"] = df["distrito"].astype(str).str.strip().str.title() df["tipo"] = df["tipo"].astype(str).str.strip().str.title() except Exception as e: st.error(f"Error al cargar el archivo JSON: {e}") st.stop()
+# Sección de Inicio
+if seccion == "Inicio":
+    st.markdown("### Bienvenido a LimaProp")
+    st.markdown("Selecciona una opción en el menú lateral para comenzar.")
 
-Opciones de filtrado
+# Sección de búsqueda
+elif seccion == "Buscar por distrito":
+    st.subheader("Proyectos disponibles")
+    distritos = sorted(df["distrito"].unique())
+    distrito_seleccionado = st.selectbox("Selecciona un distrito", [""] + distritos)
 
-zonas = sorted(df["distrito"].unique()) zona_seleccionada = st.sidebar.selectbox("Selecciona una zona:", ["-- Selecciona --"] + zonas)
+    if distrito_seleccionado:
+        proyectos = df[df["distrito"] == distrito_seleccionado]
+        if not proyectos.empty:
+            mostrar_proyectos(proyectos)
 
-Mostrar proyectos solo si se ha seleccionado una zona
+            # Mostrar mapa
+            st.subheader("Mapa interactivo de proyectos")
+            m = folium.Map(location=[proyectos["lat"].mean(), proyectos["lon"].mean()], zoom_start=14)
+            for _, row in proyectos.iterrows():
+                folium.Marker(
+                    [row["lat"], row["lon"]],
+                    tooltip=row["nombre"],
+                    popup=f"<a href='{row['link']}' target='_blank'>{row['nombre']}</a>"
+                ).add_to(m)
+            st_folium(m, width=700, height=400)
+        else:
+            st.info("No hay proyectos disponibles en ese distrito.")
 
-if zona_seleccionada != "-- Selecciona --": st.subheader("🛌 Proyectos Disponibles") proyectos = df[df["distrito"] == zona_seleccionada]
+# Sección de noticias
+elif seccion == "Noticias del sector":
+    st.subheader("📰 Noticias del sector inmobiliario en Perú")
 
-for idx, row in proyectos.iterrows():
-    with st.container():
-        cols = st.columns([1, 3])
-        with cols[0]:
-            if row["image"]:
-                try:
-                    st.image(row["image"], width=150)
-                except:
-                    st.write("[Imagen no disponible]")
-        with cols[1]:
-            st.markdown(f"**{row['nombre']}**")
-            st.markdown(f"Tipo: {row['tipo']}")
-            st.markdown(f"Precio: {row['precio']}")
-            st.markdown(f"Ubicación: {row['direccion']}")
-            st.markdown("---")
+    def obtener_noticias():
+        url = "https://gestion.pe/economia/inmobiliaria/"
+        try:
+            page = requests.get(url, timeout=10)
+            soup = BeautifulSoup(page.content, "html.parser")
+            articles = soup.find_all("div", class_="story-item__info", limit=5)
+            noticias = []
+            for art in articles:
+                titulo = art.find("a").get_text(strip=True)
+                enlace = art.find("a")["href"]
+                noticias.append((titulo, "https://gestion.pe" + enlace if enlace.startswith("/") else enlace))
+            return noticias
+        except Exception as e:
+            return [("Error al obtener noticias", str(e))]
 
-# Mapa interactivo
-st.subheader(":world_map: Mapa de Proyectos")
-m = folium.Map(location=[-12.0464, -77.0428], zoom_start=12)
-for idx, row in proyectos.iterrows():
-    try:
-        folium.Marker(
-            location=[row["lat"], row["lon"]],
-            popup=row["nombre"],
-            tooltip=row["nombre"]
-        ).add_to(m)
-    except:
-        continue
-st_folium(m, width=1000)
+    noticias = obtener_noticias()
+    for titulo, enlace in noticias:
+        st.markdown(f"- [{titulo}]({enlace})")
 
-Noticias del sector inmobiliario
-
-st.subheader("📰 Noticias del Sector Inmobiliario en Perú (2025)")
-
-noticias = [ { "titulo": "Ventas de viviendas nuevas en Lima crecieron 30% en el primer trimestre de 2025", "resumen": "El mercado inmobiliario de Lima Metropolitana experimentó un crecimiento del 30% en ventas durante el primer trimestre de 2025, impulsado por la Vivienda de Interés Social, según ASEI.", "enlace": "https://gestion.pe/tu-dinero/inmobiliarias/" }, { "titulo": "Tendencias clave en el mercado inmobiliario peruano en 2025", "resumen": "El sector enfrenta desafíos como adaptarse a la nueva normativa VIS, mantener la demanda en un contexto de posibles fluctuaciones en las tasas de interés y diferenciar su oferta para atraer tanto a compradores finales como a inversionistas.", "enlace": "https://vao.pe/tendencias-clave-mercado-inmobiliario-peruano-2025" }, { "titulo": "El boom inmobiliario en el Perú en el 2025: cinco datos clave y tendencias del mercado", "resumen": "El sector inmobiliario en el Perú vive un momento de dinamismo en 2025, marcado por un crecimiento sostenido, cambios en las preferencias de compradores y políticas públicas que impulsan la demanda.", "enlace": "https://www.cronicaviva.com.pe/el-boom-inmobiliario-en-el-peru-en-2025-datos-clave-y-tendencias-del-mercado/" }, { "titulo": "Perspectivas del sector inmobiliario en Perú para 2025: tendencias y oportunidades", "resumen": "El mercado inmobiliario en Perú sigue evolucionando, influenciado por factores económicos, sociales y tecnológicos. En 2025, se esperan cambios significativos en la demanda de vivienda, inversión y financiamiento.", "enlace": "https://hdcorpgrupoinmobiliario.com/2025/03/17/perspectivas-del-sector-inmobiliario-en-peru-para-2025/" } ]
-
-for noticia in noticias: st.markdown(f"{noticia['titulo']}") st.write(noticia['resumen']) st.markdown(f"Leer más") st.markdown("---")
-
-Footer
-
-st.markdown(""" <hr style='margin-top: 50px; margin-bottom: 10px;'> <div style='text-align: center; color: gray;'> LimaProp © 2025 - Todos los derechos reservados | Diseño profesional para una experiencia inmobiliaria moderna. </div> """, unsafe_allow_html=True)
-
+# Footer para eliminar espacio vacío
+st.markdown(
+    """
+    <style>
+    .reportview-container .main footer {visibility: hidden;}
+    footer {visibility: hidden;}
+    .block-container {
+        padding-bottom: 0px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+st.markdown("---")
+st.markdown("© 2025 LimaProp | Todos los derechos reservados", unsafe_allow_html=True)
