@@ -3,11 +3,30 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
+# ----- Estilo para mejorar la distribución -----
+st.markdown("""
+    <style>
+    .block-container {
+        padding-bottom: 1rem !important;
+    }
+    .main {
+        min-height: 90vh;
+    }
+    .project-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        background-color: #fafafa;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# Configuración de la página
 st.set_page_config(page_title="LimaProp", layout="wide")
 
-st.markdown("## 🏙️ LimaProp App - Buscador de Proyectos Inmobiliarios")
-st.markdown("Explora proyectos inmobiliarios por zona, tipo y precio en Lima Metropolitana!")
-st.markdown("---")
+st.title("🏙️ LimaProp - Buscador de Proyectos Inmobiliarios")
+st.markdown("Explora proyectos inmobiliarios por zona, tipo y precio en Lima Metropolitana.")
 
 # Cargar datos
 try:
@@ -21,11 +40,28 @@ except Exception as e:
 # Sidebar con filtros
 with st.sidebar:
     st.header("🔎 Filtros")
-    distrito_seleccionado = st.selectbox("Selecciona un distrito", options=sorted(df["distrito"].unique()))
-    tipo_seleccionado = st.multiselect("Tipo de propiedad", options=sorted(df["tipo"].unique()), default=sorted(df["tipo"].unique()))
+
+    distrito_seleccionado = st.selectbox(
+        "Selecciona un distrito:",
+        options=sorted(df["distrito"].unique())
+    )
+
+    tipos_disponibles = sorted(df["tipo"].unique())
+    tipo_seleccionado = st.multiselect(
+        "Tipo de propiedad:",
+        options=tipos_disponibles,
+        default=tipos_disponibles
+    )
+
     precio_min = int(df["precio"].min())
     precio_max = int(df["precio"].max())
-    rango_precios = st.slider("Rango de precios (S/.)", min_value=precio_min, max_value=precio_max, value=(precio_min, precio_max))
+    rango_precios = st.slider(
+        "Rango de precios (S/.)",
+        min_value=precio_min,
+        max_value=precio_max,
+        value=(precio_min, precio_max),
+        step=5000
+    )
 
 # Aplicar filtros
 df_filtrado = df[
@@ -35,40 +71,38 @@ df_filtrado = df[
     (df["precio"] <= rango_precios[1])
 ]
 
-# Mostrar primero los proyectos centrados
-st.subheader("🏗️ Proyectos en " + distrito_seleccionado)
-with st.container():
-    if df_filtrado.empty:
-        st.warning("No se encontraron proyectos.")
-    else:
-        cols = st.columns(2)  # Distribuye proyectos en 2 columnas para mejor estética
-        for i, (_, row) in enumerate(df_filtrado.iterrows()):
-            with cols[i % 2]:
-                st.markdown(
-                    f"""
-                    <div style="background-color: #f9f9f9; padding: 16px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-                        <h4 style="margin-bottom: 8px;">{row['nombre']}</h4>
-                        <p style="margin: 0;"><strong>Tipo:</strong> {row['tipo']}</p>
-                        <p style="margin: 0;"><strong>Distrito:</strong> {row['distrito']}</p>
-                        <p style="margin: 0 0 10px;"><strong>Precio:</strong> S/. {int(row['precio']):,}".replace(",", ".")</p>
-                        <a href="{row['link']}" target="_blank" style="text-decoration: none; color: white; background-color: #007bff; padding: 8px 16px; border-radius: 6px; display: inline-block;">🔗 Ver Proyecto</a>
-                    </div>
-                    """,
-                    unsafe_allow_html=True
-                )
+# Distribución principal en columnas
+col1, col2 = st.columns([1, 1.5])
 
-# Luego mostrar el mapa debajo
-st.markdown("---")
-st.subheader(f"📍 Mapa de proyectos en {distrito_seleccionado}")
-if not df_filtrado.empty:
-    mapa = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=14)
-    for _, row in df_filtrado.iterrows():
-        folium.Marker(
-            location=[row["lat"], row["lon"]],
-            popup=f"<strong>{row['nombre']}</strong><br><a href='{row['link']}' target='_blank'>Ver proyecto</a>",
-            tooltip=row["nombre"],
-            icon=folium.Icon(color="blue", icon="home")
-        ).add_to(mapa)
-    st_folium(mapa, use_container_width=True, height=520)
-else:
-    st.info("No hay proyectos para este filtro.")
+with col1:
+    st.subheader(f"📍 Mapa en {distrito_seleccionado}")
+    if not df_filtrado.empty:
+        mapa = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=14)
+
+        for _, row in df_filtrado.iterrows():
+            folium.Marker(
+                location=[row["lat"], row["lon"]],
+                popup=f"<strong>{row['nombre']}</strong><br><a href='{row['link']}' target='_blank'>Ver proyecto</a>",
+                tooltip=row["nombre"],
+                icon=folium.Icon(color="blue", icon="home")
+            ).add_to(mapa)
+
+        st_folium(mapa, use_container_width=True, height=400)
+    else:
+        st.info("No hay proyectos disponibles para este distrito con los filtros seleccionados.")
+
+with col2:
+    st.subheader("🏗️ Proyectos disponibles")
+    if df_filtrado.empty:
+        st.warning("No se encontraron proyectos para los filtros seleccionados.")
+    else:
+        for _, row in df_filtrado.iterrows():
+            st.markdown(f"""
+                <div class="project-card">
+                    <h4>{row['nombre']}</h4>
+                    <p><strong>Distrito:</strong> {row['distrito']}</p>
+                    <p><strong>Tipo:</strong> {row['tipo']}</p>
+                    <p><strong>Precio:</strong> S/. {int(row['precio']):,}</p>
+                    <a href="{row['link']}" target="_blank">🔗 Ver proyecto</a>
+                </div>
+            """, unsafe_allow_html=True)
