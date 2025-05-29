@@ -1,1 +1,285 @@
-[{"nombre":"Miraflores Residencial 1","distrito":"Miraflores","lat":-12.1223,"lon":-77.0297,"precio":"$250000","habitaciones":1,"área_m2":70,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/miraflores\/residencial-1"},{"nombre":"Miraflores Residencial 2","distrito":"Miraflores","lat":-12.1218,"lon":-77.0292,"precio":"$260000","habitaciones":2,"área_m2":75,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/miraflores\/residencial-2"},{"nombre":"Miraflores Residencial 3","distrito":"Miraflores","lat":-12.1213,"lon":-77.0287,"precio":"$270000","habitaciones":3,"área_m2":80,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/miraflores\/residencial-3"},{"nombre":"Miraflores Residencial 4","distrito":"Miraflores","lat":-12.1208,"lon":-77.0282,"precio":"$280000","habitaciones":4,"área_m2":85,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/miraflores\/residencial-4"},{"nombre":"Miraflores Residencial 5","distrito":"Miraflores","lat":-12.1203,"lon":-77.0277,"precio":"$290000","habitaciones":1,"área_m2":90,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/miraflores\/residencial-5"},{"nombre":"Miraflores Residencial 6","distrito":"Miraflores","lat":-12.1198,"lon":-77.0272,"precio":"$300000","habitaciones":2,"área_m2":95,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/miraflores\/residencial-6"},{"nombre":"Miraflores Residencial 7","distrito":"Miraflores","lat":-12.1193,"lon":-77.0267,"precio":"$310000","habitaciones":3,"área_m2":100,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/miraflores\/residencial-7"},{"nombre":"Miraflores Residencial 8","distrito":"Miraflores","lat":-12.1188,"lon":-77.0262,"precio":"$320000","habitaciones":4,"área_m2":105,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/miraflores\/residencial-8"},{"nombre":"Miraflores Residencial 9","distrito":"Miraflores","lat":-12.1183,"lon":-77.0257,"precio":"$330000","habitaciones":1,"área_m2":110,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/miraflores\/residencial-9"},{"nombre":"Miraflores Residencial 10","distrito":"Miraflores","lat":-12.1178,"lon":-77.0252,"precio":"$340000","habitaciones":2,"área_m2":115,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/miraflores\/residencial-10"},{"nombre":"San Isidro Residencial 1","distrito":"San Isidro","lat":-12.0994,"lon":-77.0367,"precio":"$250000","habitaciones":1,"área_m2":70,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-isidro\/residencial-1"},{"nombre":"San Isidro Residencial 2","distrito":"San Isidro","lat":-12.0989,"lon":-77.0362,"precio":"$260000","habitaciones":2,"área_m2":75,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-isidro\/residencial-2"},{"nombre":"San Isidro Residencial 3","distrito":"San Isidro","lat":-12.0984,"lon":-77.0357,"precio":"$270000","habitaciones":3,"área_m2":80,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-isidro\/residencial-3"},{"nombre":"San Isidro Residencial 4","distrito":"San Isidro","lat":-12.0979,"lon":-77.0352,"precio":"$280000","habitaciones":4,"área_m2":85,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-isidro\/residencial-4"},{"nombre":"San Isidro Residencial 5","distrito":"San Isidro","lat":-12.0974,"lon":-77.0347,"precio":"$290000","habitaciones":1,"área_m2":90,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-isidro\/residencial-5"},{"nombre":"San Isidro Residencial 6","distrito":"San Isidro","lat":-12.0969,"lon":-77.0342,"precio":"$300000","habitaciones":2,"área_m2":95,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-isidro\/residencial-6"},{"nombre":"San Isidro Residencial 7","distrito":"San Isidro","lat":-12.0964,"lon":-77.0337,"precio":"$310000","habitaciones":3,"área_m2":100,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-isidro\/residencial-7"},{"nombre":"San Isidro Residencial 8","distrito":"San Isidro","lat":-12.0959,"lon":-77.0332,"precio":"$320000","habitaciones":4,"área_m2":105,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-isidro\/residencial-8"},{"nombre":"San Isidro Residencial 9","distrito":"San Isidro","lat":-12.0954,"lon":-77.0327,"precio":"$330000","habitaciones":1,"área_m2":110,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-isidro\/residencial-9"},{"nombre":"San Isidro Residencial 10","distrito":"San Isidro","lat":-12.0949,"lon":-77.0322,"precio":"$340000","habitaciones":2,"área_m2":115,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-isidro\/residencial-10"},{"nombre":"Surco Residencial 1","distrito":"Surco","lat":-12.1584,"lon":-76.9821,"precio":"$250000","habitaciones":1,"área_m2":70,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/surco\/residencial-1"},{"nombre":"Surco Residencial 2","distrito":"Surco","lat":-12.1579,"lon":-76.9816,"precio":"$260000","habitaciones":2,"área_m2":75,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/surco\/residencial-2"},{"nombre":"Surco Residencial 3","distrito":"Surco","lat":-12.1574,"lon":-76.9811,"precio":"$270000","habitaciones":3,"área_m2":80,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/surco\/residencial-3"},{"nombre":"Surco Residencial 4","distrito":"Surco","lat":-12.1569,"lon":-76.9806,"precio":"$280000","habitaciones":4,"área_m2":85,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/surco\/residencial-4"},{"nombre":"Surco Residencial 5","distrito":"Surco","lat":-12.1564,"lon":-76.9801,"precio":"$290000","habitaciones":1,"área_m2":90,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/surco\/residencial-5"},{"nombre":"Surco Residencial 6","distrito":"Surco","lat":-12.1559,"lon":-76.9796,"precio":"$300000","habitaciones":2,"área_m2":95,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/surco\/residencial-6"},{"nombre":"Surco Residencial 7","distrito":"Surco","lat":-12.1554,"lon":-76.9791,"precio":"$310000","habitaciones":3,"área_m2":100,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/surco\/residencial-7"},{"nombre":"Surco Residencial 8","distrito":"Surco","lat":-12.1549,"lon":-76.9786,"precio":"$320000","habitaciones":4,"área_m2":105,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/surco\/residencial-8"},{"nombre":"Surco Residencial 9","distrito":"Surco","lat":-12.1544,"lon":-76.9781,"precio":"$330000","habitaciones":1,"área_m2":110,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/surco\/residencial-9"},{"nombre":"Surco Residencial 10","distrito":"Surco","lat":-12.1539,"lon":-76.9776,"precio":"$340000","habitaciones":2,"área_m2":115,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/surco\/residencial-10"},{"nombre":"La Molina Residencial 1","distrito":"La Molina","lat":-12.0888,"lon":-76.9435,"precio":"$250000","habitaciones":1,"área_m2":70,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/la-molina\/residencial-1"},{"nombre":"La Molina Residencial 2","distrito":"La Molina","lat":-12.0883,"lon":-76.943,"precio":"$260000","habitaciones":2,"área_m2":75,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/la-molina\/residencial-2"},{"nombre":"La Molina Residencial 3","distrito":"La Molina","lat":-12.0878,"lon":-76.9425,"precio":"$270000","habitaciones":3,"área_m2":80,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/la-molina\/residencial-3"},{"nombre":"La Molina Residencial 4","distrito":"La Molina","lat":-12.0873,"lon":-76.942,"precio":"$280000","habitaciones":4,"área_m2":85,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/la-molina\/residencial-4"},{"nombre":"La Molina Residencial 5","distrito":"La Molina","lat":-12.0868,"lon":-76.9415,"precio":"$290000","habitaciones":1,"área_m2":90,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/la-molina\/residencial-5"},{"nombre":"La Molina Residencial 6","distrito":"La Molina","lat":-12.0863,"lon":-76.941,"precio":"$300000","habitaciones":2,"área_m2":95,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/la-molina\/residencial-6"},{"nombre":"La Molina Residencial 7","distrito":"La Molina","lat":-12.0858,"lon":-76.9405,"precio":"$310000","habitaciones":3,"área_m2":100,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/la-molina\/residencial-7"},{"nombre":"La Molina Residencial 8","distrito":"La Molina","lat":-12.0853,"lon":-76.94,"precio":"$320000","habitaciones":4,"área_m2":105,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/la-molina\/residencial-8"},{"nombre":"La Molina Residencial 9","distrito":"La Molina","lat":-12.0848,"lon":-76.9395,"precio":"$330000","habitaciones":1,"área_m2":110,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/la-molina\/residencial-9"},{"nombre":"La Molina Residencial 10","distrito":"La Molina","lat":-12.0843,"lon":-76.939,"precio":"$340000","habitaciones":2,"área_m2":115,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/la-molina\/residencial-10"},{"nombre":"Barranco Residencial 1","distrito":"Barranco","lat":-12.1392,"lon":-77.0204,"precio":"$250000","habitaciones":1,"área_m2":70,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/barranco\/residencial-1"},{"nombre":"Barranco Residencial 2","distrito":"Barranco","lat":-12.1387,"lon":-77.0199,"precio":"$260000","habitaciones":2,"área_m2":75,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/barranco\/residencial-2"},{"nombre":"Barranco Residencial 3","distrito":"Barranco","lat":-12.1382,"lon":-77.0194,"precio":"$270000","habitaciones":3,"área_m2":80,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/barranco\/residencial-3"},{"nombre":"Barranco Residencial 4","distrito":"Barranco","lat":-12.1377,"lon":-77.0189,"precio":"$280000","habitaciones":4,"área_m2":85,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/barranco\/residencial-4"},{"nombre":"Barranco Residencial 5","distrito":"Barranco","lat":-12.1372,"lon":-77.0184,"precio":"$290000","habitaciones":1,"área_m2":90,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/barranco\/residencial-5"},{"nombre":"Barranco Residencial 6","distrito":"Barranco","lat":-12.1367,"lon":-77.0179,"precio":"$300000","habitaciones":2,"área_m2":95,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/barranco\/residencial-6"},{"nombre":"Barranco Residencial 7","distrito":"Barranco","lat":-12.1362,"lon":-77.0174,"precio":"$310000","habitaciones":3,"área_m2":100,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/barranco\/residencial-7"},{"nombre":"Barranco Residencial 8","distrito":"Barranco","lat":-12.1357,"lon":-77.0169,"precio":"$320000","habitaciones":4,"área_m2":105,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/barranco\/residencial-8"},{"nombre":"Barranco Residencial 9","distrito":"Barranco","lat":-12.1352,"lon":-77.0164,"precio":"$330000","habitaciones":1,"área_m2":110,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/barranco\/residencial-9"},{"nombre":"Barranco Residencial 10","distrito":"Barranco","lat":-12.1347,"lon":-77.0159,"precio":"$340000","habitaciones":2,"área_m2":115,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/barranco\/residencial-10"},{"nombre":"San Borja Residencial 1","distrito":"San Borja","lat":-12.0951,"lon":-76.9982,"precio":"$250000","habitaciones":1,"área_m2":70,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-borja\/residencial-1"},{"nombre":"San Borja Residencial 2","distrito":"San Borja","lat":-12.0946,"lon":-76.9977,"precio":"$260000","habitaciones":2,"área_m2":75,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-borja\/residencial-2"},{"nombre":"San Borja Residencial 3","distrito":"San Borja","lat":-12.0941,"lon":-76.9972,"precio":"$270000","habitaciones":3,"área_m2":80,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-borja\/residencial-3"},{"nombre":"San Borja Residencial 4","distrito":"San Borja","lat":-12.0936,"lon":-76.9967,"precio":"$280000","habitaciones":4,"área_m2":85,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-borja\/residencial-4"},{"nombre":"San Borja Residencial 5","distrito":"San Borja","lat":-12.0931,"lon":-76.9962,"precio":"$290000","habitaciones":1,"área_m2":90,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-borja\/residencial-5"},{"nombre":"San Borja Residencial 6","distrito":"San Borja","lat":-12.0926,"lon":-76.9957,"precio":"$300000","habitaciones":2,"área_m2":95,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-borja\/residencial-6"},{"nombre":"San Borja Residencial 7","distrito":"San Borja","lat":-12.0921,"lon":-76.9952,"precio":"$310000","habitaciones":3,"área_m2":100,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-borja\/residencial-7"},{"nombre":"San Borja Residencial 8","distrito":"San Borja","lat":-12.0916,"lon":-76.9947,"precio":"$320000","habitaciones":4,"área_m2":105,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-borja\/residencial-8"},{"nombre":"San Borja Residencial 9","distrito":"San Borja","lat":-12.0911,"lon":-76.9942,"precio":"$330000","habitaciones":1,"área_m2":110,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-borja\/residencial-9"},{"nombre":"San Borja Residencial 10","distrito":"San Borja","lat":-12.0906,"lon":-76.9937,"precio":"$340000","habitaciones":2,"área_m2":115,"tipo":"Departamento","link":"https:\/\/urbania.pe\/proyecto\/san-borja\/residencial-10"}]
+[
+  {
+    "nombre": "Residencial Pardo 700",
+    "distrito": "Miraflores",
+    "lat": -12.1215,
+    "lon": -77.0301,
+    "link": "https://urbania.pe/proyecto-residencial-pardo-700"
+  },
+  {
+    "nombre": "Edificio Ocean View",
+    "distrito": "Miraflores",
+    "lat": -12.1201,
+    "lon": -77.0332,
+    "link": "https://urbania.pe/proyecto-edificio-ocean-view"
+  },
+  {
+    "nombre": "Condominio Del Mar",
+    "distrito": "Miraflores",
+    "lat": -12.1189,
+    "lon": -77.0289,
+    "link": "https://urbania.pe/proyecto-condominio-del-mar"
+  },
+  {
+    "nombre": "Parque Kennedy Towers",
+    "distrito": "Miraflores",
+    "lat": -12.1208,
+    "lon": -77.0293,
+    "link": "https://urbania.pe/proyecto-parque-kennedy-towers"
+  },
+  {
+    "nombre": "San Fernando 120",
+    "distrito": "Miraflores",
+    "lat": -12.1212,
+    "lon": -77.0275,
+    "link": "https://urbania.pe/proyecto-san-fernando-120"
+  },
+  {
+    "nombre": "Residencial Pacific",
+    "distrito": "Miraflores",
+    "lat": -12.1230,
+    "lon": -77.0321,
+    "link": "https://urbania.pe/proyecto-residencial-pacific"
+  },
+  {
+    "nombre": "Green Park",
+    "distrito": "Miraflores",
+    "lat": -12.1224,
+    "lon": -77.0342,
+    "link": "https://urbania.pe/proyecto-green-park"
+  },
+  {
+    "nombre": "Vía Parque",
+    "distrito": "Miraflores",
+    "lat": -12.1198,
+    "lon": -77.0314,
+    "link": "https://urbania.pe/proyecto-via-parque"
+  },
+  {
+    "nombre": "Miraflores Central",
+    "distrito": "Miraflores",
+    "lat": -12.1221,
+    "lon": -77.0308,
+    "link": "https://urbania.pe/proyecto-miraflores-central"
+  },
+  {
+    "nombre": "Condominio Larcomar",
+    "distrito": "Miraflores",
+    "lat": -12.1265,
+    "lon": -77.0309,
+    "link": "https://urbania.pe/proyecto-condominio-larcomar"
+  },
+
+  {
+    "nombre": "Residencial Golf",
+    "distrito": "San Isidro",
+    "lat": -12.0950,
+    "lon": -77.0368,
+    "link": "https://urbania.pe/proyecto-residencial-golf"
+  },
+  {
+    "nombre": "Edificio Pezet",
+    "distrito": "San Isidro",
+    "lat": -12.0956,
+    "lon": -77.0385,
+    "link": "https://urbania.pe/proyecto-edificio-pezet"
+  },
+  {
+    "nombre": "Condominio El Bosque",
+    "distrito": "San Isidro",
+    "lat": -12.0964,
+    "lon": -77.0332,
+    "link": "https://urbania.pe/proyecto-el-bosque"
+  },
+  {
+    "nombre": "Vista Golf",
+    "distrito": "San Isidro",
+    "lat": -12.0942,
+    "lon": -77.0370,
+    "link": "https://urbania.pe/proyecto-vista-golf"
+  },
+  {
+    "nombre": "Lux Garden",
+    "distrito": "San Isidro",
+    "lat": -12.0931,
+    "lon": -77.0360,
+    "link": "https://urbania.pe/proyecto-lux-garden"
+  },
+  {
+    "nombre": "Residencial Asturias",
+    "distrito": "San Isidro",
+    "lat": -12.0945,
+    "lon": -77.0352,
+    "link": "https://urbania.pe/proyecto-asturias"
+  },
+  {
+    "nombre": "San Isidro Elite",
+    "distrito": "San Isidro",
+    "lat": -12.0968,
+    "lon": -77.0327,
+    "link": "https://urbania.pe/proyecto-san-isidro-elite"
+  },
+  {
+    "nombre": "Altos de Pezet",
+    "distrito": "San Isidro",
+    "lat": -12.0957,
+    "lon": -77.0341,
+    "link": "https://urbania.pe/proyecto-altos-pezet"
+  },
+  {
+    "nombre": "Golf Premier",
+    "distrito": "San Isidro",
+    "lat": -12.0972,
+    "lon": -77.0375,
+    "link": "https://urbania.pe/proyecto-golf-premier"
+  },
+  {
+    "nombre": "Residencial Belgrado",
+    "distrito": "San Isidro",
+    "lat": -12.0937,
+    "lon": -77.0335,
+    "link": "https://urbania.pe/proyecto-belgrado"
+  },
+
+  {
+    "nombre": "Malecón 28 de Julio",
+    "distrito": "Barranco",
+    "lat": -12.1451,
+    "lon": -77.0212,
+    "link": "https://urbania.pe/proyecto-malecón-28"
+  },
+  {
+    "nombre": "Residencial Pedro de Osma",
+    "distrito": "Barranco",
+    "lat": -12.1438,
+    "lon": -77.0198,
+    "link": "https://urbania.pe/proyecto-pedro-de-osma"
+  },
+  {
+    "nombre": "Edificio Arte",
+    "distrito": "Barranco",
+    "lat": -12.1449,
+    "lon": -77.0204,
+    "link": "https://urbania.pe/proyecto-edificio-arte"
+  },
+  {
+    "nombre": "Parque Central",
+    "distrito": "Barranco",
+    "lat": -12.1445,
+    "lon": -77.0221,
+    "link": "https://urbania.pe/proyecto-parque-central"
+  },
+  {
+    "nombre": "Ocean Barranco",
+    "distrito": "Barranco",
+    "lat": -12.1463,
+    "lon": -77.0232,
+    "link": "https://urbania.pe/proyecto-ocean-barranco"
+  },
+  {
+    "nombre": "Residencial Sucre",
+    "distrito": "Barranco",
+    "lat": -12.1433,
+    "lon": -77.0217,
+    "link": "https://urbania.pe/proyecto-sucre"
+  },
+  {
+    "nombre": "Edificio Plaza",
+    "distrito": "Barranco",
+    "lat": -12.1460,
+    "lon": -77.0192,
+    "link": "https://urbania.pe/proyecto-plaza"
+  },
+  {
+    "nombre": "Concepto Barranco",
+    "distrito": "Barranco",
+    "lat": -12.1458,
+    "lon": -77.0200,
+    "link": "https://urbania.pe/proyecto-concepto"
+  },
+  {
+    "nombre": "Residencial Litoral",
+    "distrito": "Barranco",
+    "lat": -12.1465,
+    "lon": -77.0225,
+    "link": "https://urbania.pe/proyecto-litoral"
+  },
+  {
+    "nombre": "Barranco Green",
+    "distrito": "Barranco",
+    "lat": -12.1441,
+    "lon": -77.0207,
+    "link": "https://urbania.pe/proyecto-barranco-green"
+  },
+
+  {
+    "nombre": "Residencial Fresno",
+    "distrito": "La Molina",
+    "lat": -12.0874,
+    "lon": -76.9351,
+    "link": "https://urbania.pe/proyecto-fresno"
+  },
+  {
+    "nombre": "Residencial Rinconada",
+    "distrito": "La Molina",
+    "lat": -12.0865,
+    "lon": -76.9318,
+    "link": "https://urbania.pe/proyecto-rinconada"
+  },
+  {
+    "nombre": "La Molina Park",
+    "distrito": "La Molina",
+    "lat": -12.0881,
+    "lon": -76.9323,
+    "link": "https://urbania.pe/proyecto-molina-park"
+  },
+  {
+    "nombre": "Molivento",
+    "distrito": "La Molina",
+    "lat": -12.0895,
+    "lon": -76.9362,
+    "link": "https://urbania.pe/proyecto-molivento"
+  },
+  {
+    "nombre": "Vista del Valle",
+    "distrito": "La Molina",
+    "lat": -12.0850,
+    "lon": -76.9340,
+    "link": "https://urbania.pe/proyecto-vista-valle"
+  },
+  {
+    "nombre": "El Mirador",
+    "distrito": "La Molina",
+    "lat": -12.0870,
+    "lon": -76.9335,
+    "link": "https://urbania.pe/proyecto-mirador"
+  },
+  {
+    "nombre": "Altos de La Molina",
+    "distrito": "La Molina",
+    "lat": -12.0867,
+    "lon": -76.9359,
+    "link": "https://urbania.pe/proyecto-altos-molina"
+  },
+  {
+    "nombre": "Residencial Viña",
+    "distrito": "La Molina",
+    "lat": -12.0889,
+    "lon": -76.9321,
+    "link": "https://urbania.pe/proyecto-viña"
+  },
+  {
+    "nombre": "La Molina Real",
+    "distrito": "La Molina",
+    "lat": -12.0893,
+    "lon": -76.9330,
+    "link": "https://urbania.pe/proyecto-molina-real"
+  },
+  {
+    "nombre": "Residencial Sauce",
+    "distrito": "La Molina",
+    "lat": -12.0860,
+    "lon": -76.9345,
+    "link": "https://urbania.pe/proyecto-sauce"
+  }
+]
