@@ -5,8 +5,8 @@ from streamlit_folium import st_folium
 
 st.set_page_config(page_title="LimaProp", layout="wide")
 
-st.markdown("## 🏙️ LimaProp - Buscador de Proyectos Inmobiliarios")
-st.markdown("Explora proyectos inmobiliarios por zona, tipo y precio en Lima Metropolitana.")
+st.markdown("## 🏙️ LimaProp App - Buscador de Proyectos Inmobiliarios")
+st.markdown("Explora proyectos inmobiliarios por zona, tipo y precio en Lima Metropolitana!")
 st.markdown("---")
 
 # Cargar datos
