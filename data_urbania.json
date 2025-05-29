@@ -2,71 +2,109 @@
   {
     "nombre": "Ocean View Residences",
     "distrito": "Miraflores",
-    "descripcion": "Departamentos de lujo con vista al mar, ubicados en el Malecón Cisneros.",
+    "descripcion": "Departamentos de lujo con vista al mar.",
     "precio": "Desde S/ 1,200,000",
-    "link": "https://urbania.pe/ocean-view-residences"
+    "link": "https://urbania.pe/ocean-view-residences",
+    "lat": -12.125,
+    "lon": -77.035
   },
   {
     "nombre": "Parque Central",
     "distrito": "Miraflores",
-    "descripcion": "Proyecto residencial frente al Parque Kennedy, con áreas comunes y gimnasio.",
+    "descripcion": "Frente al Parque Kennedy, con gimnasio.",
     "precio": "Desde S/ 950,000",
-    "link": "https://urbania.pe/parque-central"
+    "link": "https://urbania.pe/parque-central",
+    "lat": -12.119,
+    "lon": -77.031
   },
   {
-    "nombre": "Aurora Gardens",
-    "distrito": "Miraflores",
-    "descripcion": "Departamentos familiares en la zona de Aurora, cerca de colegios y parques.",
-    "precio": "Desde S/ 850,000",
-    "link": "https://urbania.pe/aurora-gardens"
-  },
-  {
-    "nombre": "Skyline Tower",
-    "distrito": "Miraflores",
-    "descripcion": "Edificio moderno con departamentos de 1 y 2 dormitorios, ideal para inversionistas.",
-    "precio": "Desde S/ 700,000",
-    "link": "https://urbania.pe/skyline-tower"
-  },
-  {
-    "nombre": "Malecón 28",
-    "distrito": "Miraflores",
-    "descripcion": "Exclusivos departamentos con vista al océano, acabados de alta gama.",
-    "precio": "Desde S/ 1,500,000",
-    "link": "https://urbania.pe/malecon-28"
+    "nombre": "Sky Towers",
+    "distrito": "San Isidro",
+    "descripcion": "Edificio moderno cerca al Golf de San Isidro.",
+    "precio": "Desde S/ 1,300,000",
+    "link": "https://urbania.pe/sky-towers",
+    "lat": -12.098,
+    "lon": -77.036
   },
   {
     "nombre": "Green Park",
-    "distrito": "Miraflores",
-    "descripcion": "Proyecto eco-amigable con jardines verticales y certificación LEED.",
+    "distrito": "San Isidro",
+    "descripcion": "Residencial sostenible con áreas verdes.",
     "precio": "Desde S/ 980,000",
-    "link": "https://urbania.pe/green-park"
+    "link": "https://urbania.pe/green-park-si",
+    "lat": -12.097,
+    "lon": -77.033
   },
   {
-    "nombre": "Residencial Pardo",
-    "distrito": "Miraflores",
-    "descripcion": "Departamentos céntricos en Av. Pardo, con fácil acceso a transporte público.",
+    "nombre": "Barranco Bohemio",
+    "distrito": "Barranco",
+    "descripcion": "Viviendas artísticas en el corazón de Barranco.",
+    "precio": "Desde S/ 890,000",
+    "link": "https://urbania.pe/barranco-bohemio",
+    "lat": -12.144,
+    "lon": -77.021
+  },
+  {
+    "nombre": "Vista Mar",
+    "distrito": "Barranco",
+    "descripcion": "Vista al mar y acceso al malecón.",
+    "precio": "Desde S/ 1,150,000",
+    "link": "https://urbania.pe/vista-mar-barranco",
+    "lat": -12.145,
+    "lon": -77.022
+  },
+  {
+    "nombre": "Altos del Surco",
+    "distrito": "Santiago de Surco",
+    "descripcion": "Departamentos en zona residencial tranquila.",
+    "precio": "Desde S/ 750,000",
+    "link": "https://urbania.pe/altos-surco",
+    "lat": -12.149,
+    "lon": -76.979
+  },
+  {
+    "nombre": "Residencial Caminos",
+    "distrito": "Santiago de Surco",
+    "descripcion": "Amplios departamentos con seguridad.",
     "precio": "Desde S/ 820,000",
-    "link": "https://urbania.pe/residencial-pardo"
+    "link": "https://urbania.pe/caminos-surco",
+    "lat": -12.150,
+    "lon": -76.982
   },
   {
-    "nombre": "Ocean Breeze",
-    "distrito": "Miraflores",
-    "descripcion": "Viviendas modernas a pocos pasos del mar, con terrazas privadas.",
-    "precio": "Desde S/ 1,100,000",
-    "link": "https://urbania.pe/ocean-breeze"
+    "nombre": "Magdalena Life",
+    "distrito": "Magdalena del Mar",
+    "descripcion": "Viviendas modernas cerca al malecón.",
+    "precio": "Desde S/ 780,000",
+    "link": "https://urbania.pe/magdalena-life",
+    "lat": -12.090,
+    "lon": -77.071
   },
   {
-    "nombre": "Lima Bay",
-    "distrito": "Miraflores",
-    "descripcion": "Condominio con vista panorámica de la bahía, áreas sociales y piscina.",
-    "precio": "Desde S/ 1,300,000",
-    "link": "https://urbania.pe/lima-bay"
+    "nombre": "Portales de Magdalena",
+    "distrito": "Magdalena del Mar",
+    "descripcion": "Zona céntrica y conectividad vial.",
+    "precio": "Desde S/ 720,000",
+    "link": "https://urbania.pe/portales-magdalena",
+    "lat": -12.088,
+    "lon": -77.070
   },
   {
-    "nombre": "Sunset Residences",
-    "distrito": "Miraflores",
-    "descripcion": "Departamentos con vista al atardecer, acabados premium y seguridad 24/7.",
-    "precio": "Desde S/ 1,250,000",
-    "link": "https://urbania.pe/sunset-residences"
+    "nombre": "San Borja Suites",
+    "distrito": "San Borja",
+    "descripcion": "Cerca al Pentagonito, ideal para familias.",
+    "precio": "Desde S/ 910,000",
+    "link": "https://urbania.pe/sanborja-suites",
+    "lat": -12.103,
+    "lon": -76.994
+  },
+  {
+    "nombre": "Parques del Sur",
+    "distrito": "San Borja",
+    "descripcion": "Áreas comunes y parques internos.",
+    "precio": "Desde S/ 870,000",
+    "link": "https://urbania.pe/parques-sur",
+    "lat": -12.105,
+    "lon": -76.990
   }
 ]
