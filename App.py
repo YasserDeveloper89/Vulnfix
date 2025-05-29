@@ -2,13 +2,15 @@ import streamlit as st
 import pandas as pd
 import folium
 from streamlit_folium import st_folium
+from bs4 import BeautifulSoup
+import requests
 
 # Configuración de la página
 st.set_page_config(page_title="LimaProp", layout="wide")
 
-# Título
+# Título principal
 st.title("🏙️ LimaProp - Buscador de Proyectos Inmobiliarios")
-st.markdown("Explora proyectos inmobiliarios en Lima de forma interactiva y encuentra tu nuevo hogar.")
+st.markdown("Explora proyectos inmobiliarios por zona, tipo y precio en Lima Metropolitana.")
 
 # Cargar datos
 try:
@@ -19,77 +21,94 @@ except Exception as e:
     st.error(f"Error al cargar el archivo JSON: {e}")
     st.stop()
 
-# Sidebar: filtros
-st.sidebar.header("🔎 Filtros de búsqueda")
-distritos = df["distrito"].sort_values().unique()
-distrito_seleccionado = st.sidebar.selectbox("Selecciona un distrito", [""] + list(distritos))
+# Sidebar - Filtros
+with st.sidebar:
+    st.header("🔎 Filtros")
 
-# Mostrar proyectos si se seleccionó distrito
-if distrito_seleccionado:
-    st.subheader(f"🏢 Proyectos disponibles en {distrito_seleccionado}")
-    proyectos = df[df["distrito"] == distrito_seleccionado]
+    distrito_seleccionado = st.selectbox(
+        "Selecciona un distrito:",
+        options=["-- Selecciona --"] + sorted(df["distrito"].unique())
+    )
 
-    for _, row in proyectos.iterrows():
-        with st.container():
-            st.markdown(f"### {row['nombre']}")
-            st.markdown(f"- **Tipo:** {row['tipo']}")
-            st.markdown(f"- **Precio:** ${row['precio']:,}")
-            st.markdown(f"[Ver más detalles]({row['link']})")
-            st.markdown("---")
+    if distrito_seleccionado != "-- Selecciona --":
+        tipos_disponibles = sorted(df[df["distrito"] == distrito_seleccionado]["tipo"].unique())
+        tipo_seleccionado = st.multiselect(
+            "Tipo de propiedad:",
+            options=tipos_disponibles,
+            default=tipos_disponibles
+        )
 
-    # Mapa interactivo solo cuando hay proyectos filtrados
-    st.subheader("🗺️ Mapa de proyectos")
-    m = folium.Map(location=[proyectos["lat"].mean(), proyectos["lon"].mean()], zoom_start=15)
+        precio_min = int(df["precio"].min())
+        precio_max = int(df["precio"].max())
+        rango_precios = st.slider(
+            "Rango de precios (S/.)",
+            min_value=precio_min,
+            max_value=precio_max,
+            value=(precio_min, precio_max)
+        )
 
-    for _, row in proyectos.iterrows():
-        popup = folium.Popup(f"<b>{row['nombre']}</b><br>{row['tipo']}<br>${row['precio']:,}", max_width=250)
-        folium.Marker([row["lat"], row["lon"]], popup=popup).add_to(m)
+# Mostrar resultados solo si hay selección válida
+if distrito_seleccionado != "-- Selecciona --":
+    # Filtrar datos
+    df_filtrado = df[
+        (df["distrito"] == distrito_seleccionado) &
+        (df["tipo"].isin(tipo_seleccionado)) &
+        (df["precio"] >= rango_precios[0]) &
+        (df["precio"] <= rango_precios[1])
+    ]
 
-    st_folium(m, width=700, height=500)
+    # Mostrar proyectos
+    st.subheader("🏗️ Proyectos Disponibles")
+    if df_filtrado.empty:
+        st.warning("No se encontraron proyectos para los filtros seleccionados.")
+    else:
+        for _, row in df_filtrado.iterrows():
+            st.markdown(f"""
+                <div style="border:1px solid #ccc; border-radius:10px; padding:10px; margin-bottom:10px;">
+                    <h4 style="margin-bottom:5px;">{row['nombre']}</h4>
+                    <p style="margin:0;">📍 <b>Distrito:</b> {row['distrito']} | 🏠 <b>Tipo:</b> {row['tipo']} | 💰 <b>Precio:</b> S/. {int(row['precio']):,}</p>
+                    <a href="{row['link']}" target="_blank">🔗 Ver proyecto</a>
+                </div>
+            """, unsafe_allow_html=True)
 
-# Noticias del sector inmobiliario
-st.markdown("## 📰 Noticias del Sector Inmobiliario en Perú (2025)")
-noticias = [
-    {
-        "titulo": "Ventas de viviendas en Lima crecieron 30% en el primer trimestre de 2025",
-        "resumen": "Durante el primer trimestre de 2025, el mercado inmobiliario limeño experimentó un importante repunte, alcanzando la venta de 6,237 unidades.",
-        "enlace": "https://www.revistaeconomia.com/asei-ventas-de-viviendas-nuevas-en-lima-crecieron-30-en-el-primer-trimestre-de-2025/"
-    },
-    {
-        "titulo": "Jóvenes peruanos impulsan la compra de viviendas en 2025",
-        "resumen": "El mercado inmobiliario peruano se reinventa con una nueva generación de compradores entre 30 y 45 años que buscan estabilidad económica.",
-        "enlace": "https://elperuano.pe/noticia/263720-boom-inmobiliario-en-regiones-jovenes-peruanos-impulsan-la-compra-de-viviendas-en-2025"
-    },
-    {
-        "titulo": "Tendencias clave en el mercado inmobiliario peruano en 2025",
-        "resumen": "El sector debe adaptarse a la nueva normativa VIS, fluctuaciones de tasas de interés y atraer inversionistas con propuestas diferenciadas.",
-        "enlace": "https://vao.pe/tendencias-clave-mercado-inmobiliario-peruano-2025"
-    },
-    {
-        "titulo": "El boom inmobiliario en el Perú en el 2025: cinco datos clave y tendencias del mercado",
-        "resumen": "El programa MiVivienda ha sido clave, con una inversión estatal de S/1,338 millones y un 69% de ventas en viviendas de interés social.",
-        "enlace": "https://www.cronicaviva.com.pe/el-boom-inmobiliario-en-el-peru-en-2025-datos-clave-y-tendencias-del-mercado/"
-    },
-    {
-        "titulo": "Omar Castro, un poeta frente al problema de la vivienda",
-        "resumen": "Castro aborda la crisis habitacional desde una perspectiva artística, denunciando la especulación y falta de políticas de vivienda social.",
-        "enlace": "https://elpais.com/cultura/2025-04-03/omar-castro-un-poeta-frente-al-problema-de-la-vivienda-es-alucinante-lo-poco-que-vale-una-vida-en-contraste-con-lo-caro-que-es-vivir.html"
-    }
-]
+    # Mostrar mapa
+    st.subheader("🗺️ Mapa Interactivo de Proyectos")
+    mapa = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=14)
 
-for noticia in noticias:
-    st.markdown(f"**{noticia['titulo']}**")
-    st.write(noticia['resumen'])
-    st.markdown(f"[Leer más]({noticia['enlace']})")
-    st.markdown("---")
+    for _, row in df_filtrado.iterrows():
+        folium.Marker(
+            location=[row["lat"], row["lon"]],
+            popup=f"<strong>{row['nombre']}</strong><br><a href='{row['link']}' target='_blank'>Ver proyecto</a>",
+            tooltip=row["nombre"],
+            icon=folium.Icon(color="blue", icon="home")
+        ).add_to(mapa)
 
-# Footer para mejorar estética
-st.markdown(
-    """
-    <hr style="margin-top: 2rem; margin-bottom: 1rem;">
-    <div style="text-align: center; color: gray; font-size: small;">
-        © 2025 LimaProp | Desarrollado con ❤️ usando Streamlit
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+    st_folium(mapa, use_container_width=True, height=500)
+
+# Noticias Inmobiliarias
+st.subheader("📰 Noticias Inmobiliarias en Perú")
+
+try:
+    url = "https://gestion.pe/economia/inmobiliaria/"
+    response = requests.get(url, timeout=5)
+    soup = BeautifulSoup(response.text, "html.parser")
+    noticias = soup.select("h2.story-item__title a")[:4]
+
+    for noticia in noticias:
+        titulo = noticia.text.strip()
+        link = noticia["href"]
+        st.markdown(f"- [{titulo}]({link})")
+
+except Exception:
+    st.info("No se pudieron cargar las noticias en este momento.")
+
+# Espaciador final mínimo
+st.markdown("<div style='height:40px;'></div>", unsafe_allow_html=True)
+
+# Footer
+st.markdown("""
+<hr>
+<div style='text-align:center; font-size:14px; color:gray;'>
+    © 2025 LimaProp | Desarrollado para mostrar proyectos inmobiliarios en Lima Metropolitana
+</div>
+""", unsafe_allow_html=True)
