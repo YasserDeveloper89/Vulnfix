@@ -34,7 +34,7 @@ with st.sidebar:
     rango_precios = st.slider("Rango de precios (S/.)", min_value=precio_min, max_value=precio_max,
                               value=(precio_min, precio_max))
 
-# Filtrar solo si selecciona distrito
+# Filtrar y mostrar resultados si se selecciona un distrito
 if distrito_seleccionado != "Selecciona...":
     df_filtrado = df[
         (df["distrito"] == distrito_seleccionado) &
@@ -73,12 +73,12 @@ if distrito_seleccionado != "Selecciona...":
             ).add_to(mapa)
         st_folium(mapa, use_container_width=True, height=500)
 
-# ✅ Footer profesional sin espacio extra
-st.markdown(
-    """
-    <div style="text-align: center; font-size: 0.85em; color: #888; margin-top: 2rem; padding-bottom: 1rem;">
-        © 2025 LimaProp. Todos los derechos reservados.
-    </div>
-    """,
-    unsafe_allow_html=True
-                                                    )
+    # ✅ Footer SOLO cuando hay resultados y sin dejar espacio en blanco
+    st.markdown(
+        """
+        <div style="text-align: center; font-size: 0.85em; color: #888; margin-top: 2rem; padding-bottom: 1rem;">
+            © 2025 LimaProp. Todos los derechos reservados.
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
