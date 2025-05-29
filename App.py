@@ -3,32 +3,31 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
-# ----- Estilo para mejorar la distribución -----
+# ✅ Debe ser el primer comando de Streamlit
+st.set_page_config(page_title="LimaProp", layout="wide")
+
+# 🎨 Estilo personalizado para mejorar estética
 st.markdown("""
     <style>
     .block-container {
+        padding-top: 2rem;
         padding-bottom: 1rem !important;
-    }
-    .main {
-        min-height: 90vh;
     }
     .project-card {
         padding: 1rem;
         margin-bottom: 1rem;
-        border: 1px solid #eee;
-        border-radius: 10px;
-        background-color: #fafafa;
+        border: 1px solid #e6e6e6;
+        border-radius: 12px;
+        background-color: #f9f9f9;
     }
     </style>
 """, unsafe_allow_html=True)
 
-# Configuración de la página
-st.set_page_config(page_title="LimaProp", layout="wide")
-
+# 🏙️ Título principal
 st.title("🏙️ LimaProp - Buscador de Proyectos Inmobiliarios")
 st.markdown("Explora proyectos inmobiliarios por zona, tipo y precio en Lima Metropolitana.")
 
-# Cargar datos
+# 📄 Cargar datos
 try:
     df = pd.read_json("data_urbania.json")
     df["distrito"] = df["distrito"].astype(str).str.strip().str.title()
@@ -37,10 +36,10 @@ except Exception as e:
     st.error(f"Error al cargar el archivo JSON: {e}")
     st.stop()
 
-# Sidebar con filtros
+# 🎛️ Filtros laterales
 with st.sidebar:
     st.header("🔎 Filtros")
-
+    
     distrito_seleccionado = st.selectbox(
         "Selecciona un distrito:",
         options=sorted(df["distrito"].unique())
@@ -59,11 +58,10 @@ with st.sidebar:
         "Rango de precios (S/.)",
         min_value=precio_min,
         max_value=precio_max,
-        value=(precio_min, precio_max),
-        step=5000
+        value=(precio_min, precio_max)
     )
 
-# Aplicar filtros
+# 📊 Aplicar filtros
 df_filtrado = df[
     (df["distrito"] == distrito_seleccionado) &
     (df["tipo"].isin(tipo_seleccionado)) &
@@ -71,13 +69,16 @@ df_filtrado = df[
     (df["precio"] <= rango_precios[1])
 ]
 
-# Distribución principal en columnas
+# 📍 Mapa y proyectos
 col1, col2 = st.columns([1, 1.5])
 
 with col1:
-    st.subheader(f"📍 Mapa en {distrito_seleccionado}")
+    st.subheader(f"📍 Mapa de proyectos en {distrito_seleccionado}")
     if not df_filtrado.empty:
-        mapa = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=14)
+        mapa = folium.Map(
+            location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()],
+            zoom_start=14
+        )
 
         for _, row in df_filtrado.iterrows():
             folium.Marker(
@@ -87,22 +88,23 @@ with col1:
                 icon=folium.Icon(color="blue", icon="home")
             ).add_to(mapa)
 
-        st_folium(mapa, use_container_width=True, height=400)
+        st_folium(mapa, use_container_width=True, height=500)
     else:
-        st.info("No hay proyectos disponibles para este distrito con los filtros seleccionados.")
+        st.warning("No se encontraron proyectos para los filtros seleccionados.")
 
 with col2:
-    st.subheader("🏗️ Proyectos disponibles")
+    st.subheader("🏗️ Proyectos Disponibles")
     if df_filtrado.empty:
-        st.warning("No se encontraron proyectos para los filtros seleccionados.")
+        st.info("No hay proyectos con las características seleccionadas.")
     else:
         for _, row in df_filtrado.iterrows():
-            st.markdown(f"""
-                <div class="project-card">
-                    <h4>{row['nombre']}</h4>
-                    <p><strong>Distrito:</strong> {row['distrito']}</p>
-                    <p><strong>Tipo:</strong> {row['tipo']}</p>
-                    <p><strong>Precio:</strong> S/. {int(row['precio']):,}</p>
-                    <a href="{row['link']}" target="_blank">🔗 Ver proyecto</a>
-                </div>
-            """, unsafe_allow_html=True)
+            with st.container():
+                st.markdown(f"""
+                    <div class="project-card">
+                        <h4>{row['nombre']}</h4>
+                        <p><strong>Distrito:</strong> {row['distrito']}<br>
+                        <strong>Tipo:</strong> {row['tipo']}<br>
+                        <strong>Precio:</strong> S/. {int(row['precio']):,}</p>
+                        <a href="{row['link']}" target="_blank">🔗 Ver proyecto en Urbania</a>
+                    </div>
+                """, unsafe_allow_html=True)
