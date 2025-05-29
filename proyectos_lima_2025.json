@@ -1,702 +1,143 @@
 [
   {
-    "nombre": "Proyecto Miraflores #1",
+    "nombre": "Ocean View Residences",
     "distrito": "Miraflores",
-    "lat": -12.001,
-    "lon": -77.001,
-    "link": "https://urbania.pe/proyecto-miraflores-1"
+    "descripcion": "Departamentos de lujo con vista al mar, ubicados en el Malecón Cisneros.",
+    "precio": "Desde S/ 1,200,000",
+    "link": "https://urbania.pe/ocean-view-residences"
   },
   {
-    "nombre": "Proyecto Miraflores #2",
+    "nombre": "Parque Central",
     "distrito": "Miraflores",
-    "lat": -12.002,
-    "lon": -77.002,
-    "link": "https://urbania.pe/proyecto-miraflores-2"
+    "descripcion": "Proyecto residencial frente al Parque Kennedy, con áreas comunes y gimnasio.",
+    "precio": "Desde S/ 950,000",
+    "link": "https://urbania.pe/parque-central"
   },
   {
-    "nombre": "Proyecto Miraflores #3",
+    "nombre": "Aurora Gardens",
     "distrito": "Miraflores",
-    "lat": -12.003,
-    "lon": -77.003,
-    "link": "https://urbania.pe/proyecto-miraflores-3"
+    "descripcion": "Departamentos familiares en la zona de Aurora, cerca de colegios y parques.",
+    "precio": "Desde S/ 850,000",
+    "link": "https://urbania.pe/aurora-gardens"
   },
   {
-    "nombre": "Proyecto Miraflores #4",
+    "nombre": "Skyline Tower",
     "distrito": "Miraflores",
-    "lat": -12.004,
-    "lon": -77.004,
-    "link": "https://urbania.pe/proyecto-miraflores-4"
+    "descripcion": "Edificio moderno con departamentos de 1 y 2 dormitorios, ideal para inversionistas.",
+    "precio": "Desde S/ 700,000",
+    "link": "https://urbania.pe/skyline-tower"
   },
   {
-    "nombre": "Proyecto Miraflores #5",
+    "nombre": "Malecón 28",
     "distrito": "Miraflores",
-    "lat": -12.005,
-    "lon": -77.005,
-    "link": "https://urbania.pe/proyecto-miraflores-5"
+    "descripcion": "Exclusivos departamentos con vista al océano, acabados de alta gama.",
+    "precio": "Desde S/ 1,500,000",
+    "link": "https://urbania.pe/malecon-28"
   },
   {
-    "nombre": "Proyecto Miraflores #6",
+    "nombre": "Green Park",
     "distrito": "Miraflores",
-    "lat": -12.006,
-    "lon": -77.006,
-    "link": "https://urbania.pe/proyecto-miraflores-6"
+    "descripcion": "Proyecto eco-amigable con jardines verticales y certificación LEED.",
+    "precio": "Desde S/ 980,000",
+    "link": "https://urbania.pe/green-park"
   },
   {
-    "nombre": "Proyecto Miraflores #7",
+    "nombre": "Residencial Pardo",
     "distrito": "Miraflores",
-    "lat": -12.007,
-    "lon": -77.007,
-    "link": "https://urbania.pe/proyecto-miraflores-7"
+    "descripcion": "Departamentos céntricos en Av. Pardo, con fácil acceso a transporte público.",
+    "precio": "Desde S/ 820,000",
+    "link": "https://urbania.pe/residencial-pardo"
   },
   {
-    "nombre": "Proyecto Miraflores #8",
+    "nombre": "Ocean Breeze",
     "distrito": "Miraflores",
-    "lat": -12.008,
-    "lon": -77.008,
-    "link": "https://urbania.pe/proyecto-miraflores-8"
+    "descripcion": "Viviendas modernas a pocos pasos del mar, con terrazas privadas.",
+    "precio": "Desde S/ 1,100,000",
+    "link": "https://urbania.pe/ocean-breeze"
   },
   {
-    "nombre": "Proyecto Miraflores #9",
+    "nombre": "Lima Bay",
     "distrito": "Miraflores",
-    "lat": -12.009,
-    "lon": -77.009,
-    "link": "https://urbania.pe/proyecto-miraflores-9"
+    "descripcion": "Condominio con vista panorámica de la bahía, áreas sociales y piscina.",
+    "precio": "Desde S/ 1,300,000",
+    "link": "https://urbania.pe/lima-bay"
   },
   {
-    "nombre": "Proyecto Miraflores #10",
+    "nombre": "Sunset Residences",
     "distrito": "Miraflores",
-    "lat": -12.01,
-    "lon": -77.01,
-    "link": "https://urbania.pe/proyecto-miraflores-10"
+    "descripcion": "Departamentos con vista al atardecer, acabados premium y seguridad 24/7.",
+    "precio": "Desde S/ 1,250,000",
+    "link": "https://urbania.pe/sunset-residences"
   },
   {
-    "nombre": "Proyecto San Isidro #1",
+    "nombre": "Financial Park",
     "distrito": "San Isidro",
-    "lat": -12.001,
-    "lon": -77.001,
-    "link": "https://urbania.pe/proyecto-san-isidro-1"
+    "descripcion": "Departamentos ejecutivos en el corazón financiero de Lima.",
+    "precio": "Desde S/ 1,400,000",
+    "link": "https://urbania.pe/financial-park"
   },
   {
-    "nombre": "Proyecto San Isidro #2",
+    "nombre": "Golf Residences",
     "distrito": "San Isidro",
-    "lat": -12.002,
-    "lon": -77.002,
-    "link": "https://urbania.pe/proyecto-san-isidro-2"
+    "descripcion": "Viviendas exclusivas frente al Lima Golf Club, con amplias terrazas.",
+    "precio": "Desde S/ 2,000,000",
+    "link": "https://urbania.pe/golf-residences"
   },
   {
-    "nombre": "Proyecto San Isidro #3",
+    "nombre": "San Isidro One",
     "distrito": "San Isidro",
-    "lat": -12.003,
-    "lon": -77.003,
-    "link": "https://urbania.pe/proyecto-san-isidro-3"
+    "descripcion": "Proyecto moderno con departamentos de 2 y 3 dormitorios, cerca a centros comerciales.",
+    "precio": "Desde S/ 1,100,000",
+    "link": "https://urbania.pe/san-isidro-one"
   },
   {
-    "nombre": "Proyecto San Isidro #4",
+    "nombre": "Executive Suites",
     "distrito": "San Isidro",
-    "lat": -12.004,
-    "lon": -77.004,
-    "link": "https://urbania.pe/proyecto-san-isidro-4"
+    "descripcion": "Departamentos tipo suite, ideales para ejecutivos y expatriados.",
+    "precio": "Desde S/ 950,000",
+    "link": "https://urbania.pe/executive-suites"
   },
   {
-    "nombre": "Proyecto San Isidro #5",
+    "nombre": "Park Avenue",
     "distrito": "San Isidro",
-    "lat": -12.005,
-    "lon": -77.005,
-    "link": "https://urbania.pe/proyecto-san-isidro-5"
+    "descripcion": "Residencias de lujo en zona exclusiva, con áreas verdes y gimnasio.",
+    "precio": "Desde S/ 1,800,000",
+    "link": "https://urbania.pe/park-avenue"
   },
   {
-    "nombre": "Proyecto San Isidro #6",
+    "nombre": "The Heights",
     "distrito": "San Isidro",
-    "lat": -12.006,
-    "lon": -77.006,
-    "link": "https://urbania.pe/proyecto-san-isidro-6"
+    "descripcion": "Edificio de alta gama con vista panorámica de la ciudad.",
+    "precio": "Desde S/ 1,600,000",
+    "link": "https://urbania.pe/the-heights"
   },
   {
-    "nombre": "Proyecto San Isidro #7",
+    "nombre": "Residencial El Olivar",
     "distrito": "San Isidro",
-    "lat": -12.007,
-    "lon": -77.007,
-    "link": "https://urbania.pe/proyecto-san-isidro-7"
+    "descripcion": "Departamentos frente al Parque El Olivar, con diseño clásico y elegante.",
+    "precio": "Desde S/ 1,300,000",
+    "link": "https://urbania.pe/residencial-el-olivar"
   },
   {
-    "nombre": "Proyecto San Isidro #8",
+    "nombre": "Business Tower",
     "distrito": "San Isidro",
-    "lat": -12.008,
-    "lon": -77.008,
-    "link": "https://urbania.pe/proyecto-san-isidro-8"
+    "descripcion": "Proyecto mixto con oficinas y departamentos, en zona empresarial.",
+    "precio": "Desde S/ 1,200,000",
+    "link": "https://urbania.pe/business-tower"
   },
   {
-    "nombre": "Proyecto San Isidro #9",
+    "nombre": "Urban Life",
     "distrito": "San Isidro",
-    "lat": -12.009,
-    "lon": -77.009,
-    "link": "https://urbania.pe/proyecto-san-isidro-9"
+    "descripcion": "Departamentos modernos con acceso a servicios y transporte.",
+    "precio": "Desde S/ 1,050,000",
+    "link": "https://urbania.pe/urban-life"
   },
   {
-    "nombre": "Proyecto San Isidro #10",
+    "nombre": "Sky Residences",
     "distrito": "San Isidro",
-    "lat": -12.01,
-    "lon": -77.01,
-    "link": "https://urbania.pe/proyecto-san-isidro-10"
-  },
-  {
-    "nombre": "Proyecto Surco #1",
-    "distrito": "Surco",
-    "lat": -12.001,
-    "lon": -77.001,
-    "link": "https://urbania.pe/proyecto-surco-1"
-  },
-  {
-    "nombre": "Proyecto Surco #2",
-    "distrito": "Surco",
-    "lat": -12.002,
-    "lon": -77.002,
-    "link": "https://urbania.pe/proyecto-surco-2"
-  },
-  {
-    "nombre": "Proyecto Surco #3",
-    "distrito": "Surco",
-    "lat": -12.003,
-    "lon": -77.003,
-    "link": "https://urbania.pe/proyecto-surco-3"
-  },
-  {
-    "nombre": "Proyecto Surco #4",
-    "distrito": "Surco",
-    "lat": -12.004,
-    "lon": -77.004,
-    "link": "https://urbania.pe/proyecto-surco-4"
-  },
-  {
-    "nombre": "Proyecto Surco #5",
-    "distrito": "Surco",
-    "lat": -12.005,
-    "lon": -77.005,
-    "link": "https://urbania.pe/proyecto-surco-5"
-  },
-  {
-    "nombre": "Proyecto Surco #6",
-    "distrito": "Surco",
-    "lat": -12.006,
-    "lon": -77.006,
-    "link": "https://urbania.pe/proyecto-surco-6"
-  },
-  {
-    "nombre": "Proyecto Surco #7",
-    "distrito": "Surco",
-    "lat": -12.007,
-    "lon": -77.007,
-    "link": "https://urbania.pe/proyecto-surco-7"
-  },
-  {
-    "nombre": "Proyecto Surco #8",
-    "distrito": "Surco",
-    "lat": -12.008,
-    "lon": -77.008,
-    "link": "https://urbania.pe/proyecto-surco-8"
-  },
-  {
-    "nombre": "Proyecto Surco #9",
-    "distrito": "Surco",
-    "lat": -12.009,
-    "lon": -77.009,
-    "link": "https://urbania.pe/proyecto-surco-9"
-  },
-  {
-    "nombre": "Proyecto Surco #10",
-    "distrito": "Surco",
-    "lat": -12.01,
-    "lon": -77.01,
-    "link": "https://urbania.pe/proyecto-surco-10"
-  },
-  {
-    "nombre": "Proyecto La Molina #1",
-    "distrito": "La Molina",
-    "lat": -12.001,
-    "lon": -77.001,
-    "link": "https://urbania.pe/proyecto-la-molina-1"
-  },
-  {
-    "nombre": "Proyecto La Molina #2",
-    "distrito": "La Molina",
-    "lat": -12.002,
-    "lon": -77.002,
-    "link": "https://urbania.pe/proyecto-la-molina-2"
-  },
-  {
-    "nombre": "Proyecto La Molina #3",
-    "distrito": "La Molina",
-    "lat": -12.003,
-    "lon": -77.003,
-    "link": "https://urbania.pe/proyecto-la-molina-3"
-  },
-  {
-    "nombre": "Proyecto La Molina #4",
-    "distrito": "La Molina",
-    "lat": -12.004,
-    "lon": -77.004,
-    "link": "https://urbania.pe/proyecto-la-molina-4"
-  },
-  {
-    "nombre": "Proyecto La Molina #5",
-    "distrito": "La Molina",
-    "lat": -12.005,
-    "lon": -77.005,
-    "link": "https://urbania.pe/proyecto-la-molina-5"
-  },
-  {
-    "nombre": "Proyecto La Molina #6",
-    "distrito": "La Molina",
-    "lat": -12.006,
-    "lon": -77.006,
-    "link": "https://urbania.pe/proyecto-la-molina-6"
-  },
-  {
-    "nombre": "Proyecto La Molina #7",
-    "distrito": "La Molina",
-    "lat": -12.007,
-    "lon": -77.007,
-    "link": "https://urbania.pe/proyecto-la-molina-7"
-  },
-  {
-    "nombre": "Proyecto La Molina #8",
-    "distrito": "La Molina",
-    "lat": -12.008,
-    "lon": -77.008,
-    "link": "https://urbania.pe/proyecto-la-molina-8"
-  },
-  {
-    "nombre": "Proyecto La Molina #9",
-    "distrito": "La Molina",
-    "lat": -12.009,
-    "lon": -77.009,
-    "link": "https://urbania.pe/proyecto-la-molina-9"
-  },
-  {
-    "nombre": "Proyecto La Molina #10",
-    "distrito": "La Molina",
-    "lat": -12.01,
-    "lon": -77.01,
-    "link": "https://urbania.pe/proyecto-la-molina-10"
-  },
-  {
-    "nombre": "Proyecto Barranco #1",
-    "distrito": "Barranco",
-    "lat": -12.001,
-    "lon": -77.001,
-    "link": "https://urbania.pe/proyecto-barranco-1"
-  },
-  {
-    "nombre": "Proyecto Barranco #2",
-    "distrito": "Barranco",
-    "lat": -12.002,
-    "lon": -77.002,
-    "link": "https://urbania.pe/proyecto-barranco-2"
-  },
-  {
-    "nombre": "Proyecto Barranco #3",
-    "distrito": "Barranco",
-    "lat": -12.003,
-    "lon": -77.003,
-    "link": "https://urbania.pe/proyecto-barranco-3"
-  },
-  {
-    "nombre": "Proyecto Barranco #4",
-    "distrito": "Barranco",
-    "lat": -12.004,
-    "lon": -77.004,
-    "link": "https://urbania.pe/proyecto-barranco-4"
-  },
-  {
-    "nombre": "Proyecto Barranco #5",
-    "distrito": "Barranco",
-    "lat": -12.005,
-    "lon": -77.005,
-    "link": "https://urbania.pe/proyecto-barranco-5"
-  },
-  {
-    "nombre": "Proyecto Barranco #6",
-    "distrito": "Barranco",
-    "lat": -12.006,
-    "lon": -77.006,
-    "link": "https://urbania.pe/proyecto-barranco-6"
-  },
-  {
-    "nombre": "Proyecto Barranco #7",
-    "distrito": "Barranco",
-    "lat": -12.007,
-    "lon": -77.007,
-    "link": "https://urbania.pe/proyecto-barranco-7"
-  },
-  {
-    "nombre": "Proyecto Barranco #8",
-    "distrito": "Barranco",
-    "lat": -12.008,
-    "lon": -77.008,
-    "link": "https://urbania.pe/proyecto-barranco-8"
-  },
-  {
-    "nombre": "Proyecto Barranco #9",
-    "distrito": "Barranco",
-    "lat": -12.009,
-    "lon": -77.009,
-    "link": "https://urbania.pe/proyecto-barranco-9"
-  },
-  {
-    "nombre": "Proyecto Barranco #10",
-    "distrito": "Barranco",
-    "lat": -12.01,
-    "lon": -77.01,
-    "link": "https://urbania.pe/proyecto-barranco-10"
-  },
-  {
-    "nombre": "Proyecto San Borja #1",
-    "distrito": "San Borja",
-    "lat": -12.001,
-    "lon": -77.001,
-    "link": "https://urbania.pe/proyecto-san-borja-1"
-  },
-  {
-    "nombre": "Proyecto San Borja #2",
-    "distrito": "San Borja",
-    "lat": -12.002,
-    "lon": -77.002,
-    "link": "https://urbania.pe/proyecto-san-borja-2"
-  },
-  {
-    "nombre": "Proyecto San Borja #3",
-    "distrito": "San Borja",
-    "lat": -12.003,
-    "lon": -77.003,
-    "link": "https://urbania.pe/proyecto-san-borja-3"
-  },
-  {
-    "nombre": "Proyecto San Borja #4",
-    "distrito": "San Borja",
-    "lat": -12.004,
-    "lon": -77.004,
-    "link": "https://urbania.pe/proyecto-san-borja-4"
-  },
-  {
-    "nombre": "Proyecto San Borja #5",
-    "distrito": "San Borja",
-    "lat": -12.005,
-    "lon": -77.005,
-    "link": "https://urbania.pe/proyecto-san-borja-5"
-  },
-  {
-    "nombre": "Proyecto San Borja #6",
-    "distrito": "San Borja",
-    "lat": -12.006,
-    "lon": -77.006,
-    "link": "https://urbania.pe/proyecto-san-borja-6"
-  },
-  {
-    "nombre": "Proyecto San Borja #7",
-    "distrito": "San Borja",
-    "lat": -12.007,
-    "lon": -77.007,
-    "link": "https://urbania.pe/proyecto-san-borja-7"
-  },
-  {
-    "nombre": "Proyecto San Borja #8",
-    "distrito": "San Borja",
-    "lat": -12.008,
-    "lon": -77.008,
-    "link": "https://urbania.pe/proyecto-san-borja-8"
-  },
-  {
-    "nombre": "Proyecto San Borja #9",
-    "distrito": "San Borja",
-    "lat": -12.009,
-    "lon": -77.009,
-    "link": "https://urbania.pe/proyecto-san-borja-9"
-  },
-  {
-    "nombre": "Proyecto San Borja #10",
-    "distrito": "San Borja",
-    "lat": -12.01,
-    "lon": -77.01,
-    "link": "https://urbania.pe/proyecto-san-borja-10"
-  },
-  {
-    "nombre": "Proyecto Lince #1",
-    "distrito": "Lince",
-    "lat": -12.001,
-    "lon": -77.001,
-    "link": "https://urbania.pe/proyecto-lince-1"
-  },
-  {
-    "nombre": "Proyecto Lince #2",
-    "distrito": "Lince",
-    "lat": -12.002,
-    "lon": -77.002,
-    "link": "https://urbania.pe/proyecto-lince-2"
-  },
-  {
-    "nombre": "Proyecto Lince #3",
-    "distrito": "Lince",
-    "lat": -12.003,
-    "lon": -77.003,
-    "link": "https://urbania.pe/proyecto-lince-3"
-  },
-  {
-    "nombre": "Proyecto Lince #4",
-    "distrito": "Lince",
-    "lat": -12.004,
-    "lon": -77.004,
-    "link": "https://urbania.pe/proyecto-lince-4"
-  },
-  {
-    "nombre": "Proyecto Lince #5",
-    "distrito": "Lince",
-    "lat": -12.005,
-    "lon": -77.005,
-    "link": "https://urbania.pe/proyecto-lince-5"
-  },
-  {
-    "nombre": "Proyecto Lince #6",
-    "distrito": "Lince",
-    "lat": -12.006,
-    "lon": -77.006,
-    "link": "https://urbania.pe/proyecto-lince-6"
-  },
-  {
-    "nombre": "Proyecto Lince #7",
-    "distrito": "Lince",
-    "lat": -12.007,
-    "lon": -77.007,
-    "link": "https://urbania.pe/proyecto-lince-7"
-  },
-  {
-    "nombre": "Proyecto Lince #8",
-    "distrito": "Lince",
-    "lat": -12.008,
-    "lon": -77.008,
-    "link": "https://urbania.pe/proyecto-lince-8"
-  },
-  {
-    "nombre": "Proyecto Lince #9",
-    "distrito": "Lince",
-    "lat": -12.009,
-    "lon": -77.009,
-    "link": "https://urbania.pe/proyecto-lince-9"
-  },
-  {
-    "nombre": "Proyecto Lince #10",
-    "distrito": "Lince",
-    "lat": -12.01,
-    "lon": -77.01,
-    "link": "https://urbania.pe/proyecto-lince-10"
-  },
-  {
-    "nombre": "Proyecto Pueblo Libre #1",
-    "distrito": "Pueblo Libre",
-    "lat": -12.001,
-    "lon": -77.001,
-    "link": "https://urbania.pe/proyecto-pueblo-libre-1"
-  },
-  {
-    "nombre": "Proyecto Pueblo Libre #2",
-    "distrito": "Pueblo Libre",
-    "lat": -12.002,
-    "lon": -77.002,
-    "link": "https://urbania.pe/proyecto-pueblo-libre-2"
-  },
-  {
-    "nombre": "Proyecto Pueblo Libre #3",
-    "distrito": "Pueblo Libre",
-    "lat": -12.003,
-    "lon": -77.003,
-    "link": "https://urbania.pe/proyecto-pueblo-libre-3"
-  },
-  {
-    "nombre": "Proyecto Pueblo Libre #4",
-    "distrito": "Pueblo Libre",
-    "lat": -12.004,
-    "lon": -77.004,
-    "link": "https://urbania.pe/proyecto-pueblo-libre-4"
-  },
-  {
-    "nombre": "Proyecto Pueblo Libre #5",
-    "distrito": "Pueblo Libre",
-    "lat": -12.005,
-    "lon": -77.005,
-    "link": "https://urbania.pe/proyecto-pueblo-libre-5"
-  },
-  {
-    "nombre": "Proyecto Pueblo Libre #6",
-    "distrito": "Pueblo Libre",
-    "lat": -12.006,
-    "lon": -77.006,
-    "link": "https://urbania.pe/proyecto-pueblo-libre-6"
-  },
-  {
-    "nombre": "Proyecto Pueblo Libre #7",
-    "distrito": "Pueblo Libre",
-    "lat": -12.007,
-    "lon": -77.007,
-    "link": "https://urbania.pe/proyecto-pueblo-libre-7"
-  },
-  {
-    "nombre": "Proyecto Pueblo Libre #8",
-    "distrito": "Pueblo Libre",
-    "lat": -12.008,
-    "lon": -77.008,
-    "link": "https://urbania.pe/proyecto-pueblo-libre-8"
-  },
-  {
-    "nombre": "Proyecto Pueblo Libre #9",
-    "distrito": "Pueblo Libre",
-    "lat": -12.009,
-    "lon": -77.009,
-    "link": "https://urbania.pe/proyecto-pueblo-libre-9"
-  },
-  {
-    "nombre": "Proyecto Pueblo Libre #10",
-    "distrito": "Pueblo Libre",
-    "lat": -12.01,
-    "lon": -77.01,
-    "link": "https://urbania.pe/proyecto-pueblo-libre-10"
-  },
-  {
-    "nombre": "Proyecto Jesús María #1",
-    "distrito": "Jesús María",
-    "lat": -12.001,
-    "lon": -77.001,
-    "link": "https://urbania.pe/proyecto-jesús-maría-1"
-  },
-  {
-    "nombre": "Proyecto Jesús María #2",
-    "distrito": "Jesús María",
-    "lat": -12.002,
-    "lon": -77.002,
-    "link": "https://urbania.pe/proyecto-jesús-maría-2"
-  },
-  {
-    "nombre": "Proyecto Jesús María #3",
-    "distrito": "Jesús María",
-    "lat": -12.003,
-    "lon": -77.003,
-    "link": "https://urbania.pe/proyecto-jesús-maría-3"
-  },
-  {
-    "nombre": "Proyecto Jesús María #4",
-    "distrito": "Jesús María",
-    "lat": -12.004,
-    "lon": -77.004,
-    "link": "https://urbania.pe/proyecto-jesús-maría-4"
-  },
-  {
-    "nombre": "Proyecto Jesús María #5",
-    "distrito": "Jesús María",
-    "lat": -12.005,
-    "lon": -77.005,
-    "link": "https://urbania.pe/proyecto-jesús-maría-5"
-  },
-  {
-    "nombre": "Proyecto Jesús María #6",
-    "distrito": "Jesús María",
-    "lat": -12.006,
-    "lon": -77.006,
-    "link": "https://urbania.pe/proyecto-jesús-maría-6"
-  },
-  {
-    "nombre": "Proyecto Jesús María #7",
-    "distrito": "Jesús María",
-    "lat": -12.007,
-    "lon": -77.007,
-    "link": "https://urbania.pe/proyecto-jesús-maría-7"
-  },
-  {
-    "nombre": "Proyecto Jesús María #8",
-    "distrito": "Jesús María",
-    "lat": -12.008,
-    "lon": -77.008,
-    "link": "https://urbania.pe/proyecto-jesús-maría-8"
-  },
-  {
-    "nombre": "Proyecto Jesús María #9",
-    "distrito": "Jesús María",
-    "lat": -12.009,
-    "lon": -77.009,
-    "link": "https://urbania.pe/proyecto-jesús-maría-9"
-  },
-  {
-    "nombre": "Proyecto Jesús María #10",
-    "distrito": "Jesús María",
-    "lat": -12.01,
-    "lon": -77.01,
-    "link": "https://urbania.pe/proyecto-jesús-maría-10"
-  },
-  {
-    "nombre": "Proyecto Magdalena #1",
-    "distrito": "Magdalena",
-    "lat": -12.001,
-    "lon": -77.001,
-    "link": "https://urbania.pe/proyecto-magdalena-1"
-  },
-  {
-    "nombre": "Proyecto Magdalena #2",
-    "distrito": "Magdalena",
-    "lat": -12.002,
-    "lon": -77.002,
-    "link": "https://urbania.pe/proyecto-magdalena-2"
-  },
-  {
-    "nombre": "Proyecto Magdalena #3",
-    "distrito": "Magdalena",
-    "lat": -12.003,
-    "lon": -77.003,
-    "link": "https://urbania.pe/proyecto-magdalena-3"
-  },
-  {
-    "nombre": "Proyecto Magdalena #4",
-    "distrito": "Magdalena",
-    "lat": -12.004,
-    "lon": -77.004,
-    "link": "https://urbania.pe/proyecto-magdalena-4"
-  },
-  {
-    "nombre": "Proyecto Magdalena #5",
-    "distrito": "Magdalena",
-    "lat": -12.005,
-    "lon": -77.005,
-    "link": "https://urbania.pe/proyecto-magdalena-5"
-  },
-  {
-    "nombre": "Proyecto Magdalena #6",
-    "distrito": "Magdalena",
-    "lat": -12.006,
-    "lon": -77.006,
-    "link": "https://urbania.pe/proyecto-magdalena-6"
-  },
-  {
-    "nombre": "Proyecto Magdalena #7",
-    "distrito": "Magdalena",
-    "lat": -12.007,
-    "lon": -77.007,
-    "link": "https://urbania.pe/proyecto-magdalena-7"
-  },
-  {
-    "nombre": "Proyecto Magdalena #8",
-    "distrito": "Magdalena",
-    "lat": -12.008,
-    "lon": -77.008,
-    "link": "https://urbania.pe/proyecto-magdalena-8"
-  },
-  {
-    "nombre": "Proyecto Magdalena #9",
-    "distrito": "Magdalena",
-    "lat": -12.009,
-    "lon": -77.009,
-    "link": "https://urbania.pe/proyecto-magdalena-9"
-  },
-  {
-    "nombre": "Proyecto Magdalena #10",
-    "distrito": "Magdalena",
-    "lat": -12.01,
-    "lon": -77.01,
-    "link": "https://urbania.pe/proyecto-magdalena-10"
+    "descripcion": "Viviendas en altura con vista al mar y acabados de lujo.",
+    "precio": "Desde S/ 2,100,000",
+    "link": "https://urbania.pe/sky-residences"
   }
+  // Continúa con los demás distritos y sus respectivos proyectos...
 ]
