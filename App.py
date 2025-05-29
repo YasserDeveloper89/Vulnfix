@@ -66,18 +66,18 @@ if distrito_seleccionado != "Selecciona...":
         for _, row in df_filtrado.iterrows():
             st.markdown(
                 f"""
-                <div style="border:1px solid #ddd; border-radius:10px; padding:15px; margin-bottom:10px;">
-                    <h4 style="margin-bottom:5px;">{row['nombre']}</h4>
+                <div style="border:1px solid #ddd; border-radius:10px; padding:12px; margin-bottom:8px; font-size:14px;">
+                    <h4 style="margin-bottom:5px; font-size:16px;">{row['nombre']}</h4>
                     <p style="margin:0;"><strong>Tipo:</strong> {row['tipo']}</p>
                     <p style="margin:0;"><strong>Precio:</strong> S/. {int(row['precio']):,}</p>
-                    <a href="{row['link']}" target="_blank" style="color:#1f77b4;">🔗 Ver proyecto</a>
+                    <a href="{row['link']}" target="_blank" style="color:#1f77b4; font-size:13px;">🔗 Ver proyecto</a>
                 </div>
                 """, unsafe_allow_html=True
             )
 
-    # Mapa de proyectos con control de layout
+    # Mapa de proyectos
+    st.subheader("🗺️ Mapa de proyectos")
     if not df_filtrado.empty:
-        st.subheader("🗺️ Mapa de proyectos")
         with st.container():
             mapa = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=14)
             for _, row in df_filtrado.iterrows():
@@ -89,5 +89,6 @@ if distrito_seleccionado != "Selecciona...":
                 ).add_to(mapa)
             st_folium(mapa, use_container_width=True, height=350)
 
-# Eliminar footer visual (si es necesario, lo puedes volver a poner luego)
+# Eliminar footer visual innecesario
+# Puedes volver a incluir el footer legal si gustas:
 # st.markdown(...footer...)
