@@ -3,16 +3,20 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
-# ✅ Esta línea debe ir siempre al principio
+# Configuración de página
 st.set_page_config(page_title="LimaProp", layout="wide")
 
-# Reducir espacio extra al final de la página
+# Reducir espacios al final
 st.markdown("""
     <style>
         .block-container {
-            padding-bottom: 1rem !important;
+            padding-bottom: 0rem !important;
+            margin-bottom: 0rem !important;
         }
         footer {visibility: hidden;}
+        iframe {
+            height: 400px !important;
+        }
     </style>
 """, unsafe_allow_html=True)
 
@@ -44,7 +48,7 @@ with st.sidebar:
     rango_precios = st.slider("Rango de precios (S/.)", min_value=precio_min, max_value=precio_max,
                               value=(precio_min, precio_max))
 
-# Filtrar solo si selecciona distrito
+# Filtrar datos si se selecciona un distrito
 if distrito_seleccionado != "Selecciona...":
     df_filtrado = df[
         (df["distrito"] == distrito_seleccionado) &
@@ -53,8 +57,7 @@ if distrito_seleccionado != "Selecciona...":
         (df["precio"] <= rango_precios[1])
     ]
 
-    # Mostrar lista de proyectos
-    st.subheader(f"🏢 Proyectos disponibles en {distrito_seleccionado}")
+    st.subheader(f"🏢 Proyectos en {distrito_seleccionado}")
     if df_filtrado.empty:
         st.warning("No se encontraron proyectos con los filtros seleccionados.")
     else:
@@ -70,7 +73,7 @@ if distrito_seleccionado != "Selecciona...":
                 """, unsafe_allow_html=True
             )
 
-    # Mapa de proyectos
+    # Mapa ajustado
     st.subheader("🗺️ Mapa de proyectos")
     if not df_filtrado.empty:
         mapa = folium.Map(location=[df_filtrado["lat"].mean(), df_filtrado["lon"].mean()], zoom_start=14)
@@ -81,15 +84,15 @@ if distrito_seleccionado != "Selecciona...":
                 tooltip=row["nombre"],
                 icon=folium.Icon(color="blue", icon="home")
             ).add_to(mapa)
-        st_folium(mapa, use_container_width=True, height=500)
+        st_folium(mapa, use_container_width=True, height=400)  # Ajustado a 400px
 
-# Footer profesional (ajustado sin margen adicional)
+# Footer con margen reducido
 st.markdown(
     """
-    <hr style="margin-top: 20px; margin-bottom: 10px;"/>
+    <hr style="margin-top: 10px;"/>
     <div style="text-align: center; font-size: 0.9em; color: #888;">
         © 2025 LimaProp. Todos los derechos reservados.
     </div>
     """,
     unsafe_allow_html=True
-)
+    )
