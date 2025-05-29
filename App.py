@@ -2,61 +2,49 @@ import streamlit as st
 import pandas as pd
 import folium
 from streamlit_folium import st_folium
-from PIL import Image
 
-# Cargar imágenes
-logo = Image.open("logo_limaprop.png")
-portada = Image.open("portada_limaprop.png")
+# Título principal
+st.set_page_config(page_title="LimaProp - Proyectos Inmobiliarios", layout="wide")
+st.title("🏠 LimaProp - Proyectos Inmobiliarios en Lima")
+st.markdown("Explora proyectos inmobiliarios nuevos en Lima con filtros interactivos.")
 
-# Configuración de la página
-st.set_page_config(page_title="LimaProp", layout="wide")
-
-# Mostrar portada y logo
-col1, col2 = st.columns([1, 6])
-with col1:
-    st.image(logo, width=100)
-with col2:
-    st.title("LimaProp - Proyectos Inmobiliarios 2025")
-st.image(portada, use_column_width=True)
-
-# Cargar datos
+# Cargar datos JSON
 try:
     df = pd.read_json("data_urbania.json")
-
-    # Validar columnas
-    required_columns = {'nombre', 'distrito', 'lat', 'lon', 'link'}
-    if not required_columns.issubset(df.columns):
-        st.error("El archivo de datos no contiene todas las columnas necesarias.")
-    else:
-        # Filtros
-        st.sidebar.header("🔍 Filtros")
-        distritos = sorted(df["distrito"].unique())
-        distrito_seleccionado = st.sidebar.selectbox("Selecciona un distrito", ["Todos"] + distritos)
-
-        if distrito_seleccionado != "Todos":
-            df_filtrado = df[df["distrito"] == distrito_seleccionado]
-        else:
-            df_filtrado = df
-
-        # Mostrar resultados
-        st.markdown(f"### 🏘️ Resultados ({len(df_filtrado)} proyectos)")
-        for index, row in df_filtrado.iterrows():
-            with st.expander(f"{row['nombre']} - {row['distrito']}"):
-                st.write(f"📍 Ubicación: {row['lat']}, {row['lon']}")
-                st.write(f"🔗 [Ver propiedad en Urbania]({row['link']})")
-
-        # Mapa
-        st.markdown("### 🌍 Mapa Interactivo de Proyectos")
-        if not df_filtrado.empty:
-            m = folium.Map(location=[-12.1, -77.03], zoom_start=12)
-            for index, row in df_filtrado.iterrows():
-                folium.Marker(
-                    location=[row["lat"], row["lon"]],
-                    popup=f"{row['nombre']} ({row['distrito']})",
-                    tooltip=row['nombre']
-                ).add_to(m)
-            st_folium(m, width=700, height=500)
-        else:
-            st.info("No hay proyectos disponibles para mostrar en el mapa.")
 except Exception as e:
     st.error(f"Error al cargar los datos: {e}")
+    st.stop()
+
+# Verificar columnas requeridas
+required_columns = {'nombre', 'distrito', 'lat', 'lon', 'link'}
+if not required_columns.issubset(df.columns):
+    st.error(f"El archivo de datos no contiene todas las columnas necesarias.\nSe requieren: {required_columns}\nColumnas actuales: {set(df.columns)}")
+    st.stop()
+
+# Filtrar por distrito
+distritos = sorted(df['distrito'].unique())
+distrito_seleccionado = st.selectbox("Selecciona un distrito:", ["Todos"] + distritos)
+
+if distrito_seleccionado != "Todos":
+    df = df[df['distrito'] == distrito_seleccionado]
+
+# Mostrar tabla
+st.subheader("📋 Lista de Proyectos")
+st.dataframe(df[['nombre', 'distrito', 'link']], use_container_width=True)
+
+# Mapa
+st.subheader("🗺️ Mapa de Proyectos Inmobiliarios")
+
+if not df.empty:
+    m = folium.Map(location=[-12.0464, -77.0428], zoom_start=12)
+    for _, row in df.iterrows():
+        popup_html = f"<b>{row['nombre']}</b><br><a href='{row['link']}' target='_blank'>Ver proyecto</a>"
+        folium.Marker(
+            location=[row['lat'], row['lon']],
+            popup=popup_html,
+            tooltip=row['nombre'],
+            icon=folium.Icon(color="blue", icon="home")
+        ).add_to(m)
+    st_folium(m, width=700, height=500)
+else:
+    st.info("No hay proyectos disponibles para el distrito seleccionado.")
