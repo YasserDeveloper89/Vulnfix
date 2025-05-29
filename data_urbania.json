@@ -1,92 +1,92 @@
 [
   {
-    "nombre": "Residencial El Parque",
+    "nombre": "Residencial Aurora",
     "distrito": "Miraflores",
     "lat": -12.1215,
     "lon": -77.0301,
-    "link": "https://ejemplo.com/miraflores1",
-    "precio": 460000,
+    "link": "https://urbania.pe/proyecto/miraflores1",
+    "precio": 480000,
     "tipo": "Departamento"
   },
   {
-    "nombre": "Torre Pacific",
-    "distrito": "Miraflores",
-    "lat": -12.1255,
-    "lon": -77.0281,
-    "link": "https://ejemplo.com/miraflores2",
-    "precio": 520000,
-    "tipo": "Departamento"
-  },
-  {
-    "nombre": "Vista Verde",
-    "distrito": "San Isidro",
-    "lat": -12.0995,
-    "lon": -77.0362,
-    "link": "https://ejemplo.com/sanisidro1",
-    "precio": 680000,
-    "tipo": "Penthouse"
-  },
-  {
-    "nombre": "Edificio Aurora",
-    "distrito": "San Isidro",
-    "lat": -12.0980,
-    "lon": -77.0379,
-    "link": "https://ejemplo.com/sanisidro2",
-    "precio": 740000,
-    "tipo": "Departamento"
-  },
-  {
-    "nombre": "Ocean Bay",
+    "nombre": "Ocean View",
     "distrito": "Barranco",
-    "lat": -12.1456,
-    "lon": -77.0212,
-    "link": "https://ejemplo.com/barranco1",
+    "lat": -12.1451,
+    "lon": -77.0201,
+    "link": "https://urbania.pe/proyecto/barranco1",
     "precio": 510000,
     "tipo": "Departamento"
   },
   {
-    "nombre": "Terrazas del Mar",
+    "nombre": "Sky Tower",
+    "distrito": "San Isidro",
+    "lat": -12.1011,
+    "lon": -77.0366,
+    "link": "https://urbania.pe/proyecto/sanisidro1",
+    "precio": 740000,
+    "tipo": "Penthouse"
+  },
+  {
+    "nombre": "Altos de Surco",
+    "distrito": "Santiago de Surco",
+    "lat": -12.1350,
+    "lon": -76.9905,
+    "link": "https://urbania.pe/proyecto/surco1",
+    "precio": 490000,
+    "tipo": "Dúplex"
+  },
+  {
+    "nombre": "Torres de Lince",
+    "distrito": "Lince",
+    "lat": -12.0819,
+    "lon": -77.0420,
+    "link": "https://urbania.pe/proyecto/lince1",
+    "precio": 430000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Parque Real",
+    "distrito": "San Borja",
+    "lat": -12.1055,
+    "lon": -76.9942,
+    "link": "https://urbania.pe/proyecto/sanborja1",
+    "precio": 560000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Green Park",
+    "distrito": "Miraflores",
+    "lat": -12.1222,
+    "lon": -77.0290,
+    "link": "https://urbania.pe/proyecto/miraflores2",
+    "precio": 510000,
+    "tipo": "Departamento"
+  },
+  {
+    "nombre": "Vista Pacífico",
     "distrito": "Barranco",
-    "lat": -12.1431,
-    "lon": -77.0223,
-    "link": "https://ejemplo.com/barranco2",
+    "lat": -12.1466,
+    "lon": -77.0213,
+    "link": "https://urbania.pe/proyecto/barranco2",
     "precio": 495000,
     "tipo": "Loft"
+  },
+  {
+    "nombre": "Edificio Business One",
+    "distrito": "San Isidro",
+    "lat": -12.1009,
+    "lon": -77.0350,
+    "link": "https://urbania.pe/proyecto/sanisidro2",
+    "precio": 720000,
+    "tipo": "Oficina"
   },
   {
     "nombre": "Central Living",
     "distrito": "Lince",
     "lat": -12.0821,
-    "lon": -77.0422,
-    "link": "https://ejemplo.com/lince1",
-    "precio": 395000,
-    "tipo": "Departamento"
-  },
-  {
-    "nombre": "Parque Norte",
-    "distrito": "Lince",
-    "lat": -12.0842,
-    "lon": -77.0440,
-    "link": "https://ejemplo.com/lince2",
-    "precio": 415000,
-    "tipo": "Departamento"
-  },
-  {
-    "nombre": "Altos de Surco",
-    "distrito": "Santiago de Surco",
-    "lat": -12.1354,
-    "lon": -76.9900,
-    "link": "https://ejemplo.com/surco1",
-    "precio": 480000,
-    "tipo": "Dúplex"
-  },
-  {
-    "nombre": "Surco Gardens",
-    "distrito": "Santiago de Surco",
-    "lat": -12.1370,
-    "lon": -76.9923,
-    "link": "https://ejemplo.com/surco2",
-    "precio": 500000,
+    "lon": -77.0415,
+    "link": "https://urbania.pe/proyecto/lince2",
+    "precio": 410000,
     "tipo": "Departamento"
   }
 ]
